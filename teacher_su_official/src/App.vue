@@ -1,9 +1,7 @@
 <template>
   <div class="app">
     <Navbar></Navbar>
-    <div class="container-fluid">
       <router-view></router-view>
-    </div>
   </div>
 </template>
 
@@ -21,6 +19,8 @@ import Navbar from "./components/Navbar"
     $secondary:#363636;
     $light:#FFFFFF;
     $dark:#000000;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
     @import "~bootstrap/scss/bootstrap";
     .active{
       background: #000;
