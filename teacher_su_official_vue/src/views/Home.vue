@@ -109,56 +109,6 @@
         </div>
       </div>   
 
-      <div class="row mt-5">
-        <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
-          <div class="mt-3">
-            <h3 style="font-family:'Roboto Slab', serif;" class="mb-4 fs-1">Events</h3>
-            
-            <div class="d-flex flex-wrap justify-content-center align-items-center  enImg-con">
-              <div class="en-img">
-                <img src="../assets/en-img.jpeg" style="width:100%;height:100%;" alt="">
-              </div>
-              <div>
-                <p class="text-danger text-decoration-underline fw-bold fs-4">Master of Cybersecurity webinar</p>
-                <p class="fs-5 fw-bold">Monday 13 September 06:00pm</p>
-              </div>
-            </div>
-            <div class="d-flex flex-wrap justify-content-center align-items-center  enImg-con">
-              <div class="en-img">
-                <img src="../assets/en-img.jpeg" style="width:100%;height:100%;" alt="">
-              </div>
-              <div>
-                <p class="text-danger text-decoration-underline fw-bold fs-4">Master of Cybersecurity webinar</p>
-                <p class="fs-5 fw-bold">Monday 13 September 06:00pm</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
-          <div class="mt-3">
-            <h3 style="font-family:'Roboto Slab', serif;" class="mb-4 fs-1">News</h3>
-            
-            <div class="d-flex flex-wrap justify-content-center align-items-center  enImg-con">
-              <div class="en-img">
-                <img src="../assets/en-img.jpeg" style="width:100%;height:100%;" alt="">
-              </div>
-              <div>
-                <p class="text-danger text-decoration-underline fw-bold fs-4">Master of Cybersecurity webinar</p>
-                <p class="fs-5 fw-bold">Monday 13 September 06:00pm</p>
-              </div>
-            </div>
-            <div class="d-flex flex-wrap justify-content-center align-items-center  enImg-con">
-              <div class="en-img">
-                <img src="../assets/en-img.jpeg" style="width:100%;height:100%;" alt="">
-              </div>
-              <div>
-                <p class="text-danger text-decoration-underline fw-bold fs-4">Master of Cybersecurity webinar</p>
-                <p class="fs-5 fw-bold">Monday 13 September 06:00pm</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="row bg-primary my-5">
         <Header title="Our Success Stories" class="text-light text-center mt-5 courses-text"></Header>
 
@@ -225,6 +175,58 @@
             </div>
         </div>
       </div>
+
+      <div class="row mt-5">
+        <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+          <div class="mt-3">
+            <h3 style="font-family:'Roboto Slab', serif;" class="mb-4 fs-1">Events</h3>
+            
+            <div class="d-flex flex-wrap justify-content-center align-items-center  enImg-con">
+              <div class="en-img">
+                <img src="../assets/en-img.jpeg" style="width:100%;height:100%;" alt="">
+              </div>
+              <div>
+                <p class="text-danger text-decoration-underline fw-bold fs-4">Master of Cybersecurity webinar</p>
+                <p class="fs-5 fw-bold">Monday 13 September 06:00pm</p>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap justify-content-center align-items-center  enImg-con">
+              <div class="en-img">
+                <img src="../assets/en-img.jpeg" style="width:100%;height:100%;" alt="">
+              </div>
+              <div>
+                <p class="text-danger text-decoration-underline fw-bold fs-4">Master of Cybersecurity webinar</p>
+                <p class="fs-5 fw-bold">Monday 13 September 06:00pm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+          <div class="mt-3">
+            <h3 style="font-family:'Roboto Slab', serif;" class="mb-4 fs-1">News</h3>
+            
+            <div class="d-flex flex-wrap justify-content-center align-items-center  enImg-con">
+              <div class="en-img">
+                <img src="../assets/en-img.jpeg" style="width:100%;height:100%;" alt="">
+              </div>
+              <div>
+                <p class="text-danger text-decoration-underline fw-bold fs-4">Master of Cybersecurity webinar</p>
+                <p class="fs-5 fw-bold">Monday 13 September 06:00pm</p>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap justify-content-center align-items-center  enImg-con">
+              <div class="en-img">
+                <img src="../assets/en-img.jpeg" style="width:100%;height:100%;" alt="">
+              </div>
+              <div>
+                <p class="text-danger text-decoration-underline fw-bold fs-4">Master of Cybersecurity webinar</p>
+                <p class="fs-5 fw-bold">Monday 13 September 06:00pm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
 </div>
 
 </template>
