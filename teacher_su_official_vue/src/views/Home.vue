@@ -1,7 +1,7 @@
 <template>
 <div class="container-fluid">
-      <div class="row hero-banner">
-        <div class="col-12 col-md-6 bg-primary d-flex align-items-center justify-content-center">
+      <div class="row hero-banner position-relative">
+        <div class="col-12 col-md-12 bg-primary d-flex align-items-center justify-content-center">
             <div class="py-5  p-md-5 BannerTesti">
               <Header class="BannerText text-light fw-light pe-lg-5" title="A world-class education, wherever you are"></Header>
               <p class="text-light">Start studying online now</p>
@@ -262,6 +262,10 @@ export default {
   background:url(../assets/homebanner.jpeg) no-repeat center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  position: absolute;
+  right: 0;
+  z-index: 1;
 }
 
 .courses{
