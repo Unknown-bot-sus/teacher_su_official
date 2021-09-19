@@ -1,15 +1,15 @@
 <template>
 <div class="container-fluid">
       <div class="row hero-banner position-relative">
-        <div class="col-12 col-md-12 d-flex align-items-center lg-justify-content-start md-justify-content-center sm-justify-content-center homebanner-containercs">
-            <div class="col-md-6 py-5  p-md-5 BannerTesti">
+        <div class="col-12 col-lg-12 py-5 d-flex align-items-center  homebanner-containercs">
+            <div class="col-lg-6 py-5   BannerTesti">
               <Header class="BannerText text-light fw-light pe-lg-5" title="A world-class education, wherever you are"></Header>
               <p class="text-light">Start studying online now</p>
               <button class="btn btn-outline-light">REGISTER NOW <i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
 
-        <div class="col-12 col-md-6"  id="homebanner">
+        <div class="col-12 col-sm-6"  id="homebanner">
 
         </div>
       </div>
@@ -319,9 +319,9 @@ export default {
   position: absolute;
   left: -40px;
 }
-@media only screen and (min-width:1890px){
+@media only screen and (min-width:1589px){
     .BannerTesti{
-      padding-right: 250px!important;
+      padding-left: 200px!important;
     }
 }
 @media only screen and (max-width: 484px){
@@ -333,7 +333,11 @@ export default {
     .BannerText{
         font-size: 2rem;
     }
+    .BannerTesti{
+      padding-left: 10px!important;
+    }
 }
+
 @media only screen and (min-width: 1117px){
     .courses{
       margin-top: -60px;
