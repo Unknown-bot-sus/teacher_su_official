@@ -1,13 +1,14 @@
 <template>
 <div class="container-fluid">
       <div class="row hero-banner position-relative">
-        <div class="col-12 col-md-12 bg-primary d-flex align-items-center justify-content-center">
-            <div class="py-5  p-md-5 BannerTesti">
+        <div class="col-12 col-md-12 d-flex align-items-center lg-justify-content-start md-justify-content-center sm-justify-content-center homebanner-containercs">
+            <div class="col-md-6 py-5  p-md-5 BannerTesti">
               <Header class="BannerText text-light fw-light pe-lg-5" title="A world-class education, wherever you are"></Header>
               <p class="text-light">Start studying online now</p>
               <button class="btn btn-outline-light">REGISTER NOW <i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
+
         <div class="col-12 col-md-6"  id="homebanner">
 
         </div>
@@ -260,12 +261,23 @@ export default {
 
 #homebanner{
   background:url(../assets/homebanner.jpeg) no-repeat center;
+  height: inherit;
   background-size: cover;
   background-repeat: no-repeat;
 
   position: absolute;
-  right: 0;
-  z-index: 1;
+  right: 0%;
+  z-index: -2;
+}
+
+.homebanner-containercs{
+  background-image: linear-gradient(
+    110deg,
+    var(--primary),
+    var(--primary) 60%,
+    transparent 60%
+  );
+  z-index: -1;
 }
 
 .courses{
@@ -328,6 +340,7 @@ export default {
     .hero-banner{
       height: 500px;
     }
+
 }
 @media only screen and (max-width: 1111px){
   
@@ -346,11 +359,19 @@ export default {
       scrollbar-width: none;  /* Firefox */
     }
 
+    .homebanner-containercs{
+      background: var(--primary);
+    }
+
 }
 @media only screen and (max-width: 652px){
     .stu-img{
       width:350px;
       height: 210px;
+    }
+
+    .homebanner-containercs{
+      background: var(--primary);
     }
 }
 </style>

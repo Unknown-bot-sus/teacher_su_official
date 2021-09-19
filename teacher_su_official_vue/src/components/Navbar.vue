@@ -1,6 +1,6 @@
 <template>
   <header id="home">
-    <nav class="navbar navbar-expand-lg py-0">
+    <nav class="navbar navbar-expand-lg flex-column py-0">
       <div class="container-fluid bg-danger m-0 p-0" id="small-menu">
         <a href="#" class="navbar-brand position-relative">
           <img src="../assets/logo.png" alt="logo" width="70" height="70" class="d-inline-block"/>
@@ -25,7 +25,63 @@
       </div>
 
       <div class="container-fluid bg-dark m-0 p-0" id="mega-menu">
+        <button class="navbar-toggler nav-buttoncs" data-bs-toggle="collapse" data-bs-target="#nav">
+          <div class="bg-light line1"></div>
+          <div class="bg-light line2"></div>
+          <div class="bg-light line3"></div>
+        </button>
 
+        <div class="navbar-collapse collapse  text-light fw-bold" id="nav">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Courses
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              </div>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Study with us
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              </div>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Career Opportunities
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              </div>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Community
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              </div>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   </header>
