@@ -91,14 +91,20 @@
             </div>
         </div>
 
+        <Form text_label="Comment"></Form>
+
     </div>
 </template>
 
 <script>
 import Header from "../components/Header"
+import Form from "../components/Form"
     export default {
         name:'Courses',
-        components:{Header}
+        components:{
+            Header,
+            Form,
+            }
     }
 </script>
 
