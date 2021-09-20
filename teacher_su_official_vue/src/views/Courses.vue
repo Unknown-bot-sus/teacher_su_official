@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-12 p-0">
                 <div class="Banner-img">
-                    <div class="Banner d-flex align-items-center justify-content-end p-md-5">
+                    <div class="Banner d-flex align-items-center justify-content-center p-md-5">
                         <div class="p-5">
                             <Header class="Banner-text text-light" title="Choose your favourite course"></Header>
                         </div>
@@ -127,7 +127,7 @@ import Header from "../components/Header"
         height: 120px;
     }
     .st-con{
-        min-width: 350px;
+        min-width: 300px;
     }
     @media only screen and (max-width: 400px){
     .Banner-text{

@@ -20,7 +20,13 @@ const routes = [
     name:'Courses',
     component: () => import(/* webpackChunkName: "about" */ '../views/Courses.vue')
     
-  }
+  },
+  {
+    path:'/studyWithUs/some',
+    name:'Study',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Study.vue')
+    
+  },
 ]
 
 const router = createRouter({
