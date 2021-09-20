@@ -17,7 +17,7 @@
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
     .header{
-        font-size: 3rem;
+        font-size: 3.1rem;
         font-family: 'Roboto Slab', serif;
     }
 </style>

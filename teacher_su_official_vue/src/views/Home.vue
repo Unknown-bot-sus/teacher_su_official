@@ -319,6 +319,9 @@ export default {
   position: absolute;
   left: -40px;
 }
+.BannerTesti{
+      padding-left: 100px!important;
+    }
 @media only screen and (min-width:1589px){
     .BannerTesti{
       padding-left: 200px!important;
