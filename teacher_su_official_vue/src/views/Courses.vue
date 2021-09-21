@@ -85,7 +85,7 @@
 
         <div class="row">
             
-            <Header></Header>
+            <Header title=""></Header>
             <div class="col-12">
 
             </div>

@@ -176,7 +176,7 @@
         </div>
       </div>
 
-      <div class="row mt-5">
+      <div class="row my-5">
         <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
           <div class="mt-3">
             <h3 style="font-family:'Roboto Slab', serif;" class="mb-4 fs-1">Events</h3>
