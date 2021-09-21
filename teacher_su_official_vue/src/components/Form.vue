@@ -14,8 +14,8 @@
 
         <div class="row">
             <div class="form-group col-lg-4 col-sm-6">
-                <input type="email" id="email" class="form-control" required />
-                <Label inputId="age" text="Email"></Label>
+                <input type="text" id="email" class="form-control" autocomplete="off" required />
+                <Label inputId="email" text="Email"></Label>
             </div>
 
             <div class="form-group col-lg-4 col-sm-6">
@@ -47,7 +47,6 @@
             <div class="d-grid col-lg-1 col-sm-4">
                 <button type="submit" class="btn btn-danger">Submit</button>
             </div>
-            
         </div>
     </form>
 </template>
@@ -75,6 +74,11 @@ form{
     margin: 1.5rem auto;
 }
 
+.form-control::-webkit-inner-spin-button,
+.form-control::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+
 input.form-control{
     background-color: transparent;
     font-size: 1.5rem;
@@ -82,9 +86,12 @@ input.form-control{
     border: none;
     border-bottom: 1px solid var(--dark);
     border-radius: 0;
+
+    appearance: texfield;
+    -moz-appearance: textfield;
 }
 
-textarea{
+textarea.form-control{
     border: 1px solid var(--dark);
     min-height:10rem;
 }
@@ -92,12 +99,13 @@ textarea{
 .form-control:focus{
     outline: none;
 
-    border: none;
     box-shadow: none;
     border-bottom: 1px solid var(--dark);
 }
 
 .btn{
+    font-weight: 900;
+    font-size: 1.2rem;
     padding: 0.5rem 2rem;
     margin-left: 10rem;
     border-radius: 20px;
@@ -106,10 +114,22 @@ textarea{
 }
 
 .btn:focus{
+    outline: none;
+
     transform: scale(0.98);
-    color: var(--danger);
-    background-color: var(--light);
-    box-shadow: 0px 0px 40px var(--danger);
+
+   box-shadow: none;
+
+    color: transparent;
+
+    background: linear-gradient(
+        45deg,
+        red,
+        blue
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
 }
 
 @media only screen and (max-width: 652px){

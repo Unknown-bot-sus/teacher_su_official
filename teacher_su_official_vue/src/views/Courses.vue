@@ -84,14 +84,14 @@
         </div>
 
         <div class="row">
-            
-            <Header></Header>
             <div class="col-12">
-
+                <h1 style="font-size: 3.1rem, font-family: 'Roboto Slab', serif" class="text-center">Want to study at <span class="text-danger fw-bold">Teacher Su</span>?</h1>
+                <Header title="Enroll now!" class="text-center"></Header>
+                <Form text_label="Comment"></Form>
             </div>
         </div>
 
-        <Form text_label="Comment"></Form>
+        
 
     </div>
 </template>
@@ -99,13 +99,15 @@
 <script>
 import Header from "../components/Header"
 import Form from "../components/Form"
-    export default {
-        name:'Courses',
-        components:{
-            Header,
-            Form,
-            }
-    }
+
+export default {
+    name:'Courses',
+    components:{
+        Header,
+        Form,
+        Header,
+        }
+}
 </script>
 
 <style scoped>

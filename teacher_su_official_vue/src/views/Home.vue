@@ -371,7 +371,6 @@ export default {
     .homebanner-containercs{
       background: var(--primary);
     }
-
 }
 @media only screen and (max-width: 652px){
     .stu-img{

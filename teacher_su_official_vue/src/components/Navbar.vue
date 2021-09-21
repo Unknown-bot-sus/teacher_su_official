@@ -1,15 +1,18 @@
 <template>
   <header id="home">
-    <nav class="navbar navbar-expand-lg navbar-dark flex-column m-0 p-0">
-      <div class="container-fluid bg-danger m-0 p-0" id="small-menu">
+    <nav class="">
+      <div class="navbar navbar-expand-sm navbar-dark d-flex justify-content-between bg-danger m-0 p-0" id="small-menu">
 
-        <a href="#" class="navbar-brand position-relative">
+        <a href="#" class="navbar-brand position-relative d-flex">
           <img src="../assets/logo.png" alt="logo" width="70" height="70" class="d-inline-block"/>
           <div class="vertical-line bg-light align-middle"></div>
-          <span class="text-light fw-bold h4 mx-2 align-center">Teacher Su Centre</span>
+          <div class="d-flex flex-column text-light fw-bold h4 mx-2 justify-content-start align-items-start">
+            <span>Teacher Su</span>
+            <span>Centre</span>
+          </div>
         </a>
 
-        <div class="justify-content-end" id="nav">
+        <div class="align-self-centre" id="nav">
           <ul class="navbar-nav">
             <li class="navbar-item"><router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">Teacher Su Students</router-link></li>
             <li class="navbar-item"><router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">Staff</router-link></li>
@@ -29,7 +32,7 @@
 
       </div>
 
-      <div class="container-fluid bg-dark m-0 p-0" id="mega-menu">
+      <div class="navbar navbar-expand-lg navbar-dark bg-dark m-0 p-0" id="mega-menu">
 
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" id="nav-button">
           <div class="bg-light line1"></div>
