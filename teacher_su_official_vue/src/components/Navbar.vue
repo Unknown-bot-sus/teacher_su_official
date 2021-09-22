@@ -110,7 +110,7 @@ export default {
 
     if(getScrollY >= 100) $('#nav-barcs').addClass('fixed-top');
     else $('#nav-barcs').removeClass('fixed-top');
-  });
+    });
   }
 };
 
