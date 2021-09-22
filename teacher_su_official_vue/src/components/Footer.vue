@@ -2,7 +2,7 @@
 
     <footer class="container-fluid bg-secondary p-5">
         <div class="logo-container">
-            <img src="../assets/logo.png" alt="logo" width="70" height="70">
+            <img src="../assets/img/logo.png" alt="logo" width="70" height="70">
             <div class="vertical-line bg-light align-middle d-inline-block"></div>
             <span class="fw-bold text-light h2 align-middle">Teacher Su Centre</span>
         </div>

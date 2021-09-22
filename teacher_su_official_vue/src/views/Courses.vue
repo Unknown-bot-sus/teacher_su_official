@@ -25,7 +25,7 @@
             <div class="col-12 d-lg-flex align-items-center justify-content-center p-5">
                 <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap p-3 ">
                     <div>
-                        <img src="../assets/man.jpg" class="rev-img mb-2" alt="">
+                        <img src="../assets/img/man.jpg" class="rev-img mb-2" alt="">
                         <div>
                             <p class="fw-bold text-center m-0">Thiha Swan Htet</p>
                             <p class="text-muted text-center m-2">IELTS student</p>
@@ -52,28 +52,28 @@
                 <div class="row my-5">
                     <div class="col-12 col-lg-6 mb-5 d-flex align-item-center justify-content-center">
                         <div class="st-con d-flex align-items-center justify-content-between border border-1 border-dark">
-                            <img src="../assets/Study.jpg" class="st-img" alt="">
+                            <img src="../assets/img/Study.jpg" class="st-img" alt="">
                             <p class="m-0 ms-3  fw-bold">How to apply</p>
                             <i class="fas fa-chevron-circle-right mx-2 text-danger"></i>
                         </div>
                     </div>
                     <div class="col-12 col-lg-6 mb-5 d-flex align-item-center justify-content-center">
                         <div class="st-con d-flex align-items-center justify-content-between border border-1 border-dark">
-                            <img src="../assets/Study.jpg" class="st-img" alt="">
+                            <img src="../assets/img/Study.jpg" class="st-img" alt="">
                             <p class="m-0 ms-3  fw-bold">Find your scholarship</p>
                             <i class="fas fa-chevron-circle-right mx-2 text-danger"></i>
                         </div>
                     </div>
                     <div class="col-12 col-lg-6 mb-5 d-flex align-item-center justify-content-center">
                         <div class="st-con d-flex align-items-center justify-content-between border border-1 border-dark">
-                            <img src="../assets/Study.jpg" class="st-img" alt="">
+                            <img src="../assets/img/Study.jpg" class="st-img" alt="">
                             <p class="m-0 mx-4  fw-bold">Pathways</p>
                             <i class="fas fa-chevron-circle-right mx-2 text-danger"></i>
                         </div>
                     </div>
                     <div class="col-12 col-lg-6 mb-5 d-flex align-item-center justify-content-center">
                         <div class="st-con d-flex align-items-center justify-content-between border border-1 border-dark">
-                            <img src="../assets/Study.jpg" class="st-img" alt="">
+                            <img src="../assets/img/Study.jpg" class="st-img" alt="">
                             <p class="m-0 ms-3  fw-bold">Career opportunities</p>
                             <i class="fas fa-chevron-circle-right mx-2 text-danger"></i>
                         </div>

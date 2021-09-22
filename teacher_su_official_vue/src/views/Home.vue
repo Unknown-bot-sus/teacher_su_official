@@ -2,11 +2,11 @@
 <div class="container-fluid">
       <div class="row hero-banner position-relative">
         <div class="col-12 col-lg-12 py-5 d-flex align-items-center  homebanner-containercs">
-            <div class="col-lg-6 py-5   BannerTesti">
-              <Header class="BannerText text-light fw-light pe-lg-5" title="A world-class education, wherever you are"></Header>
-              <p class="text-light">Start studying online now</p>
-              <button class="btn btn-outline-light">REGISTER NOW <i class="fas fa-chevron-right"></i></button>
-            </div>
+          <div class="col-lg-6 py-5 BannerTesti">
+            <Header class="BannerText text-light fw-light pe-lg-5" title="A world-class education, wherever you are"></Header>
+            <p class="text-light">Start studying online now</p>
+            <button class="btn btn-outline-light">REGISTER NOW <i class="fas fa-chevron-right"></i></button>
+          </div>
         </div>
 
         <div class="col-12 col-sm-6"  id="homebanner">
@@ -77,7 +77,7 @@
             <Header title="Start your studies at Teacher Su Centre" class="text-center mb-5 courses-text"></Header>
             <div class="d-flex align-items-center justify-content-evenly flex-column">
               <div class="stu-img">
-                <img src="../assets/Study.jpg" style="width:100%;height:100%;" alt="">
+                <img src="../assets/img/Study.jpg" style="width:100%;height:100%;" alt="">
               </div>
               <div class="row st-con mt-5 px-3">
                 <div class="col-12 col-xl-6 p-3 ">
@@ -132,7 +132,7 @@
                                 <button class="btn btn-danger next py-3 px-4" @click="next()"> <i class="fas fs-1 fa-chevron-right"></i> </button>
                                 <button class="btn btn-danger prev py-3 px-4" @click="prev()"> <i class="fas fs-1 fa-chevron-left"></i> </button>
                               <div class="rev-img shadow">
-                                <img src="../assets/man.jpg" style="width:100%;height:100%;" alt="">
+                                <img src="../assets/img/man.jpg" style="width:100%;height:100%;" alt="">
                               </div>
                             </div>
                           </div>
@@ -148,7 +148,7 @@
                                 <button class="btn btn-danger next py-3 px-4" @click="next()"> <i class="fas fs-1 fa-chevron-right"></i> </button>
                                 <button class="btn btn-danger prev py-3 px-4" @click="prev()"> <i class="fas fs-1 fa-chevron-left"></i> </button>
                               <div class="rev-img shadow">
-                                <img src="../assets/man.jpg" style="width:100%;height:100%;" alt="">
+                                <img src="../assets/img/man.jpg" style="width:100%;height:100%;" alt="">
                               </div>
                             </div>
                           </div>
@@ -164,7 +164,7 @@
                                 <button class="btn btn-danger next py-3 px-4" @click="next()"> <i class="fas fs-1 fa-chevron-right"></i> </button>
                                 <button class="btn btn-danger prev py-3 px-4" @click="prev()"> <i class="fas fs-1 fa-chevron-left"></i> </button>
                               <div class="rev-img shadow">
-                                <img src="../assets/man.jpg" style="width:100%;height:100%;" alt="">
+                                <img src="../assets/img/man.jpg" style="width:100%;height:100%;" alt="">
                               </div>
                             </div>
                           </div>
@@ -183,7 +183,7 @@
             
             <div class="d-flex flex-wrap justify-content-center align-items-center  enImg-con">
               <div class="en-img">
-                <img src="../assets/en-img.jpeg" style="width:100%;height:100%;" alt="">
+                <img src="../assets/img/en-img.jpeg" style="width:100%;height:100%;" alt="">
               </div>
               <div>
                 <p class="text-danger text-decoration-underline fw-bold fs-4">Master of Cybersecurity webinar</p>
@@ -192,7 +192,7 @@
             </div>
             <div class="d-flex flex-wrap justify-content-center align-items-center  enImg-con">
               <div class="en-img">
-                <img src="../assets/en-img.jpeg" style="width:100%;height:100%;" alt="">
+                <img src="../assets/img/en-img.jpeg" style="width:100%;height:100%;" alt="">
               </div>
               <div>
                 <p class="text-danger text-decoration-underline fw-bold fs-4">Master of Cybersecurity webinar</p>
@@ -207,7 +207,7 @@
             
             <div class="d-flex flex-wrap justify-content-center align-items-center  enImg-con">
               <div class="en-img">
-                <img src="../assets/en-img.jpeg" style="width:100%;height:100%;" alt="">
+                <img src="../assets/img/en-img.jpeg" style="width:100%;height:100%;" alt="">
               </div>
               <div>
                 <p class="text-danger text-decoration-underline fw-bold fs-4">Master of Cybersecurity webinar</p>
@@ -216,7 +216,7 @@
             </div>
             <div class="d-flex flex-wrap justify-content-center align-items-center  enImg-con">
               <div class="en-img">
-                <img src="../assets/en-img.jpeg" style="width:100%;height:100%;" alt="">
+                <img src="../assets/img/en-img.jpeg" style="width:100%;height:100%;" alt="">
               </div>
               <div>
                 <p class="text-danger text-decoration-underline fw-bold fs-4">Master of Cybersecurity webinar</p>
@@ -262,7 +262,7 @@ export default {
 <style scoped>
 
 #homebanner{
-  background:url(../assets/homebanner.jpeg) no-repeat center;
+  background:url(../assets/img/homebanner.jpeg);
   height: inherit;
   background-size: cover;
   background-repeat: no-repeat;
@@ -370,6 +370,7 @@ export default {
 
     .homebanner-containercs{
       background: var(--primary);
+      justify-content: center;
     }
 }
 @media only screen and (max-width: 652px){

@@ -1,38 +1,36 @@
 <template>
   <header id="home">
-    <nav class="">
-      <div class="navbar navbar-expand-sm navbar-dark d-flex justify-content-between bg-danger m-0 p-0" id="small-menu">
+    <nav id="nav-barcs">
+      <div class="navbar navbar-expand-sm navbar-dark d-flex align-items-center justify-content-between bg-danger m-0 px-3 py-0" id="small-menu" role="navigation">
 
         <a href="#" class="navbar-brand position-relative d-flex">
-          <img src="../assets/logo.png" alt="logo" width="70" height="70" class="d-inline-block"/>
+          <img src="../assets/img/logo.png" alt="logo" width="70" height="70" class="d-inline-block"/>
           <div class="vertical-line bg-light align-middle"></div>
-          <div class="d-flex flex-column text-light fw-bold h4 mx-2 justify-content-start align-items-start">
-            <span>Teacher Su</span>
-            <span>Centre</span>
+          <div class="d-flex flex-column justify-content-start align-items-start text-light fw-bold h4 mx-2 my-0 ">
+            <span class="my-auto">Teacher Su</span>
+            <span class="my-auto">Centre</span>
           </div>
         </a>
 
-        <div class="align-self-centre" id="nav">
-          <ul class="navbar-nav">
-            <li class="navbar-item"><router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">Teacher Su Students</router-link></li>
-            <li class="navbar-item"><router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">Staff</router-link></li>
-            <li class="navbar-item"><router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">Alumni</router-link></li>
-            <li class="navbar-item">
-              <div class="d-flex align-item-center position-relative">
-                <div class="vertical-line bg-dark vertical-line1"></div>
-                <router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">Library</router-link>
-                <div class="vertical-line bg-dark vertical-line2"></div>
-              </div>
-            </li>
-            <li class="navbar-item"><router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">News</router-link></li>
-            <li class="navbar-item"><router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">Contacts</router-link></li>
-        </ul>
 
-        </div>
+        <ul class="navbar-nav">
+          <li class="navbar-item"><router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">Teacher Su Students</router-link></li>
+          <li class="navbar-item"><router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">Staff</router-link></li>
+          <li class="navbar-item"><router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">Alumni</router-link></li>
+          <li class="navbar-item">
+            <div class="d-flex align-item-center position-relative">
+              <div class="vertical-line bg-dark vertical-line1"></div>
+              <router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">Library</router-link>
+              <div class="vertical-line bg-dark vertical-line2"></div>
+            </div>
+          </li>
+          <li class="navbar-item"><router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">News</router-link></li>
+          <li class="navbar-item"><router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">Contacts</router-link></li>
+        </ul>
 
       </div>
 
-      <div class="navbar navbar-expand-lg navbar-dark bg-dark m-0 p-0" id="mega-menu">
+      <div class="navbar navbar-expand-lg navbar-dark bg-dark m-0 p-0" id="mega-menu" role="navigation">
 
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" id="nav-button">
           <div class="bg-light line1"></div>
@@ -61,7 +59,7 @@
             </li>
           </ul>
 
-          <ul class="navbar-nav m-auto">
+          <ul class="navbar-nav m-auto d-wrap">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Career Opportunities
@@ -99,24 +97,24 @@
 </template>
 
 <script>
-  export default {
-    name:"Navbar",
-  };
+export default {
+  name:"Navbar",
+};
 
-  import jQuery from "jquery";
-  const $ = jQuery;
-  window.$ = $;
+import jQuery from "jquery";
+const $ = jQuery;
+window.$ = $;
 
-  $(window).scroll(function(){
-    let getScrollY = $(this).scrollTop();
+$(window).scroll(function(){
+  let getScrollY = $(this).scrollTop();
 
-    if(getScrollY >= 100) $(".navbar").addClass('fixed-top');
-    else $(".navbar").removeClass('fixed-top');
-  });
+  if(getScrollY >= 100) $('#nav-barcs').addClass('fixed-top');
+  else $('#nav-barcs').removeClass('fixed-top');
+});
 
 </script>
 <style lang="scss" scoped>
-.navbar.fixed-top{
+#nav-barcs.fixed-top{
   animation: navani 0.5s linear;
   transition: all 0.5s;
 }
@@ -173,6 +171,31 @@
 @media only screen and (max-width: 1111px){
   .vertical-line{
     display: none;
+  }
+}
+
+@media only screen and (max-width: 652px){
+  #small-menu span{
+    font-size: 1.2rem;
+    margin: auto 0;
+  }
+
+  #small-menu .navbar-nav{
+    margin: auto 0;
+  }
+
+  #small-menu .navbar-nav li{
+    margin: auto 0px;
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  #small-menu .navbar-nav .navbar-item:nth-of-type(2){
+    display: gone;
+  }
+
+  #small-menu .navbar-nav .navbar-item router-link:nth-of-type(2){
+    display: gone;
   }
 }
 </style>
