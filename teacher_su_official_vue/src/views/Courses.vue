@@ -84,6 +84,11 @@
         </div>
 
         <div class="row">
+<<<<<<< HEAD
+=======
+            
+            <Header title=""></Header>
+>>>>>>> b3bd752185ad766affeeda8cf268709793f144ef
             <div class="col-12">
                 <h1 style="font-size: 3.1rem, font-family: 'Roboto Slab', serif" class="text-center">Want to study at <span class="text-danger fw-bold">Teacher Su</span>?</h1>
                 <Header title="Enroll now!" class="text-center"></Header>
