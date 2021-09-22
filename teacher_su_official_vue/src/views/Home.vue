@@ -202,7 +202,7 @@
           </div>
         </div>
       <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
-          <div class="mt-3">
+          <div class="my-3">
             <h3 style="font-family:'Roboto Slab', serif;" class="mb-4 fs-1">News</h3>
             
             <div class="d-flex flex-wrap justify-content-center align-items-center  enImg-con">

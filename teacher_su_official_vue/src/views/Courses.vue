@@ -22,7 +22,7 @@
 
         <div class="row mt-5 my-md-5">
             <Header title="Meet one of our students" class="text-center Banner-text p-0"></Header>
-            <div class="col-12 d-lg-flex align-items-center justify-content-center p-5">
+            <div class="col-12 d-lg-flex align-items-center justify-content-center p-3 p-md-5">
                 <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap p-3 ">
                     <div>
                         <img src="../assets/img/man.jpg" class="rev-img mb-2" alt="">
@@ -84,15 +84,11 @@
         </div>
 
         <div class="row">
-<<<<<<< HEAD
-=======
             
-            <Header title=""></Header>
->>>>>>> b3bd752185ad766affeeda8cf268709793f144ef
             <div class="col-12">
                 <h1 style="font-size: 3.1rem, font-family: 'Roboto Slab', serif" class="text-center">Want to study at <span class="text-danger fw-bold">Teacher Su</span>?</h1>
                 <Header title="Enroll now!" class="text-center"></Header>
-                <Form text_label="Comment"></Form>
+                <Form text_label="Comment" class="my-5"></Form>
             </div>
         </div>
 

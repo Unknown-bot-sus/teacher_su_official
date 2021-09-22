@@ -20,7 +20,7 @@
           <li class="navbar-item">
             <div class="d-flex align-item-center position-relative">
               <div class="vertical-line bg-dark vertical-line1"></div>
-              <router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">Library</router-link>
+              <a href="http://library.teachersucenter.com" class="nav-link text-light bg-transparent mx-2 menuitemcs">Library</a>
               <div class="vertical-line bg-dark vertical-line2"></div>
             </div>
           </li>
@@ -41,9 +41,9 @@
         <div class="navbar-collapse collapse fw-bold" id="nav">
           <ul class="navbar-nav m-auto">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <router-link class="nav-link dropdown-toggle" :to="{name:'Courses'}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Courses
-              </a>
+              </router-link>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               </div>
             </li>
@@ -51,9 +51,9 @@
 
           <ul class="navbar-nav m-auto">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <router-link class="nav-link dropdown-toggle" :to="{name:'Study'}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Study with us
-              </a>
+              </router-link>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               </div>
             </li>
@@ -61,9 +61,9 @@
 
           <ul class="navbar-nav m-auto d-wrap">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <router-link class="nav-link dropdown-toggle" :to="{name:'Career'}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Career Opportunities
-              </a>
+              </router-link>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               </div>
             </li>
@@ -71,9 +71,9 @@
 
           <ul class="navbar-nav m-auto">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <router-link class="nav-link dropdown-toggle" :to="{name:'Home'}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Community
-              </a>
+              </router-link>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               </div>
             </li>
@@ -81,9 +81,9 @@
 
           <ul class="navbar-nav m-auto">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <router-link class="nav-link dropdown-toggle" :to="{name:'About'}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 About
-              </a>
+              </router-link>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               </div>
             </li>

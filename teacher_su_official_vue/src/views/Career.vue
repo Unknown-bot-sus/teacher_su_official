@@ -21,7 +21,7 @@
         </div>
 
         <div class="row my-5">
-            <h1 class="header text-center">Employing <span class="text-danger">Teacher Su</span>'s graduate and students</h1>
+            <h1 class="header text-center py-5">Employing <span class="text-danger">Teacher Su</span>'s graduate and students</h1>
         </div>
 
         <div class="row bg-primary">
