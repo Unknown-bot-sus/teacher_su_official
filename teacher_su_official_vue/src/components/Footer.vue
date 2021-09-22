@@ -25,7 +25,7 @@
 
             <div class="col-lg-4 col-sm-6 col-12 d-flex flex-column align-items-start justify-content-space-between text-light">
                 <span>Phone: <a href="tel:09343434" target="_blank">09343434</a></span>
-                <span>Address: </span>
+                <span>Address: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book </span>
                 <span>Email: <a href="mailto:example@gmail.com" target="_blank">exmaple&commat;gmail.com</a></span>
             </div>
 
