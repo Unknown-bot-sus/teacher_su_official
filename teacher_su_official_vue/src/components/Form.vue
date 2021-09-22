@@ -118,7 +118,7 @@ textarea.form-control{
 
     transform: scale(0.98);
 
-   box-shadow: none;
+    box-shadow: none;
 
     color: transparent;
 
