@@ -1,19 +1,26 @@
 <template>
-    <div id="btn-primary" class="btn-icon">
-    </div>
+    
 
     <div class="btns show">
-        <div class="btn-icon"><i class="fab fa-viber"></i></div>
+        <a class="btn-icon" href="#" target="_blank"><i class="fab fa-viber"></i></a>
 
-        <div class="btn-icon"><i class="fab fa-facebook-messenger"></i></div>
+        <a class="btn-icon" href="#" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
 
-        <div class="btn-icon"><i class="fab fa-telegram"></i></div>
+        <a class="btn-icon" href="#" target="_blank"><i class="fab fa-telegram"></i></a>
     </div>
+
+    <div id="btn-primary" class="btn-icon" @click="popup"></div>
 </template>
 
 <script>
 export default {
-    naem: 'ContactFab'
+    name: 'ContactFab',
+    methods: {
+        popup(){
+            const btn_container = document.querySelector('.btns');
+            btn_container.classList.toggle('show');
+        }
+    }
 }
 </script>
 
@@ -21,8 +28,8 @@ export default {
 .btn-icon{
     width: 5rem;
     height: 5rem;
-    background-color: var(--light);
-    color: var(--light);
+    background-color: transparent;
+    color: transparent;
     font-size: 1.5rem;
     border-radius: 100%;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
@@ -34,6 +41,7 @@ export default {
     cursor: pointer;
     position: fixed;
     bottom: 50%;
+    transform: translateY(50%);
     right: -2.5rem;
 
     transition: all 0.3s;
@@ -41,18 +49,49 @@ export default {
     z-index: 100;
 }
 
-.btn-icon:nth-of-type(1){
-    background-color: blueviolet;
+a.btn-icon, a.btn-icon:visited{
+    text-decoration: none;
+}
+
+.btns.show .btn-icon:nth-of-type(1){
+    color: blueviolet;
     transform: translate(-4rem, -4rem);
 }
 
-.btn-icon:nth-of-type(2){
-    color: linear-gradient(
-        -110deg,
-        red,
-        blue
+.btns.show .btn-icon:nth-of-type(2){
+    background: linear-gradient(
+        45deg,
+        #0066ff 30%,
+        #de0b2e 70%
     );
 
-    transform: translate(-6rem, 0rem);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+
+    color: transparent;
+
+    transform: translate(-7rem, 3rem);
+}
+
+.btns.show .btn-icon:nth-of-type(3){
+    color: #0bde98;
+
+    transform: translate(-4rem, 10rem);
+}
+
+.fab{
+    font-size: 3rem;
+}
+
+.btns.btns.show + #btn-primary{
+    width: 15rem;
+    height: 20rem;
+    right: -7.5rem;
+    background-color: transparent;
+}
+
+#btn-primary{
+    background-color: var(--light);
 }
 </style>

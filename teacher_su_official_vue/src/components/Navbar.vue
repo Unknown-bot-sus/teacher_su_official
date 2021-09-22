@@ -1,7 +1,7 @@
 <template>
   <header id="home">
     <nav id="nav-barcs">
-      <div class="navbar navbar-expand-sm navbar-dark d-flex align-items-center justify-content-between bg-danger m-0 px-3 py-0" id="small-menu" role="navigation">
+      <div class="navbar navbar-expand navbar-dark d-flex align-items-center justify-content-between bg-danger m-0 px-3 py-0" id="small-menu" role="navigation">
 
         <a href="#" class="navbar-brand position-relative d-flex">
           <img src="../assets/img/logo.png" alt="logo" width="70" height="70" class="d-inline-block"/>
