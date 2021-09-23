@@ -38,7 +38,7 @@
                         <img src="../assets/img/man.jpg" class="rev-img mb-2" alt="">
                         <div>
                             <p class="fw-bold text-center m-0">Su Htet Zaw</p>
-                            <p class="text-muted text-center m-2">Founder and CEO</p>
+                            <p class="text-muted text-center m-2">Founder and CEOf`</p>
                         </div>
                     </div>
                     <div class="ms-md-5">

@@ -5,7 +5,7 @@
           <div class="col-lg-6 py-5 BannerTesti">
             <Header class="BannerText text-light fw-light pe-lg-5" title="A world-class education, wherever you are"></Header>
             <p class="text-light">Start studying online now</p>
-            <button class="btn btn-outline-light">REGISTER NOW <i class="fas fa-chevron-right"></i></button>
+            <button class="btn btn-outline-light" style="z-index:2;position:relative;">REGISTER NOW <i class="fas fa-chevron-right"></i></button>
           </div>
         </div>
 
@@ -242,24 +242,8 @@
           <div class="mt-3">
             <h3 style="font-family:'Roboto Slab', serif;" class="mb-4 fs-1">Events</h3>
             
-            <div class="d-flex flex-wrap justify-content-center align-items-center  enImg-con">
-              <div class="en-img">
-                <img src="../assets/img/en-img.jpeg" style="width:100%;height:100%;" alt="">
-              </div>
-              <div>
-                <p class="text-danger text-decoration-underline fw-bold fs-4">Master of Cybersecurity webinar</p>
-                <p class="fs-5 fw-bold">Monday 13 September 06:00pm</p>
-              </div>
-            </div>
-            <div class="d-flex flex-wrap justify-content-center align-items-center  enImg-con">
-              <div class="en-img">
-                <img src="../assets/img/en-img.jpeg" style="width:100%;height:100%;" alt="">
-              </div>
-              <div>
-                <p class="text-danger text-decoration-underline fw-bold fs-4">Master of Cybersecurity webinar</p>
-                <p class="fs-5 fw-bold">Monday 13 September 06:00pm</p>
-              </div>
-            </div>
+            <Events v-for="event in events" :key="event.id" :event_title="event.title" :event_time="event.time" :image="event.image"></Events>
+            
           </div>
         </div>
       <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
@@ -295,10 +279,30 @@
 <script>
 // @ is an alias to /src
 import Header from "../components/Header"
+import Events from '../components/Events'
 
 export default {
   name: 'Home',
-  components:{Header},
+  components:{Header,Events},
+  data() {
+    return {
+      events: [
+        {
+          id:1,
+          title:"Master of Cybersecurity webinar",
+          time:"Monday 13 September 06:00pm",
+          image:"../assets/img/en-img.jpeg"
+        },
+        {
+          id:2,
+          title:"Master of Cybersecurity webinar",
+          time:"Monday 13 September 06:00pm",
+          image:"../assets/img/en-img.jpeg"
+        }
+      ]
+      }
+  },
+  
   methods: {
     next() {
         
@@ -352,11 +356,7 @@ export default {
   height: 330px;
   padding: 10px 30px;
 }
-.en-img{
-   width: 200px;
-   height: 120px;
-   padding: 5px 10px;
-}
+
 .rev-con{
   height: 600px;
 }
@@ -394,6 +394,11 @@ export default {
   background: #fff;
   padding: 10px;
   border-radius: 20px;
+}
+.en-img{
+   width: 200px;
+   height: 120px;
+   padding: 5px 10px;
 }
 @media only screen and (min-width:1589px){
     .BannerTesti{
