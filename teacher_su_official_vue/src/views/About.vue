@@ -30,6 +30,30 @@
         </div>
       </div>
 
+       <div class="row mt-5 my-md-5">
+            <h2 class="header1 text-center mt-3">About <span class="text-danger">Teacher Su</span></h2>
+            <div class="col-12 d-lg-flex align-items-center justify-content-center p-1 p-md-5">
+                <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap p-3 ">
+                    <div>
+                        <img src="../assets/img/man.jpg" class="rev-img mb-2" alt="">
+                        <div>
+                            <p class="fw-bold text-center m-0">Su Htet Zaw</p>
+                            <p class="text-muted text-center m-2">Founder and CEO</p>
+                        </div>
+                    </div>
+                    <div class="ms-md-5">
+                        <p>
+                            ‘of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos ‘
+                        </p>
+                        <p>
+                            ‘of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos ‘
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
       <div class="row my-5">
             <h2 class="header1 text-center mt-3"><span class="text-danger">Teacher Su</span> Centre going Through Covid</h2>
 
@@ -80,6 +104,11 @@ import Header from "../components/Header"
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+    }
+      .rev-img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
     }
     @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
     .header1{

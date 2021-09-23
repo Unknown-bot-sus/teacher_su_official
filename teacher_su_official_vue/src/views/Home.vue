@@ -72,7 +72,7 @@
         </div>
       </div>
 
-      <div class="row my-5">
+      <div class="row my-5 ">
         <div class="col-12">
             <Header title="Start your studies at Teacher Su Centre" class="text-center mb-5 courses-text"></Header>
             <div class="d-flex align-items-center justify-content-evenly flex-column">
@@ -112,13 +112,74 @@
       <div class="row bg-primary my-5">
         <Header title="Our Success Stories" class="text-light text-center mt-5 courses-text"></Header>
 
-        <div class="col-12 py-5 pb-5">
-            <div id="aa" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-indicators">
+        <div class="col-12 py-5 pb-5 d-block d-lg-none">
+            <div id="aa" class="carousel slide" style="position:relative;" data-bs-ride="carousel">
+                  
+                  <div class="carousel-indicators" style="position:absolute;bottom:-50px;">
                     <button type="button" data-bs-target="#aa" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#aa" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#aa" data-bs-slide-to="2" aria-label="Slide 3"></button>
                   </div>
+                  
+                   <div class="carousel-inner">
+
+                      <div class="carousel-item active bg-primary">
+                          <div class="col-12 d-flex align-items-center justify-content-center mc-con">
+                            <div class="mc-box d-flex align-items-center justify-content-evenly flex-column p-3">
+                              <div class="mc-img">
+                                <img src="../assets/img/man.jpg" style="width:100%;height:100%;border-radius:50%;" alt="">
+                              </div>
+                              <div class="mc-text d-flex align-items-center justify-content-evenly flex-column text-center">
+                                <h3>James</h3>
+                                <p>"Eveniet voluptatibus voluptates suscipit minima, cum voluptatum ut dolor, sed facere corporis qui, ea quisquam quis odit minus nulla vitae. Sit, voluptatem."</p>
+                              </div>
+                              
+                               
+                              
+                            </div>
+                          </div>
+                      </div>
+                      <div class="carousel-item bg-primary">
+                          <div class="col-12 d-flex align-items-center justify-content-center mc-con">
+                            <div class="mc-box d-flex align-items-center justify-content-evenly flex-column p-3">
+                              <div class="mc-img">
+                                <img src="../assets/img/man.jpg" style="width:100%;height:100%;border-radius:50%;" alt="">
+                              </div>
+                              <div class="mc-text d-flex align-items-center justify-content-evenly flex-column text-center">
+                                <h3>James</h3>
+                                <p>"Eveniet voluptatibus voluptates suscipit minima, cum voluptatum ut dolor, sed facere corporis qui, ea quisquam quis odit minus nulla vitae. Sit, voluptatem."</p>
+                              </div>
+                              
+                               
+                              
+                            </div>
+                          </div>
+                      </div>
+                      <div class="carousel-item bg-primary">
+                          <div class="col-12 d-flex align-items-center justify-content-center mc-con">
+                            <div class="mc-box d-flex align-items-center justify-content-evenly flex-column p-3">
+                              <div class="mc-img">
+                                <img src="../assets/img/man.jpg" style="width:100%;height:100%;border-radius:50%;" alt="">
+                              </div>
+                              <div class="mc-text d-flex align-items-center justify-content-evenly flex-column text-center">
+                                 <h3>James</h3>
+                                <p>"Eveniet voluptatibus voluptates suscipit minima, cum voluptatum ut dolor, sed facere corporis qui, ea quisquam quis odit minus nulla vitae. Sit, voluptatem."</p>
+                              </div>
+                              
+                               
+                              
+                            </div>
+                          </div>
+                      </div>
+
+                      
+                   </div>
+            </div>
+        </div>
+        
+        <div class="col-12 py-5 pb-5 d-none d-lg-block">
+            <div id="aa" class="carousel slide" data-bs-ride="carousel">
+                 
                    <div class="carousel-inner">
 
                       <div class="carousel-item active bg-primary">
@@ -320,8 +381,20 @@ export default {
   left: -40px;
 }
 .BannerTesti{
-      padding-left: 100px!important;
-    }
+  padding-left: 100px!important;
+}
+.mc-img{
+  width: 100px;
+  height: 100px;
+}
+.mc-con{
+    border-radius: 20px;
+}
+.mc-box{
+  background: #fff;
+  padding: 10px;
+  border-radius: 20px;
+}
 @media only screen and (min-width:1589px){
     .BannerTesti{
       padding-left: 200px!important;
