@@ -23,64 +23,9 @@
         <div class="row my-5">
             <h1 class="header text-center py-5">Employing <span class="text-danger">Teacher Su</span>'s graduate and students</h1>
         </div>
-
-        <div class="row bg-primary">
-            <div class="col-12">
-                <div class="p-3 p-md-5 text-light">
-                    <h1 class="fw-bold">Main Teacher</h1>
-                    <p>   ‘of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos ‘</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="p-3 p-md-5">
-                    <h1 class="fw-bold">Main Teacher</h1>
-                    <p>   ‘of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos ‘</p>
-                </div>
-            </div>
-        </div>
-        <div class="row bg-primary">
-            <div class="col-12">
-                <div class="p-3 p-md-5 text-light">
-                    <h1 class="fw-bold">Main Teacher</h1>
-                    <p>   ‘of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos ‘</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="p-3 p-md-5 ">
-                    <h1 class="fw-bold">Main Teacher</h1>
-                    <p>   ‘of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos ‘</p>
-                </div>
-            </div>
-        </div>
-        <div class="row bg-primary">
-            <div class="col-12">
-                <div class="p-3 p-md-5 text-light">
-                    <h1 class="fw-bold">Main Teacher</h1>
-                    <p>   ‘of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos ‘</p>
-                </div>
-            </div>
-        </div>
-        <div class="row ">
-            <div class="col-12">
-                <div class="p-3 p-md-5 ">
-                    <h1 class="fw-bold">Main Teacher</h1>
-                    <p>   ‘of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos ‘</p>
-                </div>
-            </div>
-        </div>
-        <div class="row bg-primary">
-            <div class="col-12">
-                <div class="p-3 p-md-5 text-light">
-                    <h1 class="fw-bold">Main Teacher</h1>
-                    <p>   ‘of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos ‘</p>
-                </div>
-            </div>
-        </div>
-
+        
+        <Job v-for="(job, index) in data" :key=index :bg="color_var[0][index % 2]" :color="color_var[1][index % 2]" :job_title="job.title" :description="job.description"></Job>
+        
         <br>
     <br>
     <br>
@@ -91,13 +36,61 @@
 
 <script>
 import Header from "../components/Header.vue"
-    export default {
-        name:'Career',
-        components:{Header}
+import Job from '../components/Job'
+export default {
+    name:'Career',
+    data(){
+        return{
+            data: [],
+            color_var: []
+        }
+    },
+
+    components:{
+        Header, 
+        Job,
+    },
+
+    created(){
+
+        // Data will be replaced with data from api
+        this.data = [
+            {
+                title: 'Main teacher',
+                description: 'of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos '
+            },
+            {
+                title: 'Assistant teacher',
+                description: 'of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos '
+            },
+            {
+                title: 'Tech team',
+                description: 'of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos '
+            },
+            {
+                title: 'Designer',
+                description: 'of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos '
+            },
+        ];
+
+        this.color_var = [
+            ['bg-primary', 'bg-light'],
+            ['text-light', 'text-dark']
+        ]
     }
+}
 </script>
 
 <style scoped>
+.job-container:nth-of-type(even){
+    background-color: var(--primary);
+    color: var(--dark);
+}
+
+.job-container:nth-of-type(odd){
+    background-color: var(--primary);
+    color: var(--light);
+}
 
    .banner{
         background-color: rgba(148, 148, 148, 0.459);

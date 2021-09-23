@@ -1,7 +1,7 @@
 <template>
     
 
-    <div class="btns show">
+    <div class="btns">
         <a class="btn-icon" href="#" target="_blank"><i class="fab fa-viber"></i></a>
 
         <a class="btn-icon" href="#" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
@@ -9,7 +9,7 @@
         <a class="btn-icon" href="#" target="_blank"><i class="fab fa-telegram"></i></a>
     </div>
 
-    <div id="btn-primary" class="btn-icon" @click="popup"></div>
+    <div id="btn-primary" class="btn-icon" @click="popup"><i class="fad fa-chevron-left"></i></div>
 </template>
 
 <script>
@@ -19,7 +19,25 @@ export default {
         popup(){
             const btn_container = document.querySelector('.btns');
             btn_container.classList.toggle('show');
+        },
+        hide(){
+            const btn_container = document.querySelector('.btns');
+            btn_container.classList.remove('show');
+        },
+        getcontainer(){
+            return document.querySelector('.btns');
+        },
+        getbtn(){
+            return document.querySelector('#btn-primary');
         }
+    },
+    created(){
+        const scope = document.querySelector('body');
+        scope.addEventListener('click', (e)=>{
+            if (e.target.offsetParent != this.getcontainer() && e.target.offsetParent != this.getbtn()){
+                this.hide();
+            }
+        })
     }
 }
 </script>
@@ -32,7 +50,7 @@ export default {
     color: transparent;
     font-size: 1.5rem;
     border-radius: 100%;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.5);
     
     display: flex;
     justify-content: center;
@@ -74,6 +92,11 @@ a.btn-icon, a.btn-icon:visited{
     transform: translate(-7rem, 3rem);
 }
 
+#btn-primary.btn-icon{
+    color: black;
+    display: flex;
+    justify-content: start;
+}
 .btns.show .btn-icon:nth-of-type(3){
     color: #0bde98;
 

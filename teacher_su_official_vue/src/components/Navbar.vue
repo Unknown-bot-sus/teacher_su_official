@@ -97,20 +97,24 @@
 </template>
 
 <script>
-export default {
-  name:"Navbar",
-};
-
 import jQuery from "jquery";
 const $ = jQuery;
 window.$ = $;
 
-$(window).scroll(function(){
-  let getScrollY = $(this).scrollTop();
+export default {
+  name:"Navbar",
 
-  if(getScrollY >= 100) $('#nav-barcs').addClass('fixed-top');
-  else $('#nav-barcs').removeClass('fixed-top');
-});
+  created(){
+  $(window).scroll(function(){
+    let getScrollY = $(this).scrollTop();
+
+    if(getScrollY >= 100) $('#nav-barcs').addClass('fixed-top');
+    else $('#nav-barcs').removeClass('fixed-top');
+    });
+  }
+};
+
+
 
 </script>
 <style lang="scss" scoped>
