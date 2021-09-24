@@ -6,7 +6,7 @@
         <a href="#" class="navbar-brand position-relative d-flex">
           <img src="../assets/img/logo.png" alt="logo" width="70" height="70" class="d-inline-block"/>
           <div class="vertical-line bg-light align-middle"></div>
-          <div class="d-flex flex-column justify-content-start align-items-start text-light fw-bold h4 mx-2 my-0 ">
+          <div class="d-flex flex-column justify-content-start align-items-start text-light fw-bold mx-2 my-0 ">
             <span class="my-auto">Teacher Su</span>
             <span class="my-auto">Centre</span>
           </div>
@@ -105,12 +105,12 @@ export default {
   name:"Navbar",
 
   created(){
-  $(window).scroll(function(){
-    let getScrollY = $(this).scrollTop();
+    $(window).scroll(function(){
+      let getScrollY = $(this).scrollTop();
 
-    if(getScrollY >= 100) $('#nav-barcs').addClass('fixed-top');
-    else $('#nav-barcs').removeClass('fixed-top');
-    });
+      if(getScrollY >= 100) $('#nav-barcs').addClass('fixed-top');
+      else $('#nav-barcs').removeClass('fixed-top');
+      });
   }
 };
 
@@ -179,8 +179,13 @@ export default {
 }
 
 @media only screen and (max-width: 652px){
+  .navbar-brand img{
+    width: 30px;
+    height: 30px;
+  }
+
   #small-menu span{
-    font-size: 1.2rem;
+    font-size: 10px;
     margin: auto 0;
   }
 
@@ -188,18 +193,16 @@ export default {
     margin: auto 0;
   }
 
-  #small-menu .navbar-nav li{
+  #small-menu .navbar-nav .navbar-item{
     margin: auto 0px;
     padding: 0;
-    font-size: 1rem;
+    font-size: 10px;
   }
 
-  #small-menu .navbar-nav .navbar-item:nth-of-type(2){
-    display: gone;
-  }
-
-  #small-menu .navbar-nav .navbar-item router-link:nth-of-type(2){
-    display: gone;
+  #small-menu .navbar-nav .navbar-item:nth-of-type(1),
+  #small-menu .navbar-nav .navbar-item:nth-of-type(2),
+  #small-menu .navbar-nav .navbar-item:last-of-type{
+    display: none;
   }
 }
 </style>

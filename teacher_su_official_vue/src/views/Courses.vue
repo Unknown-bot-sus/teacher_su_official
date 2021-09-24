@@ -20,6 +20,22 @@
             </div>
         </div>
 
+        <div class="row flex-column justify-content-center align-items-center mx-3 mt-5 my-md-5 py-0 px-0">
+            <div class="d-flex justify-content-start my-0 mx-0 p-0">
+                <button id="free" class="btn course-btn">Free classes</button>
+                <button id="ylearner" class="btn course-btn">Young learners</button>
+                <button id="ielts" class="btn course-btn">IELTS</button>
+                <button id="others" class="btn course-btn">Others</button>
+            </div>
+
+            <div class="d-flex justify-content-between flex-wrap align-items-center py-sm-4 py-0 px-0 courses-container">
+                <Course v-for="(course, index) in data" :key="index" :title="course.title" :description="course.description" link="#"></Course>
+                <div class="row col-12 justify-content-center align-items-center mt-5">
+                    <button class="btn view-btn">View All</button>
+                </div>
+            </div>
+        </div>
+
         <div class="row mt-5 my-md-5">
             <Header title="Meet one of our students" class="text-center Banner-text p-0"></Header>
             <div class="col-12 d-lg-flex align-items-center justify-content-center p-3 p-md-5">
@@ -98,54 +114,148 @@
 <script>
 import Header from "../components/Header"
 import Form from "../components/Form"
+import Course from '../components/Course'
 
 export default {
     name:'Courses',
-    components:{
-        Header,
-        Form,
-        Header,
+    components:{Header,Form,Header,Course},
+    data(){
+        return{
+            data: []
         }
+    },
+
+    methods:{
+        get_mincourse(array, max_index=4){
+            try{
+                return array.slice(0, max_index)
+            } catch{
+                return this.rendercourse(array, --max_index)
+            }
+        }
+    },
+
+    created(){
+        this.data = [
+            {
+                title: "Grammer for starters",
+                description: "Lorem Ipsum is simply dummy text of the printing and typesetting Lorem Ipsum is simply dummy text of the printing and typesetting."
+            },
+            {
+                title: "Grammer for starters",
+                description: "Lorem Ipsum is simply dummy text of the printing and typesetting Lorem Ipsum is simply dummy text of the printing and typesetting."
+            },
+            {
+                title: "Grammer for starters",
+                description: "Lorem Ipsum is simply dummy text of the printing and typesetting Lorem Ipsum is simply dummy text of the printing and typesetting."
+            },
+        ];
+    }
 }
 </script>
 
 <style scoped>
-    .Banner-img{
-        background-image: url(https://images.unsplash.com/photo-1501349800519-48093d60bde0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
-        background-size: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    .Banner{
-        background-color: rgba(74, 75, 75, 0.466);
-        height: 20vh;
-        min-height: 30vh;
-    }
-    .Banner-text{
-        padding: 10px;
-    }
-    .rev-img{
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-    }
+.Banner-img{
+    background-image: url(https://images.unsplash.com/photo-1501349800519-48093d60bde0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Banner{
+    background-color: rgba(74, 75, 75, 0.466);
+    height: 20vh;
+    min-height: 30vh;
+}
+
+.courses-container{
+    border: 1px solid var(--dark);
+}
+.course-btn{
+    width: 10rem;
+    border: 1px solid var(--dark);
+    border-radius: 0;
+
+    transition: font-weight 0s;
+    margin: 0;
+}
+
+.view-btn{
+    width: 10rem;
+    padding: 5px 2rem;
+    border: 1px solid var(--danger);
+    color: var(--danger);
+    text-transform: uppercase;
+}
+
+.course-btn:hover{
+    font-weight: 900;
+}
+#free.course-btn:hover{
+    border-color: var(--lightgreen);
+    color: var(--lightgreen);
+}
+#ylearner.course-btn:hover{
+    border-color: var(--danger);
+    color: var(--danger);
+}
+#ielts.course-btn:hover{
+    border-color: var(--primary);
+    color: var(--primary);
+}
+#others.course-btn:hover{
+    border-color: skyblue;
+    color: skyblue;
+}
+
+.course-btn:focus{
+    box-shadow: none;
+}
+
+#free.course-btn:focus{
+    background-color: var(--lightgreen);
+    color: var(--light);
+}
+#ylearner.course-btn:focus{
+    background-color: var(--danger);
+    color: var(--light);
+}
+#ielts.course-btn:focus{
+    background-color: var(--primary);
+    color: var(--light);
+}
+#others.course-btn:focus{
+    background-color: skyblue;
+    color: var(--light);
+}
+.Banner-text{
+    padding: 10px;
+}
+.rev-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.st-img{
+    width: 200px;
+    height: 120px;
+}
+.st-con{
+    min-width: 300px;
+}
+@media only screen and (max-width: 400px){
+.Banner-text{
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+}
+@media only screen and (max-width: 629px){
     .st-img{
-        width: 200px;
-        height: 120px;
+        width: 140px;
+        height: 70px;
     }
-    .st-con{
-        min-width: 300px;
+
+    .courses-container{
+        padding-top: 0;
     }
-    @media only screen and (max-width: 400px){
-    .Banner-text{
-        font-weight: normal;
-        font-size: 1.5rem;
-    }
-    }
-    @media only screen and (max-width: 629px){
-        .st-img{
-            width: 140px;
-            height: 70px;
-        }
-    }
+}
 </style>

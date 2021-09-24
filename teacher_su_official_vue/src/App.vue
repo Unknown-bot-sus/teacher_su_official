@@ -34,11 +34,12 @@ $dark:#000000;
   --secondary: #363636;
   --light: #FFFFFF;
   --dark: #000000;
+  --lightgreen: #0bde98;
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-    @import "~bootstrap/scss/bootstrap";
-    .active{
-      background: #000;
-    }
+@import "~bootstrap/scss/bootstrap";
+.active{
+  background: #000;
+}
 </style>

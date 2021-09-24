@@ -15,6 +15,7 @@
 <script>
 export default {
     name: 'ContactFab',
+    
     methods: {
         popup(){
             const btn_container = document.querySelector('.btns');
@@ -31,6 +32,7 @@ export default {
             return document.querySelector('#btn-primary');
         }
     },
+
     created(){
         const scope = document.querySelector('body');
         scope.addEventListener('click', (e)=>{
