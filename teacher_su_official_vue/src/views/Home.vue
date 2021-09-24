@@ -291,7 +291,7 @@ export default {
           id:1,
           title:"Master of Cybersecurity webinar",
           time:"Monday 13 September 06:00pm",
-          image:"../assets/img/en-img.jpeg"
+          image: "../assets/img/en-img.jpeg"
         },
         {
           id:2,

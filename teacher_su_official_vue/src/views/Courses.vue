@@ -22,16 +22,16 @@
 
         <div class="row flex-column justify-content-center align-items-center mx-3 mt-5 my-md-5 py-0 px-0">
             <div class="d-flex justify-content-start my-0 mx-0 p-0">
-                <button id="free" class="btn course-btn">Free classes</button>
-                <button id="ylearner" class="btn course-btn">Young learners</button>
-                <button id="ielts" class="btn course-btn">IELTS</button>
-                <button id="others" class="btn course-btn">Others</button>
+                <button id="free" class="btn course-btn active" @click="rendercourse(data[0])">Free classes</button>
+                <button id="ylearner" class="btn course-btn" @click="rendercourse(data[1])">Young learners</button>
+                <button id="ielts" class="btn course-btn" @click="rendercourse(data[2])">IELTS</button>
+                <button id="others" class="btn course-btn" @click="rendercourse(data[3])">Others</button>
             </div>
 
-            <div class="d-flex justify-content-between flex-wrap align-items-center py-sm-4 py-0 px-0 courses-container">
-                <Course v-for="(course, index) in data" :key="index" :title="course.title" :description="course.description" link="#"></Course>
+            <div class="d-flex justify-content-center flex-wrap align-items-center py-sm-4 py-0 px-0 courses-container">
+                <Course v-for="(course, index) in min_courses" :key="index" :title="course.title" :description="course.description" link="#"></Course>
                 <div class="row col-12 justify-content-center align-items-center mt-5">
-                    <button class="btn view-btn">View All</button>
+                    <button class="btn view-btn" v-show="viewbtn_shown" @click="renderall()">View All</button>
                 </div>
             </div>
         </div>
@@ -121,34 +121,93 @@ export default {
     components:{Header,Form,Header,Course},
     data(){
         return{
-            data: []
+            data: [],
+            min_courses: [],
+            all_courses: [],
+            viewbtn_shown: true,
         }
     },
 
     methods:{
         get_mincourse(array, max_index=4){
             try{
-                return array.slice(0, max_index)
-            } catch{
-                return this.rendercourse(array, --max_index)
+                return array.slice(0, max_index);
+            } catch {
+                return this.get_mincourse(array, --max_index);
             }
+        },
+
+        rendercourse(array){
+            this.all_courses = array;
+            this.min_courses = this.get_mincourse(this.all_courses);
+            if(this.all_courses.length <= 4){
+                this.viewbtn_shown = false;
+            } else {
+                this.viewbtn_shown = true;
+            }
+        },
+
+        renderall(){
+            this.min_courses = this.all_courses;
+            this.viewbtn_shown = false;
         }
+
     },
 
     created(){
         this.data = [
-            {
-                title: "Grammer for starters",
-                description: "Lorem Ipsum is simply dummy text of the printing and typesetting Lorem Ipsum is simply dummy text of the printing and typesetting."
-            },
-            {
-                title: "Grammer for starters",
-                description: "Lorem Ipsum is simply dummy text of the printing and typesetting Lorem Ipsum is simply dummy text of the printing and typesetting."
-            },
-            {
-                title: "Grammer for starters",
-                description: "Lorem Ipsum is simply dummy text of the printing and typesetting Lorem Ipsum is simply dummy text of the printing and typesetting."
-            },
+            [
+                {
+                    title: "Grammar for starters",
+                    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                }
+            ],
+
+            [
+                {
+                    title: "Starters",
+                    description: "Pre A1 Starters is the first of three Cambridge English Qualifications designed for young learners. These tests introduce children to everyday written and spoken English and are an excellent way for them to gain confidence and improve their English."
+                },
+                {
+                    title: "Movers",
+                    description: "A1 Movers is the second of three Cambridge English Qualifications designed for young learners. These tests introduce children to everyday written and spoken English and are an excellent way for them to gain confidence and improve their English."
+                },
+                {
+                    title: "Flyers",
+                    description: "A2 Flyers is the third of three Cambridge English Qualifications designed for young learners. These tests introduce children to everyday written and spoken English and are an excellent way for them to gain confidence and improve their English."
+                },
+                {
+                    title: "KET",
+                    description:   `An A2 Key qualification is proof of your ability to use English to communicate in simple situations.
+The exam tests all four English language skills – reading, writing, listening and speaking. It should give you the confidence to go on and study for higher-level exams such as  B1 Preliminary and B2 First.`
+                },
+                {
+                    title: "PET",
+                    description: `A B1 Preliminary qualification shows that you have mastered the basics of English and now have practical language skills for everyday use.
+This exam is the logical step in your language learning journey between A2 Key and B2 First.`
+                },
+            ],
+
+            [
+                {
+                    title: "IELTS",
+                    description: ` IELTS (International English Language Testing System)
+Educational institutions, employers, professional registration bodies and government immigration agencies often require proof of English language skills as part of their recruitment or admission procedures. IELTS is widely accepted for these purposes.
+IELTS is designed to test the language ability of people who want to study or work where English is used as the language of communication. Over 3.5 million tests are taken each year.`
+                },    
+            ],
+
+            [
+                {
+                    title: "Dulingo",
+                    description: `The Duolingo English Test is a modern language proficiency tool designed for today's international students and institutions. It offers an English proficiency score, video interview, and writing sample in an accessible, efficient, and secure testing experience.`
+                },
+                {
+                   title: "Speak English Professionally & English Grammar (Intermediate)",
+                   description: `A B1 Preliminary qualification shows that you have mastered the basics of English and now have practical language skills for everyday use.
+This exam is the logical step in your language learning journey between A2 Key and B2 First.` 
+                }
+            ]
         ];
     }
 }
@@ -211,19 +270,19 @@ export default {
     box-shadow: none;
 }
 
-#free.course-btn:focus{
+#free.active.course-btn{
     background-color: var(--lightgreen);
     color: var(--light);
 }
-#ylearner.course-btn:focus{
+#ylearner.active.course-btn{
     background-color: var(--danger);
     color: var(--light);
 }
-#ielts.course-btn:focus{
+#ielts.active.course-btn{
     background-color: var(--primary);
     color: var(--light);
 }
-#others.course-btn:focus{
+#others.active.course-btn{
     background-color: skyblue;
     color: var(--light);
 }
