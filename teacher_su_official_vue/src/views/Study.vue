@@ -71,6 +71,22 @@
                     </div>
                 </div>
         </div>
+
+
+
+        <div class="containercs">
+            <div class="split left">
+                <router-link to="#" class="btncs bg-transparent">How to apply</router-link>
+            </div>
+
+            <div class="split right">
+                <router-link to="#" class="btncs bg-transparent">New class</router-link>
+            </div>
+        </div>
+
+
+
+
         <div class="row my-5 d-flex align-items-center justify-content-center">
             <Header title="Extra Curriculum activites" class="text-center courses-text mb-5"></Header>
             <div class="col-12 col-sm-8 px-4 px-md-5">
@@ -108,11 +124,9 @@
             <Header class="text-center mb-5 courses-text" title="Scholarships"></Header>
 
             <div class="col-12 flex-wrap d-flex align-items-center justify-content-center">
-
-                
-                    
-                        <button class="btn btn-danger p-3 fs-1 fw-bold mx-5 rounded rounded-3 mb-3 s-btn">Merit-based scholarhip</button>
-                        <button class="btn btn-outline-danger p-3 fs-1 fw-bold mx-5 rounded rounded-3 mb-3 s-btn">Financial-aid scholarhip</button>
+ 
+                <button class="btn btn-danger p-3 fs-1 fw-bold mx-5 rounded rounded-3 mb-3 s-btn">Merit-based scholarhip</button>
+                <button class="btn btn-outline-danger p-3 fs-1 fw-bold mx-5 rounded rounded-3 mb-3 s-btn">Financial-aid scholarhip</button>
                     
                
             </div>
@@ -124,11 +138,13 @@
 import Header from "../components/Header.vue"
     export default {
         name:'Study',
-        components:{Header}
+        components:{Header},
     }
 </script>
 
 <style scoped>
+
+
     .banner{
         background-color: rgba(148, 148, 148, 0.459);
         height: 40vh;
@@ -140,6 +156,90 @@ import Header from "../components/Header.vue"
         background-position: center;
         background-repeat: no-repeat;
     }
+
+    /* Start split landing page */
+:root{
+    --hover-width:75%;
+    --other-width:25%;
+}
+
+.containercs{
+    width: 100%;
+    height: 50rem;
+    position: relative;
+}
+
+.split{
+    width: 50%;
+    height: 100%;
+    
+    position: absolute;
+}
+
+.split.left{
+    left: 0;
+    background-image: url(../assets/img/slide_left.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.right{
+    right: 0;
+    background-image: url(../assets/img/slide_right.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.left, .split.right{
+    transition: all 1000ms ease-in-out;
+}
+
+.btncs{
+    width: 15rem;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem;
+    
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    
+    transform: translate(-50%);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.split.left .btn:hover{
+	background-color: var(--primary);
+	color: var(--light);
+	transition: 0.3s;
+	
+}
+
+.split.right .btn:hover{
+	background-color: var(--danger);
+	border:var(--light);
+
+	transition: 0.3s;
+}
+
+.hover-left .left{
+	width: var(--hover-width);
+}
+.hover-left .right{
+	width: var(--other-width);
+}
+
+.hover-right .left{
+	width: var(--other-width);
+}
+.hover-right .right{
+	width: var(--hover-width);
+}
+
     
     @media only screen and (min-width: 757px){
         .banner-text{

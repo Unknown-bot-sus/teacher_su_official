@@ -291,11 +291,7 @@ export default {
           id:1,
           title:"Master of Cybersecurity webinar",
           time:"Monday 13 September 06:00pm",
-<<<<<<< HEAD
-          image: "../assets/img/en-img.jpeg"
-=======
           image:"https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
->>>>>>> fc5dfa259c25c2d2f9d3d399661519748b71cda9
         },
         {
           id:2,
