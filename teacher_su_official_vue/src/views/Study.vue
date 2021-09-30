@@ -124,17 +124,11 @@
             <Header class="text-center mb-5 courses-text" title="Scholarships"></Header>
 
             <div class="col-12 flex-wrap d-flex align-items-center justify-content-center">
-<<<<<<< HEAD
- 
-                <button class="btn btn-danger p-3 fs-1 fw-bold mx-5 rounded rounded-3 mb-3 s-btn">Merit-based scholarhip</button>
-                <button class="btn btn-outline-danger p-3 fs-1 fw-bold mx-5 rounded rounded-3 mb-3 s-btn">Financial-aid scholarhip</button>
-=======
 
                 
                     
                         <button @click="activeTab = 'meritBase'" class="btn btn-outline-danger p-3 fs-1 fw-bold mx-5 rounded rounded-3 mb-3 s-btn">Merit-based scholarhip</button>
                         <button @click="activeTab = 'finance'" class="btn btn-outline-danger p-3 fs-1 fw-bold mx-5 rounded rounded-3 mb-3 s-btn">Financial-aid scholarhip</button>
->>>>>>> 3cd20c1378cffb75e0b9e4171f5ca1ec93668f44
                     
                         
             </div>
