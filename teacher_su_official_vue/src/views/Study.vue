@@ -111,10 +111,13 @@
 
                 
                     
-                        <button class="btn btn-danger p-3 fs-1 fw-bold mx-5 rounded rounded-3 mb-3 s-btn">Merit-based scholarhip</button>
-                        <button class="btn btn-outline-danger p-3 fs-1 fw-bold mx-5 rounded rounded-3 mb-3 s-btn">Financial-aid scholarhip</button>
+                        <button @click="activeTab = 'meritBase'" class="btn btn-outline-danger p-3 fs-1 fw-bold mx-5 rounded rounded-3 mb-3 s-btn">Merit-based scholarhip</button>
+                        <button @click="activeTab = 'finance'" class="btn btn-outline-danger p-3 fs-1 fw-bold mx-5 rounded rounded-3 mb-3 s-btn">Financial-aid scholarhip</button>
                     
-               
+                        
+            </div>
+            <div class="col-12">
+                <component :is ="activeTab" />
             </div>
         </div>
     </div>
@@ -122,9 +125,17 @@
 
 <script>
 import Header from "../components/Header.vue"
+import meritBase from "../components/meritBase.vue"
+import finance from "../components/finance.vue"
+
     export default {
         name:'Study',
-        components:{Header}
+        components:{Header,meritBase,finance},
+        data() {
+            return {
+                activeTab: 'meritBase'
+            }
+        },
     }
 </script>
 
@@ -141,6 +152,11 @@ import Header from "../components/Header.vue"
         background-repeat: no-repeat;
     }
     
+    .s-btn:focus{
+        background: var(--danger);
+        color: white;
+    }
+
     @media only screen and (min-width: 757px){
         .banner-text{
             font-size: 4rem;

@@ -113,12 +113,12 @@
         <Header title="Our Success Stories" class="text-light text-center mt-5 courses-text"></Header>
 
         <div class="col-12 py-5 pb-5 d-block d-lg-none">
-            <div id="aa" class="carousel slide" style="position:relative;" data-bs-ride="carousel">
+            <div id="bb" class="carousel slide" style="position:relative;" data-bs-ride="carousel">
                   
                   <div class="carousel-indicators" style="position:absolute;bottom:-50px;">
-                    <button type="button" data-bs-target="#aa" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#aa" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#aa" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#bb" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#bb" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#bb" data-bs-slide-to="2" aria-label="Slide 3"></button>
                   </div>
                   
                    <div class="carousel-inner">
