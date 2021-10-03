@@ -1,7 +1,7 @@
 <template>
 <div class="container-fluid">
       <div class="row hero-banner position-relative">
-        <div class="col-12 col-lg-12 py-5 d-flex align-items-center  homebanner-containercs">
+        <div class="col-12 col-lg-12 py-3 py-md-5 d-flex align-items-center  homebanner-containercs">
           <div class="col-lg-6 py-5 BannerTesti">
             <Header class="BannerText text-light fw-light pe-lg-5" title="A world-class education, wherever you are"></Header>
             <p class="text-light">Start studying online now</p>
@@ -242,7 +242,7 @@
           <div class="mt-3">
             <h3 style="font-family:'Roboto Slab', serif;" class="mb-4 fs-1">Events</h3>
             
-            <Events v-for="event in events" :key="event.id" :event_title="event.title" :event_time="event.time" :image="event.image"></Events>
+            <LatestEvents></LatestEvents>
             
           </div>
         </div>
@@ -250,24 +250,7 @@
           <div class="my-3">
             <h3 style="font-family:'Roboto Slab', serif;" class="mb-4 fs-1">News</h3>
             
-            <div class="d-flex flex-wrap justify-content-center align-items-center  enImg-con">
-              <div class="en-img">
-                <img src="../assets/img/en-img.jpeg" style="width:100%;height:100%;" alt="">
-              </div>
-              <div>
-                <p class="text-danger text-decoration-underline fw-bold fs-4">Master of Cybersecurity webinar</p>
-                <p class="fs-5 fw-bold">Monday 13 September 06:00pm</p>
-              </div>
-            </div>
-            <div class="d-flex flex-wrap justify-content-center align-items-center  enImg-con">
-              <div class="en-img">
-                <img src="../assets/img/en-img.jpeg" style="width:100%;height:100%;" alt="">
-              </div>
-              <div>
-                <p class="text-danger text-decoration-underline fw-bold fs-4">Master of Cybersecurity webinar</p>
-                <p class="fs-5 fw-bold">Monday 13 September 06:00pm</p>
-              </div>
-            </div>
+            <LatestNews></LatestNews>
           </div>
         </div>
       </div>
@@ -279,33 +262,13 @@
 <script>
 // @ is an alias to /src
 import Header from "../components/Header"
-import Events from '../components/Events'
+import LatestEvents from '../components/LatestEvents'
+import LatestNews from '../components/LatestNews'
 
 export default {
   name: 'Home',
-  components:{Header,Events},
-  data() {
-    return {
-      events: [
-        {
-          id:1,
-          title:"Master of Cybersecurity webinar",
-          time:"Monday 13 September 06:00pm",
-<<<<<<< HEAD
-          image: "../assets/img/en-img.jpeg"
-=======
-          image:"https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
->>>>>>> fc5dfa259c25c2d2f9d3d399661519748b71cda9
-        },
-        {
-          id:2,
-          title:"Master of Cybersecurity webinar",
-          time:"Monday 13 September 06:00pm",
-          image:"https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-        }
-      ]
-      }
-  },
+  components:{Header,LatestEvents,LatestNews},
+  
   
   methods: {
     next() {
