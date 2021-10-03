@@ -1,7 +1,7 @@
 <template>
     <div class="d-flex flex-column course-container mx-auto">
         <h3 v-text="classname" class="fw-bold h4 titlecs"></h3>
-        <span v-text="description" class="description"></span>
+        <span v-text="classdescription" class="description"></span>
         <div class="line"></div>
         <router-link :to="link" class="bg-transparent link">
             Read More <i><i class="fad fa-chevron-right "></i></i>
@@ -27,6 +27,8 @@ export default {
     created(){
         this.classname = this.title;
         if(this.classname.length > 20) this.classname = this.classname.slice(0, 20) + "...";
+        this.classdescription = this.description;
+        if(this.classdescription.length > 200) this.classdescription = this.classdescription.slice(0, 200) + " ...Read More";
     }
 }
 </script>

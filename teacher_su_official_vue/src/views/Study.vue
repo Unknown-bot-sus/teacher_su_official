@@ -72,21 +72,6 @@
                 </div>
         </div>
 
-
-
-        <div class="containercs">
-            <div class="split left">
-                <router-link to="#" class="btncs bg-transparent">How to apply</router-link>
-            </div>
-
-            <div class="split right">
-                <router-link to="#" class="btncs bg-transparent">New class</router-link>
-            </div>
-        </div>
-
-
-
-
         <div class="row my-5 d-flex align-items-center justify-content-center">
             <Header title="Extra Curriculum activites" class="text-center courses-text mb-5"></Header>
             <div class="col-12 col-sm-8 px-4 px-md-5">
@@ -149,14 +134,28 @@ import finance from "../components/finance.vue"
         components:{Header,meritBase,finance},
         data() {
             return {
-                activeTab: 'meritBase'
+                activeTab: 'meritBase',
+                dir: 0,
+            }
+        },
+        methods: {
+            getleft(){
+                return document.querySelector('.left');
+            },
+            getright(){
+                return document.querySelector('.right');
+            },
+            getcontainer(){
+                return document.querySelector('.containercs');
             }
         },
     }
 </script>
 
 <style scoped>
-
+    *{
+        box-sizing: border-box;
+    }
 
     .banner{
         background-color: rgba(148, 148, 148, 0.459);
@@ -169,90 +168,6 @@ import finance from "../components/finance.vue"
         background-position: center;
         background-repeat: no-repeat;
     }
-
-    /* Start split landing page */
-:root{
-    --hover-width:75%;
-    --other-width:25%;
-}
-
-.containercs{
-    width: 100%;
-    height: 50rem;
-    position: relative;
-}
-
-.split{
-    width: 50%;
-    height: 100%;
-    
-    position: absolute;
-}
-
-.split.left{
-    left: 0;
-    background-image: url(../assets/img/slide_left.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.split.right{
-    right: 0;
-    background-image: url(../assets/img/slide_right.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.split.left, .split.right{
-    transition: all 1000ms ease-in-out;
-}
-
-.btncs{
-    width: 15rem;
-    font-size: 1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 1.5rem;
-    
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    
-    transform: translate(-50%);
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.split.left .btn:hover{
-	background-color: var(--primary);
-	color: var(--light);
-	transition: 0.3s;
-	
-}
-
-.split.right .btn:hover{
-	background-color: var(--danger);
-	border:var(--light);
-
-	transition: 0.3s;
-}
-
-.hover-left .left{
-	width: var(--hover-width);
-}
-.hover-left .right{
-	width: var(--other-width);
-}
-
-.hover-right .left{
-	width: var(--other-width);
-}
-.hover-right .right{
-	width: var(--hover-width);
-}
-
     
     .s-btn:focus{
         background: var(--danger);

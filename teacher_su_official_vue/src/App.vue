@@ -1,6 +1,5 @@
 <template>
   <div class="app">
-    <Navbar></Navbar>
     <ContactFab></ContactFab>
     <router-view></router-view>
     <Footer></Footer>
@@ -8,7 +7,6 @@
 </template>
 
 <script>
-import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import ContactFab from './components/ContactFab'
   export default {
