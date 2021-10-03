@@ -22,213 +22,84 @@
               <div class="vertical-line bg-dark vertical-line2"></div>
             </div>
           </li>
-          <li class="navbar-item"><router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">News</router-link></li>
+          <li class="navbar-item"><router-link :to="{name:'Announcement'}" class="nav-link bg-transparent mx-2 menuitemcs">News</router-link></li>
           <li class="navbar-item"><router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">Contacts</router-link></li>
         </ul>
       </div>
 
-    <div class="wrapper">
-      <input type="radio" name="slider" id="menu-btn">
-      <input type="radio" name="slider" id="close-btn">
-      <ul class="nav-links">
+
+
+
+
+    <div class="navbar navbar-expand navbar-dark d-flex justify-content-around align-items-center bg-dark m-0 p-0" id="mega-menu" role="navigation">
+      <input type="radio" name="slider" id="menu-btn" class="tgbtn">
+      <input type="radio" name="slider" id="close-btn" class="tgbtn">
+
+      <ul class="navbar-nav bg-primary navbar-dark">
         <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-        <li>
+
+        <li class="navbar-item">
           <a href="#" class="desktop-item">Courses</a>
-          <input type="checkbox" id="showMega">
+          <input type="checkbox" id="showMega" class="tgbtn">
           <label for="showMega" class="mobile-item">Courses</label>
           <div class="mega-box">
             <div class="content">
-              <div class="row">
-                <img src="img.jpg" alt="">
-              </div>
-              <div class="row">
-                <header>Design Services</header>
-                <ul class="mega-links">
-                  <li><a href="#">Graphics</a></li>
-                  <li><a href="#">Vectors</a></li>
-                  <li><a href="#">Business cards</a></li>
-                  <li><a href="#">Custom logo</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <header>Email Services</header>
-                <ul class="mega-links">
-                  <li><a href="#">Personal Email</a></li>
-                  <li><a href="#">Business Email</a></li>
-                  <li><a href="#">Mobile Email</a></li>
-                  <li><a href="#">Web Marketing</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <header>Security services</header>
-                <ul class="mega-links">
-                  <li><a href="#">Site Seal</a></li>
-                  <li><a href="#">VPS Hosting</a></li>
-                  <li><a href="#">Privacy Seal</a></li>
-                  <li><a href="#">Website design</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </li>
-        
-        <li>
-          <a href="#" class="desktop-item">Study with us</a>
-          <input type="checkbox" id="showMega">
-          <label for="showMega" class="mobile-item">Study with us</label>
-          <div class="mega-box">
-            <div class="content">
-              <div class="row">
-                <img src="img.jpg" alt="">
-              </div>
-              <div class="row">
-                <header>Design Services</header>
-                <ul class="mega-links">
-                  <li><a href="#">Graphics</a></li>
-                  <li><a href="#">Vectors</a></li>
-                  <li><a href="#">Business cards</a></li>
-                  <li><a href="#">Custom logo</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <header>Email Services</header>
-                <ul class="mega-links">
-                  <li><a href="#">Personal Email</a></li>
-                  <li><a href="#">Business Email</a></li>
-                  <li><a href="#">Mobile Email</a></li>
-                  <li><a href="#">Web Marketing</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <header>Security services</header>
-                <ul class="mega-links">
-                  <li><a href="#">Site Seal</a></li>
-                  <li><a href="#">VPS Hosting</a></li>
-                  <li><a href="#">Privacy Seal</a></li>
-                  <li><a href="#">Website design</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </li>
+                <div class="row justify-content-center align-items-center m-0 p-1">
+                  <input type="text" id="search-bar"/>
+                  <label for="search-bar"><i class="fad fa-search"></i></label>
+                  <router-link to="#">View all courses</router-link>
+                </div>
 
-        <li>
-          <a href="#" class="desktop-item">Career Opportunities</a>
-          <input type="checkbox" id="showMega">
-          <label for="showMega" class="mobile-item">Career Opportunities</label>
-          <div class="mega-box">
-            <div class="content">
-              <div class="row">
-                <header>Design Services</header>
-                <ul class="mega-links">
-                  <li><a href="#">Graphics</a></li>
-                  <li><a href="#">Vectors</a></li>
-                  <li><a href="#">Business cards</a></li>
-                  <li><a href="#">Custom logo</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <header>Email Services</header>
-                <ul class="mega-links">
-                  <li><a href="#">Personal Email</a></li>
-                  <li><a href="#">Business Email</a></li>
-                  <li><a href="#">Mobile Email</a></li>
-                  <li><a href="#">Web Marketing</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <header>Security services</header>
-                <ul class="mega-links">
-                  <li><a href="#">Site Seal</a></li>
-                  <li><a href="#">VPS Hosting</a></li>
-                  <li><a href="#">Privacy Seal</a></li>
-                  <li><a href="#">Website design</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </li>
+                <div class="row justify-content-center align-items-center m-0 p-1">
+                  <Header title="Browse all courses" />
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="m-0">
+                      <ul class="mega-links">
+                        <li><router-link to="#">Free classes</router-link></li>
+                        <li><router-link to="#">Young learners</router-link></li>
+                        <li><router-link to="#">Research Writing Course</router-link></li>
+                        <li><router-link to="#">How to apply</router-link></li>
+                      </ul>
+                    </div>
+                    <div class="m-0">
+                      <ul class="mega-links">
+                        <li><router-link to="#">IELTS</router-link></li>
+                        <li><router-link to="#">Duolingo</router-link></li>
+                        <li><router-link to="#">Speak English Professionally &amp; English Grammar</router-link></li>
+                        <li><router-link to="#">How to apply scholarship</router-link></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
 
-        <li>
-          <a href="#" class="desktop-item">Community</a>
-          <input type="checkbox" id="showMega">
-          <label for="showMega" class="mobile-item">Community</label>
-          <div class="mega-box">
-            <div class="content">
-              <div class="row">
-                <img src="img.jpg" alt="">
-              </div>
-              <div class="row">
-                <header>Design Services</header>
-                <ul class="mega-links">
-                  <li><a href="#">Graphics</a></li>
-                  <li><a href="#">Vectors</a></li>
-                  <li><a href="#">Business cards</a></li>
-                  <li><a href="#">Custom logo</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <header>Email Services</header>
-                <ul class="mega-links">
-                  <li><a href="#">Personal Email</a></li>
-                  <li><a href="#">Business Email</a></li>
-                  <li><a href="#">Mobile Email</a></li>
-                  <li><a href="#">Web Marketing</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <header>Security services</header>
-                <ul class="mega-links">
-                  <li><a href="#">Site Seal</a></li>
-                  <li><a href="#">VPS Hosting</a></li>
-                  <li><a href="#">Privacy Seal</a></li>
-                  <li><a href="#">Website design</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </li>
+                <div class="row justify-content-center align-items-center m-0 p-1">
+                  <Header title="Contact us"/>
+                  <ul class="mega-links">
+                    <li><span>Phone no:09999</span></li>
+                    <li><span>Address: blah blah blah</span></li>
+                  </ul>
+                  <div class="btns">
+                    <a class="btn-icon" href="#" target="_blank"><i class="fab fa-viber"></i></a>
 
-        <li>
-          <a href="#" class="desktop-item">About</a>
-          <input type="checkbox" id="showMega">
-          <label for="showMega" class="mobile-item">About</label>
-          <div class="mega-box">
-            <div class="content">
-              <div class="row">
-                <img src="img.jpg" alt="">
+                    <a class="btn-icon" href="#" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+
+                    <a class="btn-icon" href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+                  </div>
+                </div>
+
+
               </div>
-              <div class="row">
-                <header>Design Services</header>
-                <ul class="mega-links">
-                  <li><a href="#">Graphics</a></li>
-                  <li><a href="#">Vectors</a></li>
-                  <li><a href="#">Business cards</a></li>
-                  <li><a href="#">Custom logo</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <header>Email Services</header>
-                <ul class="mega-links">
-                  <li><a href="#">Personal Email</a></li>
-                  <li><a href="#">Business Email</a></li>
-                  <li><a href="#">Mobile Email</a></li>
-                  <li><a href="#">Web Marketing</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <header>Security services</header>
-                <ul class="mega-links">
-                  <li><a href="#">Site Seal</a></li>
-                  <li><a href="#">VPS Hosting</a></li>
-                  <li><a href="#">Privacy Seal</a></li>
-                  <li><a href="#">Website design</a></li>
-                </ul>
-              </div>
-            </div>
           </div>
-        </li>
+      </li>
+
+
+        <li><router-link to="#"></router-link></li>
+        <li><router-link :to="{name:'About'}"></router-link></li>
       </ul>
+
+
+
+      
       <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
     </div>
 
@@ -238,12 +109,13 @@
 
 <script>
 import jQuery from "jquery";
+import Header from "../components/Header"
 const $ = jQuery;
 window.$ = $;
 
 export default {
   name:"Navbar",
-
+  components: {Header},
   created(){
     $(window).scroll(function(){
       let getScrollY = $(this).scrollTop();
@@ -283,263 +155,25 @@ export default {
   right: 50%;
 }
 
-.line1, .line2, .line3{
-  width: 23px;
-  height: 3px;
-  margin: 5px;
-  transition: all 0.4s;
-}
-
-.changes .lines1{
-    transform: rotate(-45deg) translate(-5px,6px);
-}
-.changes .lines2{
-    opacity: 0;
-}
-.changes .lines3{
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
 // Start mega menu
-nav{
-  z-index: 99;
-  width: 100%;
-  
-  background: #242526;
-}
-nav .wrapper{
-  position: relative;
-  max-width: 1300px;
-  padding: 0px 30px;
-  height: 70px;
-  line-height: 70px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.wrapper .nav-links{
-  display: inline-flex;
-  width: 100%;
-  justify-content: space-around;
-}
-.nav-links li{
-  list-style: none;
-}
-.nav-links li a{
-  color: #f2f2f2;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 9px 15px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-.nav-links li a:hover{
-  background: #3A3B3C;
-}
-.nav-links .mobile-item{
+input{
   display: none;
 }
-
-.nav-links li:hover .mega-box{
-  transition: all 0.3s ease;
-  top: 70px;
-  opacity: 1;
-  visibility: visible;
-}
-
-.mega-box{
-  position: absolute;
-  left: 0;
-  width: 100%;
-  padding: 0 30px;
-  top: 85px;
-  opacity: 0;
-  visibility: hidden;
-}
-.mega-box .content{
-  background: #242526;
-  padding: 25px 20px;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
-}
-.mega-box .content .row{
-  width: calc(25% - 30px);
-  line-height: 45px;
-}
-.content .row img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.content .row header{
-  color: #f2f2f2;
-  font-size: 20px;
-  font-weight: 500;
-}
-.content .row .mega-links{
-  margin-left: -40px;
-  border-left: 1px solid rgba(255,255,255,0.09);
-}
-.row .mega-links li{
-  padding: 0 20px;
-}
-.row .mega-links li a{
-  padding: 0px;
-  padding: 0 20px;
-  color: #d9d9d9;
-  font-size: 17px;
-  display: block;
-}
-.row .mega-links li a:hover{
-  color: #f2f2f2;
-}
-.wrapper .btn{
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-  display: none;
-}
-.wrapper .btn.close-btn{
-  position: absolute;
-  right: 30px;
-  top: 10px;
-}
-@media screen and (max-width: 970px) {
-  .wrapper .btn{
-    display: block;
-  }
-  .wrapper .nav-links{
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    max-width: 350px;
-    top: 0;
-    left: -100%;
-    background: #242526;
-    display: block;
-    padding: 50px 10px;
-    line-height: 50px;
-    overflow-y: auto;
-    box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
-    transition: all 0.3s ease;
-  }
-  /* custom scroll bar */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #242526;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #3A3B3C;
-  }
-  #menu-btn:checked ~ .nav-links{
-    left: 0%;
-  }
-  #menu-btn:checked ~ .btn.menu-btn{
-    display: none;
-  }
-  #close-btn:checked ~ .btn.menu-btn{
-    display: block;
-  }
-  .nav-links li{
-    margin: 15px 10px;
-  }
-  .nav-links li a{
-    padding: 0 20px;
-    display: block;
-    font-size: 20px;
-  }
-  .nav-links .drop-menu{
-    position: static;
-    opacity: 1;
-    top: 65px;
-    visibility: visible;
-    padding-left: 20px;
-    width: 100%;
-    max-height: 0px;
-    overflow: hidden;
-    box-shadow: none;
-    transition: all 0.3s ease;
-  }
-  #showDrop:checked ~ .drop-menu,
-  #showMega:checked ~ .mega-box{
-    max-height: 100%;
-  }
-  .nav-links .desktop-item{
-    display: none;
-  }
-  .nav-links .mobile-item{
-    display: block;
-    color: #f2f2f2;
-    font-size: 20px;
-    font-weight: 500;
-    padding-left: 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-  }
-  .nav-links .mobile-item:hover{
-    background: #3A3B3C;
-  }
-
-  .mega-box{
-    position: static;
-    top: 65px;
-    opacity: 1;
-    visibility: visible;
-    padding: 0 20px;
-    max-height: 0px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-  .mega-box .content{
-    box-shadow: none;
-    flex-direction: column;
-    padding: 20px 20px 0 20px;
-  }
-  .mega-box .content .row{
-    width: 100%;
-    margin-bottom: 15px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-  }
-  .mega-box .content .row:nth-child(1),
-  .mega-box .content .row:nth-child(2){
-    border-top: 0px;
-  }
-  .content .row .mega-links{
-    border-left: 0px;
-    padding-left: 15px;
-  }
-  .row .mega-links li{
-    margin: 0;
-  }
-  .content .row header{
-    font-size: 19px;
-  }
-}
-nav input{
-  display: none;
-}
-.body-text{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
-  padding: 0 30px;
-}
-.body-text div{
-  font-size: 45px;
-  font-weight: 600;
-}
-
 //  End mega menu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes navani{
   from{

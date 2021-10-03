@@ -31,42 +31,16 @@
                 <table class="table table-responsive table-bordered table-hover table-striped table-success">
                     <thead>
                         <tr>
-                            <th>nah</th>
-                            <th>nah</th>
-                            <th>nah</th>
-                            <th>nah</th>
+                            <td @click="sort_title()" class="text-center">Class name</td>
+                            <td @click="sort_date()" class="text-center">Term start date</td>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>date</td>
-                            <td>date</td>
-                            <td>date</td>
-                            <td>date</td>
-                        </tr>
-                        <tr>
-                            <td>date</td>
-                            <td>date</td>
-                            <td>date</td>
-                            <td>date</td>
-                        </tr>
-                        <tr>
-                            <td>date</td>
-                            <td>date</td>
-                            <td>date</td>
-                            <td>date</td>
-                        </tr>
-                        <tr>
-                            <td>date</td>
-                            <td>date</td>
-                            <td>date</td>
-                            <td>date</td>
-                        </tr>
-                        <tr>
-                            <td>date</td>
-                            <td>date</td>
-                            <td>date</td>
-                            <td>date</td>
+                        <tr v-for="(course, index) in data" :key="index">
+                            <td><router-link to="#" class="bg-transparent text-decoration-none ps-5">{{course.title}}</router-link></td>
+                            <td><router-link to="#" class="bg-transparent text-decoration-none ps-5">
+                                <time :datetime="course.date"> {{ renderDate(course.date)}}</time>
+                                </router-link></td>
                         </tr>
                     </tbody>
                 </table>
@@ -84,9 +58,113 @@ import Form from "../components/Form.vue"
         components: {
             Header,Form
         },
+
+        data(){
+            return{
+                data: [],
+                filtered_data: [],
+                months: ['January', 'February', 'March', 'April', 'May', 'June',
+                       'July', 'August', 'September', 'October', 'November', 'December'],
+                order_title: true,
+                order_date: true,
+            }
+        },
+        methods:{
+            renderDate(date){
+                if(typeof date === 'string'){
+                    let year, month, day; 
+                    [year, month, day] = date.split('-');
+                    month = this.months[+month - 1];
+                    return `${day} ${month}, ${year}`;
+                }
+                return date;
+            },
+
+            sort_title(){
+                this.data.sort((first, second)=>(first.title > second.title) ? 1 : -1);
+                if(!this.order_title) this.data.reverse();
+                this.order_title = !this.order_title;
+            },
+
+            sort_date(){
+                this.data.sort((first, second)=>{
+                    first = first.date.split('-');
+                    second = second.date.split('-');
+                    this.sorter_date(first, second);
+                });
+                if(!this.order_date) this.data.reverse();
+                this.order_date = !this.order_date;
+            },
+            
+            sorter_date(array, array2, index=0){
+                if(index === array.length) return -1;
+                return (+array[index] > +array2[index] ? 1 : 
+                        +array[index] < +array2[index] ? 1 : 
+                        this.sorter_date(array, array2, index++));
+            }
+        },
+
+        created(){
+            this.data = [
+                {
+                    title: "Starters 11",
+                    date: "2021-06-19"
+                },
+                {
+                    title: "Starters 12",
+                    date: "2020-06-19"
+                },
+                {
+                    title: "Starters 13",
+                    date: "2020-05-19"
+                },
+                {
+                    title: "Starters 14",
+                    date: "2021-04-19"
+                },
+                {
+                    title: "Starters 15",
+                    date: "2021-06-18"
+                },
+                {
+                    title: "Starters 16",
+                    date: "2021-06-16"
+                },
+                {
+                    title: "Movers 11",
+                    date: "2021-06-13"
+                },{
+                    title: "KET 11",
+                    date: "2021-08-19"
+                },{
+                    title: "PET 11",
+                    date: "2028-06-19"
+                },{
+                    title: "IELTS reading",
+                    date: "2019-03-19"
+                },{
+                    title: "Starters 35",
+                    date: "2021-04-19"
+                },{
+                    title: "Flyers 11",
+                    date: "2021-05-19"
+                },{
+                    title: "Flyers 12",
+                    date: "2021-03-19"
+                },{
+                    title: "Flyers 13",
+                    date: "2021-03-19"
+                },{
+                    title: "Flyers 13",
+                    date: "2021-04-19"
+                },
+            ]
+        }
     }
 </script>
 
 <style lang="scss" scoped>
-
+thead tr{
+    cursor: pointer;
+}
 </style>

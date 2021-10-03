@@ -267,8 +267,30 @@ import LatestNews from '../components/LatestNews'
 
 export default {
   name: 'Home',
+<<<<<<< HEAD
   components:{Header,LatestEvents,LatestNews},
   
+=======
+  components:{Header,Events},
+  data() {
+    return {
+      events: [
+        {
+          id:1,
+          title:"Master of Cybersecurity webinar",
+          time:"Monday 13 September 06:00pm",
+          image:"https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+        },
+        {
+          id:2,
+          title:"Master of Cybersecurity webinar",
+          time:"Monday 13 September 06:00pm",
+          image:"https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+        }
+      ]
+      }
+  },
+>>>>>>> 91b16b6fa669be44b017439aec0ba31f4ec5931e
   
   methods: {
     next() {

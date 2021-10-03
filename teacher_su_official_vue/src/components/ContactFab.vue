@@ -39,7 +39,7 @@ export default {
             if (e.target.offsetParent != this.getcontainer() && e.target.offsetParent != this.getbtn()){
                 this.hide();
             }
-        })
+        });
     }
 }
 </script>

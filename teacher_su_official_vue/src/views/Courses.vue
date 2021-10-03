@@ -22,16 +22,22 @@
 
         <div class="row flex-column justify-content-center align-items-center mx-3 mt-5 my-md-5 py-0 px-0">
             <div class="d-flex justify-content-start my-0 mx-0 p-0">
-                <button id="free" class="btn course-btn active" @click="rendercourse(data[0])">Free classes</button>
-                <button id="ylearner" class="btn course-btn" @click="rendercourse(data[1])">Young learners</button>
-                <button id="ielts" class="btn course-btn" @click="rendercourse(data[2])">IELTS</button>
-                <button id="others" class="btn course-btn" @click="rendercourse(data[3])">Others</button>
+                <button v-for="(button, index) in buttons" :key="button" 
+                        :id="button"
+                        class="btn course-btn" :class="{active: activeButton === button}" 
+                        @click="activeButton = button, rendercourse(data[index])">
+                        {{ renderButtonname }}
+                </button>
             </div>
 
             <div class="d-flex justify-content-center flex-wrap align-items-center py-sm-4 py-0 px-0 courses-container">
                 <Course v-for="(course, index) in min_courses" :key="index" :title="course.title" :description="course.description" link="#"></Course>
                 <div class="row col-12 justify-content-center align-items-center mt-5">
-                    <button class="btn view-btn" v-show="viewbtn_shown" @click="renderall()">View All</button>
+                    <button class="btn view-btn" 
+                            v-show="viewbtn_shown" 
+                            @click="renderall()">
+                            View All
+                    </button>
                 </div>
             </div>
         </div>
@@ -125,6 +131,24 @@ export default {
             min_courses: [],
             all_courses: [],
             viewbtn_shown: true,
+            isActive: true,
+            buttons: ['free', 'ylearner', 'ielts', 'others'],
+            activeButton: 'free',
+        }
+    },
+
+    computed:{
+        renderButtonname(){
+            switch(this.activeButton){
+                case 'free':
+                    return 'Free classes';
+                case 'ylearner':
+                    return 'Young learners';
+                case 'ielts':
+                    return 'IELTS';
+                default:
+                    return 'Others';
+            }
         }
     },
 
@@ -209,6 +233,8 @@ This exam is the logical step in your language learning journey between A2 Key a
                 }
             ]
         ];
+
+        this.rendercourse(this.data[0]);
     }
 }
 </script>

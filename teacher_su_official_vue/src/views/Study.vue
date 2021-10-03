@@ -71,6 +71,7 @@
                     </div>
                 </div>
         </div>
+
         <div class="row my-5 d-flex align-items-center justify-content-center">
             <Header title="Extra Curriculum activites" class="text-center courses-text mb-5"></Header>
             <div class="col-12 col-sm-8 px-4 px-md-5">
@@ -133,13 +134,29 @@ import finance from "../components/finance.vue"
         components:{Header,meritBase,finance},
         data() {
             return {
-                activeTab: 'meritBase'
+                activeTab: 'meritBase',
+                dir: 0,
+            }
+        },
+        methods: {
+            getleft(){
+                return document.querySelector('.left');
+            },
+            getright(){
+                return document.querySelector('.right');
+            },
+            getcontainer(){
+                return document.querySelector('.containercs');
             }
         },
     }
 </script>
 
 <style scoped>
+    *{
+        box-sizing: border-box;
+    }
+
     .banner{
         background-color: rgba(148, 148, 148, 0.459);
         height: 40vh;
