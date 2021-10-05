@@ -1,6 +1,6 @@
 <template>
     <div class="contianer-fluid">
-         <div class="row">
+         <div class="row ">
             <div class="col-12 d-flex align-items-center px-3 px-md-5 py-2" style="background-color:#caccd1;">
                 <router-link :to="{name:'Home'}"> <i class="me-4 fs-4 fas fa-home text-dark"></i> </router-link>
                 <i class="me-4 fs-4 fas fa-chevron-right"></i>
@@ -11,7 +11,7 @@
             <div class="col-12">
                 <div class="banner-img">
                     <div class="banner d-flex align-items-center justify-content-start p-md-5">
-                        <div class="banner-card p-3">
+                        <div class="banner-card p-3  wow animate__fadeInRight">
                             <Header class="text-light  banner-text" title="Study at Teacher Su Centre"></Header>
                             <div class="d-flex align-items-center justify-content-start ">
                                 <button class="btn btn-danger">How to apply</button>
@@ -24,25 +24,31 @@
         </div>
         <div class="row my-5 mb-5">
             <div class="col-12">
-                <Header title="Study tool and software" class="text-center courses-text"></Header>
-                <div class="chItem-con">
+                <Header title="Study tool and software" class="text-center courses-text wow animate__fadeInUp"></Header>
+                <div class="chItem-con my-3">
 
                     <div class="d-flex align-items-center justify-content-left justify-content-lg-evenly flex-lg-wrap mt-5 chItem" >
                 
-                        <div style="min-width:300px;" class="bg-primary text-light d-flex align-items-center justify-content-center flex-column p-3 mx-1 ">
+                        <router-link class="text-decoration-none" to="/help">
+                            <div style="min-width:300px;" class="bg-primary text-light d-flex align-items-center justify-content-center flex-column p-3 mx-1 item-hover wow animate__fadeInUp">
                             <i class="fs-1 fas fa-video"  style="border:2px solid white;border-radius:50%;padding:20px 17px;"></i>
                             <h3 class="fw-bold  mt-2">Zoom guide</h3>
                         </div>
+                        </router-link>
 
-                        <div style="min-width:300px;" class="bg-danger text-light d-flex align-items-center justify-content-center flex-column p-3 mx-1 ">
+                        <router-link class="text-decoration-none" to="/help">
+                            <div style="min-width:300px;" class="bg-danger text-light d-flex align-items-center justify-content-center flex-column p-3 mx-1 item-hover wow animate__fadeInUp">
                             <i class="fs-1 fas fa-file-powerpoint"  style="border:2px solid white;border-radius:50%;padding:20px 25px;"></i>
                             <h3 class="fw-bold  mt-2">Powerpoint</h3>
                         </div>
+                        </router-link>
 
-                        <div style="min-width:300px;" class="bg-secondary text-light d-flex align-items-center justify-content-center flex-column p-3 mx-1 ">
+                        <router-link class="text-decoration-none" to="/help">
+                            <div style="min-width:300px;" class="bg-secondary text-light d-flex align-items-center justify-content-center flex-column p-3 mx-1 item-hover wow animate__fadeInUp">
                             <i class="fs-1 fas fa-photo-video"  style="border:2px solid white;border-radius:50%;padding:20px 15px;"></i>
                             <h3 class="fw-bold  mt-2">Video editing</h3>
                         </div>
+                        </router-link>
 
                 </div>
 
@@ -51,21 +57,25 @@
         </div>
         <div class="row my-5 mb-5 bg-primary">
                 <div class="col-12 py-5 text-light">
-                    <Header title="Study support and resourses" class="text-center courses-text"></Header>
+                    <Header title="Study support and resourses" class="text-center courses-text wow animate__fadeInUp"></Header>
                     <div class="chItem-con">
 
                         <div class="d-flex align-items-center justify-content-left justify-content-lg-evenly flex-lg-wrap mt-2 mt-sm-5 chItem" >
                     
-                            <div style="min-width:300px;" class="border border-2 border-light d-flex align-items-center justify-content-center p-3 mx-1">
+                            <a href="mailto:hello@teachersucenter.com" class="text-light text-decoration-none"> 
+                                <div style="min-width:300px;" class="border border-2 border-light d-flex align-items-center justify-content-center p-3 mx-1 item-hover wow animate__fadeInUp">
                                 <i class="fs-1 fas fa-headset"  style="border:2px solid white;border-radius:50%;padding:20px 20px;"></i>
                                 <h3 class="fw-bold ms-3 mt-2">IT support</h3>
                             </div>
+                            </a>
 
-                            <div style="min-width:300px;" class="border border-2 border-light d-flex align-items-center justify-content-center p-3 mx-1">
+                            <a href="http://library.teachersucenter.com/" class="text-light text-decoration-none">
+                                <div style="min-width:300px;" class="border border-2 border-light d-flex align-items-center justify-content-center p-3 mx-1 item-hover wow animate__fadeInUp">
                                 <i class="fs-1 fas fa-book-open"  style="border:2px solid white;border-radius:50%;padding:20px 20px;"></i>
                                 <h3 class="fw-bold ms-3 mt-2">Library</h3>
                             </div>
 
+                            </a>
                     </div>
 
                     </div>
@@ -73,7 +83,7 @@
         </div>
 
         <div class="row my-5 d-flex align-items-center justify-content-center">
-            <Header title="Extra Curriculum activites" class="text-center courses-text mb-5"></Header>
+            <Header title="Extra Curriculum activites" class="text-center courses-text mb-5 wow animate__fadeInUp"></Header>
             <div class="col-12 col-sm-8 px-4 px-md-5">
                 <div>
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -105,7 +115,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row wow animate__fadeInUp">
             <Header class="text-center mb-5 courses-text" title="Scholarships"></Header>
 
             <div class="col-12 flex-wrap d-flex align-items-center justify-content-center">
@@ -128,6 +138,7 @@
 import Header from "../components/Header.vue"
 import meritBase from "../components/meritBase.vue"
 import finance from "../components/finance.vue"
+import WOW from "wow.js"
 
     export default {
         name:'Study',
@@ -138,6 +149,23 @@ import finance from "../components/finance.vue"
                 dir: 0,
             }
         },
+        mounted () {
+        var wow = new WOW(
+      {
+        boxClass:     'wow',      
+        animateClass: 'animate__animated', 
+        offset:       0,          
+        mobile:       true,       
+        live:         true,       
+        callback:     function(box) {
+        },
+        scrollContainer: null,   
+        resetAnimation: true,     
+      }
+    );
+    wow.init();
+
+  },
         methods: {
             getleft(){
                 return document.querySelector('.left');
@@ -172,6 +200,11 @@ import finance from "../components/finance.vue"
     .s-btn:focus{
         background: var(--danger);
         color: white;
+    }
+
+    .item-hover:hover{
+        transition: 0.5s;
+        transform: translateY(15px);
     }
 
     @media only screen and (min-width: 757px){

@@ -13,7 +13,7 @@
                 <div class="Banner-img">
                     <div class="Banner d-flex align-items-center justify-content-center p-md-5">
                         <div class="p-5">
-                            <Header class="Banner-text text-light" title="Choose your favourite course"></Header>
+                            <Header class="Banner-text text-light wow animate__fadeInUp" title="Choose your favourite course"></Header>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
             </div>
 
             <div class="d-flex justify-content-center flex-wrap align-items-center py-sm-4 py-0 px-0 courses-container">
-                <Course v-for="(course, index) in min_courses" :key="index" :title="course.title" :description="course.description" link="#"></Course>
+                <Course v-for="(course, index) in min_courses" :key="index" :title="course.title" :description="course.description" :link="{name:'coursedetail',params:{id:course.id}}"></Course>
                 <div class="row col-12 justify-content-center align-items-center mt-5">
                     <button class="btn view-btn" 
                             v-show="viewbtn_shown" 
@@ -43,9 +43,9 @@
         </div>
 
         <div class="row mt-5 my-md-5">
-            <Header title="Meet one of our students" class="text-center Banner-text p-0"></Header>
+            <Header title="Meet one of our students" class="text-center Banner-text p-0 wow animate__fadeInUp"></Header>
             <div class="col-12 d-lg-flex align-items-center justify-content-center p-3 p-md-5">
-                <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap p-3 ">
+                <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap p-3 wow animate__backInLeft">
                     <div>
                         <img src="../assets/img/man.jpg" class="rev-img mb-2" alt="">
                         <div>
@@ -67,38 +67,46 @@
         </div>
 
         <div class="row mb-5 d-flex align-items-center justify-content-center">
-            <Header title="Your study experience" class="text-center Banner-text p-0"></Header>
+            <Header title="Your study experience" class="text-center Banner-text p-0 wow animate__fadeInUp"></Header>
             <div class="col-8 p-0">
                 
 
                 <div class="row my-5">
                     <div class="col-12 col-lg-6 mb-5 d-flex align-item-center justify-content-center">
-                        <div class="st-con d-flex align-items-center justify-content-between border border-1 border-dark">
+                        <router-link :to="{name:'Register'}">
+                            <div class="st-con d-flex align-items-center justify-content-between border border-1 border-dark item-hover wow animate__fadeInUp">
                             <img src="../assets/img/Study.jpg" class="st-img" alt="">
                             <p class="m-0 ms-3  fw-bold">How to apply</p>
                             <i class="fas fa-chevron-circle-right mx-2 text-danger"></i>
                         </div>
+                        </router-link>
                     </div>
                     <div class="col-12 col-lg-6 mb-5 d-flex align-item-center justify-content-center">
-                        <div class="st-con d-flex align-items-center justify-content-between border border-1 border-dark">
+                        <router-link :to="{name:'Study'}">
+                            <div class="st-con d-flex align-items-center justify-content-between border border-1 border-dark item-hover wow animate__fadeInUp">
                             <img src="../assets/img/Study.jpg" class="st-img" alt="">
                             <p class="m-0 ms-3  fw-bold">Find your scholarship</p>
                             <i class="fas fa-chevron-circle-right mx-2 text-danger"></i>
                         </div>
+                        </router-link>
                     </div>
                     <div class="col-12 col-lg-6 mb-5 d-flex align-item-center justify-content-center">
-                        <div class="st-con d-flex align-items-center justify-content-between border border-1 border-dark">
+                        <router-link :to="{name:'pathway'}">
+                            <div class="st-con d-flex align-items-center justify-content-between border border-1 border-dark item-hover wow animate__fadeInUp">
                             <img src="../assets/img/Study.jpg" class="st-img" alt="">
                             <p class="m-0 mx-4  fw-bold">Pathways</p>
                             <i class="fas fa-chevron-circle-right mx-2 text-danger"></i>
                         </div>
+                        </router-link>
                     </div>
                     <div class="col-12 col-lg-6 mb-5 d-flex align-item-center justify-content-center">
-                        <div class="st-con d-flex align-items-center justify-content-between border border-1 border-dark">
+                        <router-link :to="{name:'Career'}">
+                            <div class="st-con d-flex align-items-center justify-content-between border border-1 border-dark item-hover wow animate__fadeInUp">
                             <img src="../assets/img/Study.jpg" class="st-img" alt="">
                             <p class="m-0 ms-3  fw-bold">Career opportunities</p>
                             <i class="fas fa-chevron-circle-right mx-2 text-danger"></i>
                         </div>
+                        </router-link>
                     </div>
                    
                 </div>
@@ -107,7 +115,7 @@
 
         <div class="row">
             
-            <div class="col-12">
+            <div class="col-12 wow animate__fadeInUp">
                 <h1 style="font-size: 3.1rem, font-family: 'Roboto Slab', serif" class="text-center">Want to study at <span class="text-danger fw-bold">Teacher Su</span>?</h1>
                 <Header title="Enroll now!" class="text-center"></Header>
                 <Form text_label="Comment" class="my-5"></Form>
@@ -121,6 +129,7 @@
 import Header from "../components/Header"
 import Form from "../components/Form"
 import Course from '../components/Course'
+import WOW from "wow.js"
 
 export default {
     name:'Courses',
@@ -136,7 +145,23 @@ export default {
             activeButton: 'free',
         }
     },
+    mounted () {
+        var wow = new WOW(
+      {
+        boxClass:     'wow',      
+        animateClass: 'animate__animated', 
+        offset:       0,          
+        mobile:       true,       
+        live:         true,       
+        callback:     function(box) {
+        },
+        scrollContainer: null,   
+        resetAnimation: true,     
+      }
+    );
+    wow.init();
 
+  },
     computed:{
         renderButtonname(){
             switch(this.activeButton){
@@ -181,31 +206,31 @@ export default {
     created(){
         this.data = [
             [
-                {
+                {   id:1,
                     title: "Grammar for starters",
                     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
                 }
             ],
 
             [
-                {
+                {   id:2,
                     title: "Starters",
                     description: "Pre A1 Starters is the first of three Cambridge English Qualifications designed for young learners. These tests introduce children to everyday written and spoken English and are an excellent way for them to gain confidence and improve their English."
                 },
-                {
+                {   id:3,
                     title: "Movers",
                     description: "A1 Movers is the second of three Cambridge English Qualifications designed for young learners. These tests introduce children to everyday written and spoken English and are an excellent way for them to gain confidence and improve their English."
                 },
-                {
+                {   id:4,
                     title: "Flyers",
                     description: "A2 Flyers is the third of three Cambridge English Qualifications designed for young learners. These tests introduce children to everyday written and spoken English and are an excellent way for them to gain confidence and improve their English."
                 },
-                {
+                {   id:5,
                     title: "KET",
                     description:   `An A2 Key qualification is proof of your ability to use English to communicate in simple situations.
 The exam tests all four English language skills – reading, writing, listening and speaking. It should give you the confidence to go on and study for higher-level exams such as  B1 Preliminary and B2 First.`
                 },
-                {
+                {   id:6,
                     title: "PET",
                     description: `A B1 Preliminary qualification shows that you have mastered the basics of English and now have practical language skills for everyday use.
 This exam is the logical step in your language learning journey between A2 Key and B2 First.`
@@ -213,7 +238,7 @@ This exam is the logical step in your language learning journey between A2 Key a
             ],
 
             [
-                {
+                {   id:7,
                     title: "IELTS",
                     description: ` IELTS (International English Language Testing System)
 Educational institutions, employers, professional registration bodies and government immigration agencies often require proof of English language skills as part of their recruitment or admission procedures. IELTS is widely accepted for these purposes.
@@ -222,11 +247,11 @@ IELTS is designed to test the language ability of people who want to study or wo
             ],
 
             [
-                {
+                {   id:8,
                     title: "Dulingo",
                     description: `The Duolingo English Test is a modern language proficiency tool designed for today's international students and institutions. It offers an English proficiency score, video interview, and writing sample in an accessible, efficient, and secure testing experience.`
                 },
-                {
+                {   id:9,
                    title: "Speak English Professionally & English Grammar (Intermediate)",
                    description: `A B1 Preliminary qualification shows that you have mastered the basics of English and now have practical language skills for everyday use.
 This exam is the logical step in your language learning journey between A2 Key and B2 First.` 
@@ -326,6 +351,12 @@ This exam is the logical step in your language learning journey between A2 Key a
 }
 .st-con{
     min-width: 300px;
+}
+.item-hover:hover{
+    color: white;
+    background: var(--primary);
+    transition: 0.5s;
+    transform: translateY(-15px);
 }
 @media only screen and (max-width: 400px){
 .Banner-text{

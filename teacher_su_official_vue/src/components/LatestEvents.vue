@@ -7,7 +7,7 @@
               <div>
                 <p class="text-danger text-decoration-underline fw-bold fs-6 m-0">{{ event.title }}</p>
                 <p class="fs-6 fw-bold m-0">{{ event.time }}</p>
-                <p class="m-0">read more</p>
+                <router-link :to="{ name: 'Leventdetail', params:  {id:event.id} }"> Read more </router-link>
               </div>
     </div>
     </div>

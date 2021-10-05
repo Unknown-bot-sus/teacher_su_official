@@ -12,7 +12,6 @@ import ContactFab from './components/ContactFab'
   export default {
     name:"App",
     components :{
-      Navbar,
       Footer,
       ContactFab,
     }

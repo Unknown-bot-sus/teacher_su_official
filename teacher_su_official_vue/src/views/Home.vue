@@ -3,9 +3,9 @@
       <div class="row hero-banner position-relative">
         <div class="col-12 col-lg-12 py-3 py-md-5 d-flex align-items-center  homebanner-containercs">
           <div class="col-lg-6 py-5 BannerTesti">
-            <Header class="BannerText text-light fw-light pe-lg-5" title="A world-class education, wherever you are"></Header>
-            <p class="text-light">Start studying online now</p>
-            <button class="btn btn-outline-light" style="z-index:2;position:relative;">REGISTER NOW <i class="fas fa-chevron-right"></i></button>
+            <Header class="BannerText text-light fw-light pe-lg-5 wow animate__backInRight" title="A world-class education, wherever you are"></Header>
+            <p class="text-light wow animate__backInRight">Start studying online now</p>
+            <router-link :to="{name:'Register'}"><button class="btn btn-outline-light wow animate__backInRight" style="z-index:2;position:relative;">REGISTER NOW <i class="fas fa-chevron-right"></i></button></router-link>
           </div>
         </div>
 
@@ -17,53 +17,53 @@
       <div class="row mt-5 m-md-0">
         <div class="col-12 d-flex align-items-center justify-content-center">
             <div class="bg-light  p-md-5 d-flex flex-column align-items-center courses">
-                <Header title="Try One-on-One Learning" class="text-center courses-text"></Header>
+                <Header title="Try One-on-One Learning" class="text-center courses-text wow animate__fadeInUp"></Header>
                 <p class="text-center">Get personalized instruction and tutoring on any subject</p>
-                  <button class="btn btn-outline-dark">BROWSE CLASSES <i class="fas fa-chevron-right"></i></button>
+                  <router-link :to="{name:'Courses'}"><button class="btn btn-outline-dark wow animate__fadeInUp">BROWSE CLASSES <i class="fas fa-chevron-right"></i></button></router-link>
             </div>
         </div>
       </div>
 
       <div class="row my-5 mb-5">
         <div class="col-12">
-            <Header title="Why Choose Teacher Su" class="text-center courses-text"></Header>
-            <div class="chItem-con">
+            <Header title="Why Choose Teacher Su" class="text-center courses-text wow animate__fadeInUp"></Header>
+            <div class="chItem-con wow animate__fadeInUp">
 
                 <div class="d-flex align-items-center justify-content-left justify-content-lg-evenly flex-lg-wrap mt-5 chItem" >
             
-              <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3">
-                <i class="fs-1 fas fa-briefcase"  style="border:2px solid black;border-radius:50%;padding:20px;"></i>
+              <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp">
+                <i class="fs-1 fas fa-briefcase item-hover"  style="border:2px solid black;border-radius:50%;padding:20px;"></i>
                 <h3 class="fw-bold text-danger mt-2">Career</h3>
                 <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                <p class="text-primary">Find out more</p>
+                <router-link :to="{name:'Career'}"><p class="text-primary">Find out more</p></router-link>
               </div>
 
-              <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3">
-                <i class="fs-1 fas fa-users"  style="border:2px solid black;border-radius:50%;padding:20px 15px;"></i>
+              <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp">
+                <i class="fs-1 fas fa-users item-hover"  style="border:2px solid black;border-radius:50%;padding:20px 15px;"></i>
                 <h3 class="fw-bold text-danger mt-2">Community</h3>
                 <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                <p class="text-primary">Find out more</p>
+                <router-link :to="{name:''}"><p class="text-primary">Find out more</p></router-link>
               </div>
 
-              <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3">
-                <i class="fs-1 fas fa-hands-helping"  style="border:2px solid black;border-radius:50%;padding:20px 15px;"></i>
+              <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp">
+                <i class="fs-1 fas fa-hands-helping item-hover"  style="border:2px solid black;border-radius:50%;padding:20px 15px;"></i>
                 <h3 class="fw-bold text-danger mt-2">Help</h3>
                 <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                <p class="text-primary">Find out more</p>
+                <router-link :to="{name:'Help'}"><p class="text-primary">Find out more</p></router-link>
               </div>
 
-              <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3">
-                <i class="fs-1 fas fa-book"  style="border:2px solid black;border-radius:50%;padding:20px 22px;"></i>
+              <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp">
+                <i class="fs-1 fas fa-book item-hover"  style="border:2px solid black;border-radius:50%;padding:20px 22px;"></i>
                 <h3 class="fw-bold text-danger mt-2">Standard</h3>
                 <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                <p class="text-primary">Find out more</p>
+                <router-link :to="{name:'About'}"><p class="text-primary">Find out more</p></router-link>
               </div>
 
-              <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3">
-                <i class="fs-1 fas fa-award"  style="border:2px solid black;border-radius:50%;padding:20px 25px;"></i>
+              <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp">
+                <i class="fs-1 fas fa-award item-hover"  style="border:2px solid black;border-radius:50%;padding:20px 25px;"></i>
                 <h3 class="fw-bold text-danger mt-2">Awards</h3>
                 <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                <p class="text-primary">Find out more</p>
+                <router-link :to="{name:'About'}"><p class="text-primary">Find out more</p></router-link>
               </div>
 
             </div>
@@ -74,35 +74,41 @@
 
       <div class="row my-5 ">
         <div class="col-12">
-            <Header title="Start your studies at Teacher Su Centre" class="text-center mb-5 courses-text"></Header>
+            <Header title="Start your studies at Teacher Su Centre" class="text-center mb-5 courses-text wow animate__backInRight"></Header>
             <div class="d-flex align-items-center justify-content-evenly flex-column">
               <div class="stu-img">
                 <img src="../assets/img/Study.jpg" style="width:100%;height:100%;" alt="">
               </div>
               <div class="row st-con mt-5 px-3">
                 <div class="col-12 col-xl-6 p-3 ">
-                <div class=" d-flex align-items-center justify-content-between border border-dark">
-                    <p class="m-0 px-1 fs-6 fw-bold text-danger">Starting your first class</p>
+                <router-link :to="{name:'pathway'}">
+                  <div class=" d-flex align-items-center justify-content-between border border-dark text-danger item-hover2 wow animate__backInRight">
+                    <p class="m-0 px-1 fs-6 fw-bold ">Starting your first class</p>
+                    <span class="w-50 p-0" style="border-left:25px solid transparent;border-bottom: 50px solid #103B7B;"></span>
+                </div>
+                </router-link>
+                </div>
+                <div class="col-12 col-xl-6 p-3 ">
+                <div class=" d-flex align-items-center justify-content-between border border-dark text-danger item-hover2 wow animate__backInRight">
+                    <p class="m-0 px-1 fs-6 fw-bold ">Student opportunities</p>
                     <span class="w-50 p-0" style="border-left:25px solid transparent;border-bottom: 50px solid #103B7B;"></span>
                 </div>
                 </div>
                 <div class="col-12 col-xl-6 p-3 ">
-                <div class=" d-flex align-items-center justify-content-between border border-dark">
-                    <p class="m-0 px-1 fs-6 fw-bold text-danger">Student opportunities</p>
+                <router-link :to="{name:'Register'}">
+                  <div class=" d-flex align-items-center justify-content-between border border-dark text-danger item-hover2 wow animate__backInRight">
+                    <p class="m-0 px-1 fs-6 fw-bold ">How to apply</p>
                     <span class="w-50 p-0" style="border-left:25px solid transparent;border-bottom: 50px solid #103B7B;"></span>
                 </div>
+                </router-link>
                 </div>
                 <div class="col-12 col-xl-6 p-3 ">
-                <div class=" d-flex align-items-center justify-content-between border border-dark">
-                    <p class="m-0 px-1 fs-6 fw-bold text-danger">How to apply</p>
+                <router-link :to="{name:'Study'}">
+                  <div class=" d-flex align-items-center justify-content-between border border-dark text-danger item-hover2 wow animate__backInRight">
+                    <p class="m-0 px-1 fs-6 fw-bold ">Find your scholarship</p>
                     <span class="w-50 p-0" style="border-left:25px solid transparent;border-bottom: 50px solid #103B7B;"></span>
                 </div>
-                </div>
-                <div class="col-12 col-xl-6 p-3 ">
-                <div class=" d-flex align-items-center justify-content-between border border-dark">
-                    <p class="m-0 px-1 fs-6 fw-bold text-danger">Find your scholarship</p>
-                    <span class="w-50 p-0" style="border-left:25px solid transparent;border-bottom: 50px solid #103B7B;"></span>
-                </div>
+                </router-link>
                 </div>
               </div>
             </div>
@@ -238,7 +244,7 @@
       </div>
 
       <div class="row my-5">
-        <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+        <div class="col-12 col-md-6 d-flex align-items-center justify-content-center wow animate__backInRight">
           <div class="mt-3">
             <h3 style="font-family:'Roboto Slab', serif;" class="mb-4 fs-1">Events</h3>
             
@@ -246,7 +252,7 @@
             
           </div>
         </div>
-      <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+      <div class="col-12 col-md-6 d-flex align-items-center justify-content-center wow animate__backInRight">
           <div class="my-3">
             <h3 style="font-family:'Roboto Slab', serif;" class="mb-4 fs-1">News</h3>
             
@@ -264,33 +270,28 @@
 import Header from "../components/Header"
 import LatestEvents from '../components/LatestEvents'
 import LatestNews from '../components/LatestNews'
+import WOW from "wow.js"
 
 export default {
   name: 'Home',
-<<<<<<< HEAD
   components:{Header,LatestEvents,LatestNews},
-  
-=======
-  components:{Header,Events},
-  data() {
-    return {
-      events: [
-        {
-          id:1,
-          title:"Master of Cybersecurity webinar",
-          time:"Monday 13 September 06:00pm",
-          image:"https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+  mounted () {
+        var wow = new WOW(
+      {
+        boxClass:     'wow',      
+        animateClass: 'animate__animated', 
+        offset:       0,          
+        mobile:       true,       
+        live:         true,       
+        callback:     function(box) {
         },
-        {
-          id:2,
-          title:"Master of Cybersecurity webinar",
-          time:"Monday 13 September 06:00pm",
-          image:"https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-        }
-      ]
+        scrollContainer: null,   
+        resetAnimation: true,     
       }
+    );
+    wow.init();
+
   },
->>>>>>> 91b16b6fa669be44b017439aec0ba31f4ec5931e
   
   methods: {
     next() {
@@ -388,6 +389,19 @@ export default {
    width: 200px;
    height: 120px;
    padding: 5px 10px;
+}
+.item-hover:hover{
+  color: rgb(255, 255, 255);
+  background: black;
+  border-color: var(--primary);
+  transition: 0.5s;
+  transform: translateY(-10px);
+}
+.item-hover2:hover{
+  color: #fff!important;
+  background: var(--primary);
+  transition: 0.5s;
+  transform: translateY(-10px);
 }
 @media only screen and (min-width:1589px){
     .BannerTesti{

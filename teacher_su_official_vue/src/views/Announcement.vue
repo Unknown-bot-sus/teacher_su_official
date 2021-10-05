@@ -29,7 +29,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-4">
+                <div class="row my-4">
                     <div class="col-12 d-lg-flex align-items-center justify-content-center">
                         <div class="card">
                             <div class="card-header">
