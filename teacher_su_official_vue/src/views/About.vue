@@ -91,7 +91,7 @@ import Header from "../components/Header"
 import WOW from "wow.js"
 
   export default {
-    name:"About",
+    name:"About",  
      mounted () {
         var wow = new WOW(
       {
