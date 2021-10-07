@@ -49,6 +49,30 @@ const routes = [
     component: () => import('../views/Announcement.vue')
     
   },
+  {
+    path:'/pathway',
+    name:'pathway',
+    component: () => import('../views/pathway.vue')
+    
+  },
+  {
+    path:'/levent/:id',
+    name:'Leventdetail',
+    component: () => import('../views/Leventdetail.vue')
+    
+  },
+  {
+    path:'/lnews/:id',
+    name:'Lnewsdetail',
+    component: () => import('../views/Lnewsdetail.vue')
+    
+  },
+  {
+    path:'/course',
+    name:'coursedetail',
+    component: () => import('../views/coursedetail.vue')
+    
+  },
 ]
 
 const router = createRouter({

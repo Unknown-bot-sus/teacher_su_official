@@ -19,11 +19,11 @@
         </div>
 
       <div class="row my-5">
-            <h2 class="header1 text-center mt-3">About <span class="text-danger">Teacher Su</span> Centre</h2>
+            <h2 class="header1 text-center mt-3 wow animate__fadeInUp">About <span class="text-danger">Teacher Su</span> Centre</h2>
 
         <div class="col-12 d-flex align-items-center justify-content-center p-3 p-md-5">
 
-            <div class="para-about">
+            <div class="para-about wow animate__fadeInUp">
               <p> ‘Loem Ipsum is simply dummy text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos tenetur.’</p>
               <p> ‘Loem Ipsum is simply dummy text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos tenetur.’</p>
             </div>
@@ -31,9 +31,9 @@
       </div>
 
        <div class="row mt-5 my-md-5">
-            <h2 class="header1 text-center mt-3">About <span class="text-danger">Teacher Su</span></h2>
+            <h2 class="header1 text-center mt-3 wow animate__fadeInUp">About <span class="text-danger">Teacher Su</span></h2>
             <div class="col-12 d-lg-flex align-items-center justify-content-center p-1 p-md-5">
-                <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap p-3 ">
+                <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap p-3 wow animate__fadeInUp">
                     <div>
                         <img src="../assets/img/man.jpg" class="rev-img mb-2" alt="">
                         <div>
@@ -55,9 +55,9 @@
         </div>
 
       <div class="row my-5">
-            <h2 class="header1 text-center mt-3"><span class="text-danger">Teacher Su</span> Centre going Through Covid</h2>
+            <h2 class="header1 text-center mt-3 wow animate__fadeInUp"><span class="text-danger">Teacher Su</span> Centre going Through Covid</h2>
 
-        <div class="col-12 d-flex align-items-center justify-content-center p-3 p-md-5">
+        <div class="col-12 d-flex align-items-center justify-content-center p-3 p-md-5 wow animate__fadeInUp">
 
             <div class="para-about">
               <p> ‘Loem Ipsum is simply dummy text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos tenetur.’</p>
@@ -68,8 +68,8 @@
 
       <div class="row">
           <div class="col-12 p-3 p-lg-5">
-              <h1 class="text-center header1 mb-3">Our Vison</h1>
-              <div class="para-t">
+              <h1 class="text-center header1 mb-3 wow animate__fadeInUp">Our Vison</h1>
+              <div class="para-t wow animate__fadeInUp">
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
               </div>
           </div>
@@ -77,8 +77,8 @@
 
       <div class="row">
         <div class="col-12 p-3 p-lg-5">
-          <h1 class="text-center header1 mb-3">Policy</h1>
-          <div class="para-t">
+          <h1 class="text-center header1 mb-3 wow animate__fadeInUp">Policy</h1>
+          <div class="para-t wow animate__fadeInUp">
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
           </div>
         </div>
@@ -88,8 +88,27 @@
 
 <script>
 import Header from "../components/Header"
+import WOW from "wow.js"
+
   export default {
     name:"About",
+     mounted () {
+        var wow = new WOW(
+      {
+        boxClass:     'wow',      
+        animateClass: 'animate__animated', 
+        offset:       0,          
+        mobile:       true,       
+        live:         true,       
+        callback:     function(box) {
+        },
+        scrollContainer: null,   
+        resetAnimation: true,     
+      }
+    );
+    wow.init();
+
+  },
     components:{
       Header
     }

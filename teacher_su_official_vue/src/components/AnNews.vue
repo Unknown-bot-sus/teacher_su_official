@@ -23,7 +23,7 @@ import axios from "axios"
             } 
         },
          mounted(){
-            axios.get("https://newsapi.org/v2/everything?q=tesla&from=2021-09-01&sortBy=publishedAt&apiKey=af767d5fb9574acbb3fa4a7a0959f9dd")
+            axios.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=af767d5fb9574acbb3fa4a7a0959f9dd")
                 .then(response =>{
                     this.lists = response.data.articles;
                     console.log(this.lists);

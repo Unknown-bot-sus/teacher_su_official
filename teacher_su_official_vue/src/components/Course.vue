@@ -29,8 +29,7 @@ export default {
         this.classname = this.title;
         if(this.classname.length > 20) this.classname = this.classname.slice(0, 20) + "...";
         this.classdescription = this.description;
-        if(this.classdescription.length > 200) this.classdescription = this.classdescription.slice(0, 200) + " ...Read More";
-        console.log(this.bg_color)
+        if(this.classdescription.length > 200) this.classdescription = this.classdescription.slice(0, 200) + " ....";
     }
 }
 </script>
