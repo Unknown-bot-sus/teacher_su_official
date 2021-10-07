@@ -1,6 +1,6 @@
 <template>
 
-    <footer class="container-fluid bg-secondary p-5">
+    <footer class="container-fluid bg-secondary px-0 py-4 p-md-5">
         <div class="logo-container">
             <img src="../assets/img/logo.png" alt="logo" width="70" height="70">
             <div class="vertical-line bg-light align-middle d-inline-block"></div>
@@ -14,12 +14,12 @@
         <div class="row content-container">
             <div class="col-lg-4 col-sm-6 col-12">
                 <ul class="text-light list-unstyled">
-                    <li><router-link to="#"></router-link>Home <i class="fas fa-chevron-right"></i></li>
-                    <li><router-link to="#"></router-link>Courses <i class="fas fa-chevron-right"></i></li>
-                    <li><router-link to="#"></router-link>Study with us <i class="fas fa-chevron-right"></i></li>
-                    <li><router-link to="#"></router-link>Career Opprotunities <i class="fas fa-chevron-right"></i></li>
-                    <li><router-link to="#"></router-link>Community <i class="fas fa-chevron-right"></i></li>
-                    <li><router-link to="#"></router-link>About <i class="fas fa-chevron-right"></i></li>
+                    <li><router-link class="text-decoration-none" to="/">Home </router-link><i class="fas fa-chevron-right"></i></li>
+                    <li><router-link class="text-decoration-none" to="/courses">Courses </router-link><i class="fas fa-chevron-right"></i></li>
+                    <li><router-link class="text-decoration-none" to="/studyWithUs">Study with us </router-link><i class="fas fa-chevron-right"></i></li>
+                    <li><router-link class="text-decoration-none" to="/career">Career Opprotunities </router-link><i class="fas fa-chevron-right"></i></li>
+                    <li><router-link class="text-decoration-none" to="#">Community </router-link><i class="fas fa-chevron-right"></i></li>
+                    <li><router-link class="text-decoration-none" to="/about">About </router-link><i class="fas fa-chevron-right"></i></li>
                 </ul>
             </div>
 

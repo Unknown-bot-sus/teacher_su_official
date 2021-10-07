@@ -14,8 +14,8 @@
                         <div class="banner-card p-3  wow animate__fadeInRight">
                             <Header class="text-light  banner-text" title="Study at Teacher Su Centre"></Header>
                             <div class="d-flex align-items-center justify-content-start ">
-                                <button class="btn btn-danger">How to apply</button>
-                                <button class="btn btn-outline-danger ms-3">New Class</button>
+                                <router-link to="/register" class="btn btn-danger"> How to apply</router-link>
+                                <router-link to="/register" class="btn btn-outline-danger ms-3"> New Class</router-link>
                             </div>
                         </div>
                     </div>
@@ -84,30 +84,47 @@
 
         <div class="row my-5 d-flex align-items-center justify-content-center">
             <Header title="Extra Curriculum activites" class="text-center courses-text mb-5 wow animate__fadeInUp"></Header>
-            <div class="col-12 col-sm-8 px-4 px-md-5">
+            <div class="col-12 col-sm-7 px-4 px-md-5">
                 <div>
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                        <img src="https://images.unsplash.com/20/cambridge.JPG?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80)" class="d-block w-100" alt="...">
+                        <img src="../assets/img/image29.jpg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                        <img src="https://images.unsplash.com/20/cambridge.JPG?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80)" class="d-block w-100" alt="...">
+                        <img src="../assets/img/image32.jpg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                        <img src="https://images.unsplash.com/20/cambridge.JPG?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80)" class="d-block w-100" alt="...">
+                        <img src="../assets/img/image33.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="../assets/img/image34.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="../assets/img/image42.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="../assets/img/image46.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="../assets/img/image47.jpg" class="d-block w-100" alt="...">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <button class="carousel-control-prev fs-1 fw-bolder" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <button class="carousel-control-next fs-1 fw-bolder" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
