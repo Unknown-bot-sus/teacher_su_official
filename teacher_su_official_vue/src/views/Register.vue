@@ -28,6 +28,9 @@
         <div class="row d-flex justify-content-center align-items-center">
             <div class="col-10">
                  <Header class="text-center mb-5" title="New terms start date"></Header>
+                 <div class="fomr-group">
+                     <input type="text" class="form-control" v-model="search"/><i></i>
+                 </div>
                 <table class="table table-responsive table-bordered table-hover table-striped table-success">
                     <thead>
                         <tr>
@@ -36,10 +39,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="(course, index) in data" :key="index">
+                        <tr v-for="(course, index) in filter_class" :key="index">
                             <td><router-link to="#" class="bg-transparent text-decoration-none ps-5">{{course.title}}</router-link></td>
                             <td><router-link to="#" class="bg-transparent text-decoration-none ps-5">
-                                <time :datetime="course.date"> {{ renderDate(course.date)}}</time>
+                                <time :datetime="course.date"> {{ renderDate(course.date) }}</time>
                                 </router-link></td>
                         </tr>
                     </tbody>
@@ -62,11 +65,19 @@ import Form from "../components/Form.vue"
         data(){
             return{
                 data: [],
-                filtered_data: [],
                 months: ['January', 'February', 'March', 'April', 'May', 'June',
                        'July', 'August', 'September', 'October', 'November', 'December'],
                 order_title: true,
                 order_date: true,
+                search: '',
+            }
+        },
+        computed:{
+            filter_class(){
+                return this.data.filter((course)=> 
+                course.title.toLowerCase().includes(this.search.toLowerCase()) || 
+                course.date.toLowerCase().includes(this.search.toLowerCase()) ||
+                this.renderDate(course.date).toLowerCase().includes(this.search.toLowerCase()));
             }
         },
         methods:{
@@ -88,19 +99,18 @@ import Form from "../components/Form.vue"
 
             sort_date(){
                 this.data.sort((first, second)=>{
-                    first = first.date.split('-');
-                    second = second.date.split('-');
-                    this.sorter_date(first, second);
+                    this.sorter_date(first.date.split('-'), second.date.split('-'));
                 });
                 if(!this.order_date) this.data.reverse();
                 this.order_date = !this.order_date;
             },
             
+            
             sorter_date(array, array2, index=0){
-                if(index === array.length) return -1;
-                return (+array[index] > +array2[index] ? 1 : 
-                        +array[index] < +array2[index] ? 1 : 
-                        this.sorter_date(array, array2, index++));
+                if(index >= array.length) return -1;
+                return (+array[index] > +array2[index] ? 1 :
+                        +array[index] < +array2[index] ? -1 : 
+                        this.sorter_date(array, array2, ++index));
             }
         },
 
@@ -108,7 +118,7 @@ import Form from "../components/Form.vue"
             this.data = [
                 {
                     title: "Starters 11",
-                    date: "2021-06-19"
+                    date: "2021-06-19",
                 },
                 {
                     title: "Starters 12",
@@ -120,7 +130,7 @@ import Form from "../components/Form.vue"
                 },
                 {
                     title: "Starters 14",
-                    date: "2021-04-19"
+                    date: "2021-12-19"
                 },
                 {
                     title: "Starters 15",

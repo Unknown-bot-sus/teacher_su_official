@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <Navbar />
     <ContactFab></ContactFab>
     <router-view></router-view>
     <Footer></Footer>
@@ -7,14 +8,12 @@
 </template>
 
 <script>
+import Navbar from "./components/Navbar.vue"
 import Footer from "./components/Footer"
 import ContactFab from './components/ContactFab'
   export default {
     name:"App",
-    components :{
-      Navbar,
-      Footer,
-      ContactFab,
+    components :{Navbar,Footer,ContactFab,
     }
   };
 </script>

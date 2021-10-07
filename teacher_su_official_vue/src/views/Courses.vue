@@ -22,16 +22,18 @@
 
         <div class="row flex-column justify-content-center align-items-center mx-3 mt-5 my-md-5 py-0 px-0">
             <div class="d-flex justify-content-start my-0 mx-0 p-0">
-                <button v-for="(button, index) in buttons" :key="button" 
-                        :id="button"
+                <button v-for="(button, index) in buttons" :key="button" :id="button"
                         class="btn course-btn" :class="{active: activeButton === button}" 
                         @click="activeButton = button, rendercourse(data[index])">
-                        {{ renderButtonname }}
+                        {{ renderButtonname(index) }}
                 </button>
             </div>
 
             <div class="d-flex justify-content-center flex-wrap align-items-center py-sm-4 py-0 px-0 courses-container">
-                <Course v-for="(course, index) in min_courses" :key="index" :title="course.title" :description="course.description" link="#"></Course>
+                <Course v-for="(course, index) in min_courses" :key="index" 
+                :title="course.title" :description="course.description" 
+                link="#" :theme="activeButton"
+                ></Course>
                 <div class="row col-12 justify-content-center align-items-center mt-5">
                     <button class="btn view-btn" 
                             v-show="viewbtn_shown" 
@@ -137,21 +139,6 @@ export default {
         }
     },
 
-    computed:{
-        renderButtonname(){
-            switch(this.activeButton){
-                case 'free':
-                    return 'Free classes';
-                case 'ylearner':
-                    return 'Young learners';
-                case 'ielts':
-                    return 'IELTS';
-                default:
-                    return 'Others';
-            }
-        }
-    },
-
     methods:{
         get_mincourse(array, max_index=4){
             try{
@@ -174,7 +161,20 @@ export default {
         renderall(){
             this.min_courses = this.all_courses;
             this.viewbtn_shown = false;
-        }
+        },
+
+        renderButtonname(index){
+            switch(this.buttons[index]){
+                case 'free':
+                    return 'Free classes';
+                case 'ylearner':
+                    return 'Young learners';
+                case 'ielts':
+                    return 'IELTS';
+                default:
+                    return 'Others';
+            }
+        },
 
     },
 
