@@ -164,21 +164,6 @@ export default {
     wow.init();
 
   },
-    computed:{
-        renderButtonname(){
-            switch(this.activeButton){
-                case 'free':
-                    return 'Free classes';
-                case 'ylearner':
-                    return 'Young learners';
-                case 'ielts':
-                    return 'IELTS';
-                default:
-                    return 'Others';
-            }
-        }
-    },
-
     methods:{
         get_mincourse(array, max_index=4){
             try{

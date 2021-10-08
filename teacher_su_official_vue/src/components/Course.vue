@@ -1,6 +1,6 @@
 <template>
     <div class="d-flex flex-column course-container mx-auto">
-        <h3 v-text="classname" class="fw-bold h4 titlecs" :class="theme"></h3>
+        <h3 v-text="title" class="fw-bold h4 titlecs text-truncate" :class="theme"></h3>
         <span v-text="classdescription" class="description"></span>
         <div class="line"></div>
         <router-link :to="link" class="bg-transparent link" :class="theme">
@@ -16,18 +16,15 @@ export default {
     props: {
         title: String,
         description: String,
-        link: String,
+        link: Object,
         theme: String,
     },
     data(){
         return{
-            classname: String,
             classdescription: String
         }
     },
     created(){
-        this.classname = this.title;
-        if(this.classname.length > 20) this.classname = this.classname.slice(0, 20) + "...";
         this.classdescription = this.description;
         if(this.classdescription.length > 200) this.classdescription = this.classdescription.slice(0, 200) + " ....";
     }
