@@ -164,6 +164,7 @@ export default {
     wow.init();
 
   },
+  
     methods:{
         get_mincourse(array, max_index=4){
             try{
