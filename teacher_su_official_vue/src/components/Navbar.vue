@@ -35,7 +35,7 @@
       <input type="radio" name="slider" id="menu-btn" class="tgbtn" hidden>
       <input type="radio" name="slider" id="close-btn" class="tgbtn" hidden>
 
-      <ul class="navbar-nav navbar-dark d-flex flex-column flex-sm-row justify-content-around align-items-center container-fluid  bg-dark">
+      <ul class="navbar-nav navbar-dark d-flex flex-column flex-md-row justify-content-around align-items-center container-fluid  bg-dark">
         <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
 
         <li class="navbar-item">
@@ -227,6 +227,8 @@ nav{
  text-decoration: none;
  font-weight: bold;
 }
+
+
 
 // End Mega Box
 

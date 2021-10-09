@@ -1,6 +1,6 @@
 <template>
 <div class="container-fluid">
-      <div class="row hero-banner position-relative">
+      <div class="row hero-banner">
         <div class="col-12 col-lg-12 py-3 py-md-5 d-flex align-items-center  homebanner-containercs">
           <div class="col-lg-6 py-5 BannerTesti">
             <Header class="BannerText text-light fw-light pe-lg-5 wow animate__backInRight" title="A world-class education, wherever you are"></Header>
@@ -318,13 +318,12 @@ export default {
 
 #homebanner{
   background:url(../assets/img/homebanner.jpeg);
-  height: 100%;
+  height: inherit;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 
   position: absolute;
-  top: 0%;
   right: 0%;
   z-index: -2;
 }
