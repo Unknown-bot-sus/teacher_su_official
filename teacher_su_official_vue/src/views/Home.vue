@@ -275,6 +275,8 @@ import WOW from "wow.js"
 export default {
   name: 'Home',
   components:{Header,LatestEvents,LatestNews},
+<<<<<<< HEAD
+=======
   mounted () {
         var wow = new WOW(
       {
@@ -292,6 +294,7 @@ export default {
     wow.init();
 
   },
+>>>>>>> d4c82be31a613adceea95e400c36e2fe18fc497e
   
   methods: {
     next() {

@@ -31,59 +31,58 @@
 
 
 
-    <div class="navbar navbar-expand navbar-dark d-flex justify-content-around align-items-center bg-dark m-0 p-0" id="mega-menu" role="navigation">
-      <input type="radio" name="slider" id="menu-btn" class="tgbtn">
-      <input type="radio" name="slider" id="close-btn" class="tgbtn">
+    <div class="navbar navbar-expand navbar-dark bg-dark m-0 p-0" id="mega-menu" role="navigation">
+      <input type="radio" name="slider" id="menu-btn" class="tgbtn" hidden>
+      <input type="radio" name="slider" id="close-btn" class="tgbtn" hidden>
 
-      <ul class="navbar-nav bg-primary navbar-dark">
+      <ul class="navbar-nav navbar-dark d-flex justify-content-around align-items-center container-fluid  bg-dark">
         <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
 
         <li class="navbar-item">
-          <a href="#" class="desktop-item">Courses</a>
-          <input type="checkbox" id="showMega" class="tgbtn">
+          <router-link :to="{name: 'Courses'}" class="desktop-item nav-link">Courses<i class="fas fa-chevron-down m-3"></i></router-link>
+          <input type="checkbox" id="showMega" class="tgbtn" hidden>
           <label for="showMega" class="mobile-item">Courses</label>
           <div class="mega-box">
-            <div class="content">
-                <div class="row justify-content-center align-items-center m-0 p-1">
-                  <input type="text" id="search-bar"/>
-                  <label for="search-bar"><i class="fad fa-search"></i></label>
-                  <router-link to="#">View all courses</router-link>
+            <div class="row d-flex justify-content-around">
+                <div class="col-12 col-md-4 d-flex flex-column justify-content-around align-items-center m-0 p-1">
+                  <div class="form-group d-flex justify-content-center align-items-center search-container">
+                    
+                    <input type="text" id="search-bar" class="form-control" placeholder="Search for a course"/>
+                    <label for="search-bar"><i class="fad fa-search text-light px-1"></i></label>
+                  </div>
+                  <router-link :to="{name: 'Courses'}" class="nav-link text-center">View all courses</router-link>
                 </div>
 
-                <div class="row justify-content-center align-items-center m-0 p-1">
-                  <Header title="Browse all courses" />
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="m-0">
-                      <ul class="mega-links">
-                        <li><router-link to="#">Free classes</router-link></li>
-                        <li><router-link to="#">Young learners</router-link></li>
-                        <li><router-link to="#">Research Writing Course</router-link></li>
-                        <li><router-link to="#">How to apply</router-link></li>
+                <div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center m-0 p-1">
+                  <h3 class="text-light">Browse all courses</h3>
+                  <div class="d-flex  justify-content-between align-items-center">
+                      <ul class="mega-links list-unstyled mx-3">
+                        <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">Free classes</router-link></li>
+                        <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">Young learners</router-link></li>
+                        <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">Research Writing Course</router-link></li>
+                        <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">How to apply</router-link></li>
                       </ul>
-                    </div>
-                    <div class="m-0">
-                      <ul class="mega-links">
-                        <li><router-link to="#">IELTS</router-link></li>
-                        <li><router-link to="#">Duolingo</router-link></li>
-                        <li><router-link to="#">Speak English Professionally &amp; English Grammar</router-link></li>
-                        <li><router-link to="#">How to apply scholarship</router-link></li>
+                      <ul class="mega-links list-unstyled mx-3">
+                        <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">IELTS</router-link></li>
+                        <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">Duolingo</router-link></li>
+                        <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">Speak English Professionally &amp; <br/>English Grammar</router-link></li>
+                        <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">How to apply scholarship</router-link></li>
                       </ul>
-                    </div>
                   </div>
                 </div>
 
-                <div class="row justify-content-center align-items-center m-0 p-1">
-                  <Header title="Contact us"/>
-                  <ul class="mega-links">
-                    <li><span>Phone no:09999</span></li>
-                    <li><span>Address: blah blah blah</span></li>
+                <div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center m-0 p-1">
+                  <h3 class="text-light">Contact Us</h3>
+                  <ul class="mega-links list-unstyled">
+                    <li class="m-3"><span class="text-light">Phone no:09999</span></li>
+                    <li class="m-3"><span class="text-light">Address: blah blah blah</span></li>
                   </ul>
-                  <div class="btns">
-                    <a class="btn-icon" href="#" target="_blank"><i class="fab fa-viber"></i></a>
+                  <div class="d-flex my-3">
+                    <a  href="#" target="_blank" class="d-block mx-2"><i class="fab fa-viber btn-icon"></i></a>
 
-                    <a class="btn-icon" href="#" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+                    <a href="#" target="_blank" class="d-block mx-2"><i class="fab fa-facebook-messenger btn-icon"></i></a>
 
-                    <a class="btn-icon" href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="#" target="_blank" class="d-block mx-2"><i class="fab fa-telegram btn-icon"></i></a>
                   </div>
                 </div>
 
@@ -92,9 +91,10 @@
           </div>
       </li>
 
-
-        <li><router-link to="#"></router-link></li>
-        <li><router-link :to="{name:'About'}"></router-link></li>
+        <li class="navbar-item"><router-link to="#" class="nav-link">Study with us<i class="fas fa-chevron-down m-3"></i></router-link></li>
+        <li class="navbar-item"><router-link to="#" class="nav-link">Career Opportunities<i class="fas fa-chevron-down m-3"></i></router-link></li>
+        <li class="navbar-item"><router-link to="#" class="nav-link">Community<i class="fas fa-chevron-down m-3"></i></router-link></li>
+        <li class="navbar-item"><router-link :to="{name:'About'}" class="nav-link">About<i class="fas fa-chevron-down m-3"></i> </router-link></li>
       </ul>
 
 
@@ -156,9 +156,45 @@ export default {
 }
 
 // Start mega menu
-input{
+
+.menu-btn, .close-btn{
   display: none;
 }
+
+.mega-box{
+  width: 100%;
+
+  background-color: var(--primary);
+
+  padding: 1rem;
+
+  position: absolute;
+  left: 0;
+
+}
+
+.search-container{
+  background-color: var(--dark);
+  padding: 0;
+  padding-right: 5px;
+}
+
+.search-container .fa-search{
+  color: var(--light);
+}
+
+.buttoncs{
+}
+
+.btn-icon{
+  color: var(--light);
+  font-size: 2rem;
+}
+
+.buttoncs:focus{
+  outline: none;
+}
+
 //  End mega menu
 
 

@@ -24,7 +24,9 @@
             <h1 class="header text-center py-5">Employing <span class="text-danger">Teacher Su</span>'s graduate and students</h1>
         </div>
         
-        <Job v-for="(job, index) in data" :key=index :bg="color_var[0][index % 2]" :color="color_var[1][index % 2]" :job_title="job.title" :description="job.description"></Job>
+        <Job v-for="(job, index) in data" :key=index 
+        :bg="color_var[0][index % 2]" :color="color_var[1][index % 2]" 
+        :job_title="job.title" :description="job.description"></Job>
         
         <br>
     <br>
