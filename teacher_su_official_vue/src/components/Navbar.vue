@@ -35,39 +35,42 @@
       <input type="radio" name="slider" id="menu-btn" class="tgbtn" hidden>
       <input type="radio" name="slider" id="close-btn" class="tgbtn" hidden>
 
-      <ul class="navbar-nav navbar-dark d-flex justify-content-around align-items-center container-fluid  bg-dark">
+      <ul class="navbar-nav navbar-dark d-flex flex-column flex-md-row justify-content-around align-items-center container-fluid  bg-dark">
         <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
 
         <li class="navbar-item">
-          <router-link :to="{name: 'Courses'}" class="desktop-item nav-link">Courses<i class="fas fa-chevron-down m-3"></i></router-link>
+          <a href="#" class="desktop-item nav-link" id="courses">Courses<i class="fas fa-chevron-down m-3"></i></a>
           <input type="checkbox" id="showMega" class="tgbtn" hidden>
           <label for="showMega" class="mobile-item">Courses</label>
-          <div class="mega-box">
-            <div class="row d-flex justify-content-around">
-                <div class="col-12 col-md-4 d-flex flex-column justify-content-around align-items-center m-0 p-1">
-                  <div class="form-group d-flex justify-content-center align-items-center search-container">
-                    
+            <div class="row d-flex justify-content-around mega-box m-0">
+                <div class="col-12 col-md-4 d-flex flex-column justify-content-around align-items-center m-0 px-4">
+                  <div class="input-group search-container">
                     <input type="text" id="search-bar" class="form-control" placeholder="Search for a course"/>
-                    <label for="search-bar"><i class="fad fa-search text-light px-1"></i></label>
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary bg-transparent" type="button"><i class="fad fa-search text-light px-1"></i></button>
+                    </div>
                   </div>
                   <router-link :to="{name: 'Courses'}" class="nav-link text-center">View all courses</router-link>
                 </div>
 
                 <div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center m-0 p-1">
                   <h3 class="text-light">Browse all courses</h3>
-                  <div class="d-flex  justify-content-between align-items-center">
+                  <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
                       <ul class="mega-links list-unstyled mx-3">
                         <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">Free classes</router-link></li>
                         <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">Young learners</router-link></li>
                         <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">Research Writing Course</router-link></li>
-                        <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">How to apply</router-link></li>
                       </ul>
                       <ul class="mega-links list-unstyled mx-3">
                         <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">IELTS</router-link></li>
                         <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">Duolingo</router-link></li>
                         <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">Speak English Professionally &amp; <br/>English Grammar</router-link></li>
-                        <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">How to apply scholarship</router-link></li>
                       </ul>
+                  </div>
+
+                  <div class="form-group d-flex flex-column flex-sm-row justify-content-around align-items-center">
+                    <router-link to="#" class="form-control btns mx-3">How to apply</router-link>
+                    <router-link to="#" class="form-control btns mx-3">How to apply scholarship</router-link>
                   </div>
                 </div>
 
@@ -85,16 +88,25 @@
                     <a href="#" target="_blank" class="d-block mx-2"><i class="fab fa-telegram btn-icon"></i></a>
                   </div>
                 </div>
-
-
-              </div>
-          </div>
+            </div>
       </li>
 
-        <li class="navbar-item"><router-link to="#" class="nav-link">Study with us<i class="fas fa-chevron-down m-3"></i></router-link></li>
-        <li class="navbar-item"><router-link to="#" class="nav-link">Career Opportunities<i class="fas fa-chevron-down m-3"></i></router-link></li>
-        <li class="navbar-item"><router-link to="#" class="nav-link">Community<i class="fas fa-chevron-down m-3"></i></router-link></li>
-        <li class="navbar-item"><router-link :to="{name:'About'}" class="nav-link">About<i class="fas fa-chevron-down m-3"></i> </router-link></li>
+        <li class="navbar-item">
+          <a href="#" class="desktop-item nav-link" id="study">Study with us<i class="fas fa-chevron-down m-3"></i></a>
+          <input type="checkbox" id="showMega" class="tgbtn" hidden>
+          <label for="showMega" class="mobile-item">Courses</label>
+          <div class="mega-box">
+          </div>
+        </li>
+        <li class="navbar-item">
+          <a href="#" class="desktop-item nav-link" id="career">Career Opportunities<i class="fas fa-chevron-down m-3"></i></a>
+          <input type="checkbox" id="showMega" class="tgbtn" hidden>
+          <label for="showMega" class="mobile-item">Courses</label>
+          <div class="mega-box">
+          </div>
+        </li>
+        <li class="navbar-item"><router-link to="#" class="nav-link">Community</router-link></li>
+        <li class="navbar-item"><router-link :to="{name:'About'}" class="nav-link">About</router-link></li>
       </ul>
 
 
@@ -130,6 +142,9 @@ export default {
 
 </script>
 <style lang="scss" scoped>
+nav{
+  z-index: 1000;
+}
 #nav-barcs.fixed-top{
   animation: navani 0.5s linear;
   transition: all 0.5s;
@@ -157,33 +172,45 @@ export default {
 
 // Start mega menu
 
+// temporary
+
+.mobile-item{
+  display: none;
+}
+
 .menu-btn, .close-btn{
   display: none;
+}
+
+// Start Mega Box
+// #courses:hover + input + label + .mega-box,
+// #study:hover + input + label + .mega-box,
+// #career:hover + input + label + .mega-box,
+.nav-link:hover + input + label + .mega-box,
+.mega-box:hover{
+  visibility: visible;
+  opacity: 1;
 }
 
 .mega-box{
   width: 100%;
 
   background-color: var(--primary);
-
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 
   position: absolute;
   left: 0;
 
+  visibility: hidden;
+  opacity: 0;
+
+  transition: all 0.5s ease-out;
+  z-index: 2;
 }
 
 .search-container{
-  background-color: var(--dark);
-  padding: 0;
-  padding-right: 5px;
-}
-
-.search-container .fa-search{
-  color: var(--light);
-}
-
-.buttoncs{
+  max-width: 30rem;
 }
 
 .btn-icon{
@@ -194,6 +221,16 @@ export default {
 .buttoncs:focus{
   outline: none;
 }
+
+.btns{
+ white-space: nowrap;
+ text-decoration: none;
+ font-weight: bold;
+}
+
+
+
+// End Mega Box
 
 //  End mega menu
 

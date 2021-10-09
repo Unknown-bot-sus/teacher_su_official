@@ -324,7 +324,6 @@ export default {
   background-repeat: no-repeat;
 
   position: absolute;
-  top: -30px;
   right: 0%;
   z-index: -2;
 }
