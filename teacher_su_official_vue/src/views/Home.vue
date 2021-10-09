@@ -336,7 +336,6 @@ export default {
     var(--primary) 60%,
     transparent 60%
   );
-  z-index: -1;
 }
 
 .courses{
