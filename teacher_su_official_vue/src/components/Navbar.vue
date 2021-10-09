@@ -43,11 +43,12 @@
           <input type="checkbox" id="showMega" class="tgbtn" hidden>
           <label for="showMega" class="mobile-item">Courses</label>
             <div class="row d-flex justify-content-around mega-box m-0">
-                <div class="col-12 col-md-4 d-flex flex-column justify-content-around align-items-center m-0 p-1">
-                  <div class="form-group d-flex justify-content-center align-items-center search-container">
-                    
+                <div class="col-12 col-md-4 d-flex flex-column justify-content-around align-items-center m-0 px-4">
+                  <div class="input-group search-container">
                     <input type="text" id="search-bar" class="form-control" placeholder="Search for a course"/>
-                    <label for="search-bar"><i class="fad fa-search text-light px-1"></i></label>
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary bg-transparent" type="button"><i class="fad fa-search text-light px-1"></i></button>
+                    </div>
                   </div>
                   <router-link :to="{name: 'Courses'}" class="nav-link text-center">View all courses</router-link>
                 </div>
@@ -98,14 +99,14 @@
           </div>
         </li>
         <li class="navbar-item">
-          <a href="#" class="desktop-item nav-link" id="study">Career Opportunities<i class="fas fa-chevron-down m-3"></i></a>
+          <a href="#" class="desktop-item nav-link" id="career">Career Opportunities<i class="fas fa-chevron-down m-3"></i></a>
           <input type="checkbox" id="showMega" class="tgbtn" hidden>
           <label for="showMega" class="mobile-item">Courses</label>
           <div class="mega-box">
           </div>
         </li>
-        <li class="navbar-item"><router-link to="#" class="nav-link">Community<i class="fas fa-chevron-down m-3"></i></router-link></li>
-        <li class="navbar-item"><router-link :to="{name:'About'}" class="nav-link">About<i class="fas fa-chevron-down m-3"></i> </router-link></li>
+        <li class="navbar-item"><router-link to="#" class="nav-link">Community</router-link></li>
+        <li class="navbar-item"><router-link :to="{name:'About'}" class="nav-link">About</router-link></li>
       </ul>
 
 
@@ -141,6 +142,9 @@ export default {
 
 </script>
 <style lang="scss" scoped>
+nav{
+  z-index: 1000;
+}
 #nav-barcs.fixed-top{
   animation: navani 0.5s linear;
   transition: all 0.5s;
@@ -179,7 +183,11 @@ export default {
 }
 
 // Start Mega Box
-.nav-link:hover + input + label + .mega-box, .mega-box:hover{
+// #courses:hover + input + label + .mega-box,
+// #study:hover + input + label + .mega-box,
+// #career:hover + input + label + .mega-box,
+.nav-link:hover + input + label + .mega-box,
+.mega-box:hover{
   visibility: visible;
   opacity: 1;
 }
@@ -194,20 +202,15 @@ export default {
   position: absolute;
   left: 0;
 
-  // visibility: hidden;
-  // opacity: 0;
+  visibility: hidden;
+  opacity: 0;
 
   transition: all 0.5s ease-out;
+  z-index: 2;
 }
 
 .search-container{
-  background-color: var(--dark);
-  padding: 0;
-  padding-right: 5px;
-}
-
-.search-container .fa-search{
-  color: var(--light);
+  max-width: 30rem;
 }
 
 .btn-icon{
