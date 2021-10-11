@@ -55,7 +55,7 @@
 
               <div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-start align-items-sm-center m-0 p-1">
                 <h3 class="text-light">Browse all courses</h3>
-                <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-sm-between align-items-center">
+                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
                     <ul class="list-unstyled mx-3">
                       <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">Free classes</router-link></li>
                       <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">Young learners</router-link></li>
