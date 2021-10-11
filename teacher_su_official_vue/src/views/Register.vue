@@ -108,7 +108,6 @@ export default {
         
         sorter_date(array, array2, index=0){
             if(index >= array.length) return 1;
-            console.log(+array[index] > +array2[index], +array[index], +array2[index])
             return (+array[index] > +array2[index] ? 1 :
                     +array[index] < +array2[index] ? -1 :
                     this.sorter_date(array, array2, ++index));
