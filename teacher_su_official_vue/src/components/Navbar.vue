@@ -35,7 +35,7 @@
       <input type="radio" name="slider" id="menu-btn" class="tgbtn" hidden>
       <input type="radio" name="slider" id="close-btn" class="tgbtn" hidden>
       <div class="nav-red container-fluid bg-danger p-0">
-      <ul class="navbar-nav navbar-dark d-flex flex-column flex-md-row justify-content-start justify-content-md-around align-items-center container-fluid  bg-dark m-0 p-0">
+      <ul class="navbar-nav navbar-dark d-flex flex-column flex-lg-row justify-content-start justify-content-lg-around align-items-center container-fluid  bg-dark m-0 p-0">
         <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
 
         <li class="navbar-item">
@@ -43,7 +43,7 @@
           <input type="checkbox" id="sm-course" class="tgbtn" hidden>
           <label for="sm-course" class="mobile-item text-light">Courses<i class="fas fa-chevron-down m-3"></i></label>
           <div class="row d-flex justify-content-start justify-content-sm-around mega-box m-0">
-              <div class="col-12 col-md-4 d-flex flex-column justify-content-around align-items-start align-items-sm-center m-0 px-4">
+              <div class="col-12 col-lg-4 d-flex flex-column justify-content-around align-items-center m-0 px-4">
                 <div class="input-group search-container">
                   <input type="text" id="search-bar" class="form-control" placeholder="Search for a course"/>
                   <div class="input-group-prepend">
@@ -53,7 +53,7 @@
                 <router-link :to="{name: 'Courses'}" class="nav-link text-center">View all courses</router-link>
               </div>
 
-              <div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-start align-items-sm-center m-0 p-1">
+              <div class="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-center m-0 p-1">
                 <h3 class="text-light">Browse all courses</h3>
                 <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
                     <ul class="list-unstyled mx-3">
@@ -74,11 +74,11 @@
                 </div>
               </div>
 
-              <div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-start align-items-sm-center m-0 p-1">
+              <div class="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-center m-0 p-1">
                 <h3 class="text-light">Contact Us</h3>
                 <ul class="mega-links list-unstyled">
                   <li class="m-3"><span class="text-light">Phone no:09999</span></li>
-                  <li class="m-3"><span class="text-light">Address: blah blah blah</span></li>
+                  <li class="m-3"><span class="text-light">Address: 13/7B 2 Zay St Tharkayta, Yangon</span></li>
                 </ul>
                 <div class="d-flex my-3">
                   <a  href="#" target="_blank" class="d-block mx-2"><i class="fab fa-viber btn-icon"></i></a>
@@ -96,8 +96,8 @@
           <input type="checkbox" id="sm-study" class="tgbtn" hidden>
           <label for="sm-study" class="mobile-item text-light">Study<i class="fas fa-chevron-down m-3"></i></label>
           <div class="row d-flex justify-content-start justify-content-sm-around mega-box m-0">
-            <div class="col-12 col-md-3 d-flex flex-column justify-content-around align-items-start align-items-sm-center">
-              <h3 class="text-light border-bottom border-light p-2">Apply to study</h3>
+            <div class="col-12 col-lg-3 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
+              <h3 class="text-light border-bottom border-light p-2 heading">Apply to study</h3>
               <ul class="list-unstyled d-flex flex-column justify-content-start align-items-start">
                 <li><router-link to="#" class="nav-link">How to apply</router-link></li>
                 <li><router-link to="#" class="nav-link">New term start date</router-link></li>
@@ -106,8 +106,8 @@
               </ul>
             </div>
 
-             <div class="col-12 col-md-3 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
-              <h3 class="text-light border-bottom border-light p-2">Study tools and software</h3>
+             <div class="col-12 col-lg-3 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
+              <h3 class="text-light border-bottom border-light p-2 heading">Study tools and software</h3>
               <ul class="list-unstyled d-flex flex-column justify-content-start align-items-start">
                 <li><router-link to="#" class="nav-link">Video-conferencing(zoom)</router-link></li>
                 <li><router-link to="#" class="nav-link">Powerpoint(persentation)</router-link></li>
@@ -115,16 +115,16 @@
               </ul>
              </div>
 
-              <div class="col-12 col-md-3 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
-                <h3 class="text-light border-bottom border-light p-2">Study support and resources</h3>
+              <div class="col-12 col-lg-3 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
+                <h3 class="text-light border-bottom border-light p-2 heading">Study support and resources</h3>
                 <ul class="list-unstyled d-flex flex-column justify-content-start align-items-start">
                   <li><router-link to="#" class="nav-link">IT support</router-link></li>
                   <li><router-link to="#" class="nav-link">Library</router-link></li>
                 </ul>
              </div>
 
-              <div class="col-12 col-md-3 d-flex flex-column justify-content-around align-items-start align-items-sm-center">
-                <h3 class="text-light border-bottom border-light p-2">Extra-curriculum activites</h3>
+              <div class="col-12 col-lg-3 d-flex flex-column justify-content-around align-items-start align-items-sm-center">
+                <h3 class="text-light border-bottom border-light p-2 heading">Extra-curriculum activites</h3>
                 <ul class="list-unstyled d-flex flex-column justify-content-center align-items-start">
                   <li><router-link to="#" class="nav-link">Art Club</router-link></li>
                   <li><router-link to="#" class="nav-link">Comet Conversation Club</router-link></li>
@@ -142,7 +142,7 @@
           <label for="sm-career" class="mobile-item text-light">Career<i class="fas fa-chevron-down m-3"></i></label>
           <div class="row d-flex justify-content-start justify-content-sm-around mega-box m-0">
 
-            <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-start align-items-sm-center">
+            <div class="col-12 col-lg-6 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
               <h3 class="text-light border-bottom border-light p-2">Career</h3>
               <ul class="list-unstyled d-flex flex-column justify-content-center align-items-start">
                 <li><router-link to="#" class="nav-link">Maing teacher</router-link></li>
@@ -152,16 +152,16 @@
               </ul>
             </div>
 
-            <div class="col-12 col-md-6 d-flex flex-column justify-content-around align-items-start align-items-sm-center">
+            <div class="col-12 col-lg-6 d-flex flex-column justify-content-around align-items-start align-items-sm-center">
               <h3 class="text-light border-bottom border-light p-2">Contact us</h3>
               <ul class="list-unstyled d-flex flex-column justify-content-center align-items-start">
                 <li><router-link to="#" class="nav-link">Phone no. 093454343</router-link></li>
-                <li><router-link to="#" class="nav-link">Address: Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br/>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br/> when an unknown printer took a galley of type<br/> and scrambled it to make a type specimen book</router-link></li>
+                <li><router-link to="#" class="nav-link">Address: 12/7B 2 Zay St, angonk</router-link></li>
                 <li><router-link to="#" class="nav-link">Graphic designer</router-link></li>
                 <li><router-link to="#" class="nav-link">Tech team</router-link></li>
               </ul>
 
-                <div class="d-flex my-3">
+                <div class="d-flex justify-content-md-center my-3">
                   <a  href="#" target="_blank" class="d-block mx-2"><i class="fab fa-viber btn-icon"></i></a>
 
                   <a href="#" target="_blank" class="d-block mx-2"><i class="fab fa-facebook-messenger btn-icon"></i></a>
@@ -289,14 +289,16 @@ nav{
   border-bottom: 1px solid var(--light);
 }
 
-
+.heading{
+  white-space: nowrap;
+}
 
 // End Mega Box
 
 //  End mega menu
 
-@media (max-width:767.98px){
-  // Star mega menu
+@media (max-width: 991.98px) {
+   // Star mega menu
   .desktop-item{
     display: none;
   }
@@ -306,9 +308,6 @@ nav{
   }
 
   // Mega box
-  .mega-box{
-    background: grey;
-  }
   .tgbtn:checked + label + .mega-box{
     position: relative;
     visibility: visible;
@@ -338,6 +337,7 @@ nav{
     position: absolute;
     top: 0;
     left: -100%;
+    z-index: 100;
     overflow: scroll;
   }
 
@@ -359,6 +359,15 @@ nav{
     left: 0%;
   }
   // End mega box
+}
+
+@media (max-width:767.98px){
+  .heading{
+    font-size: 1rem;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+ 
 
   // End mega menu
   .navbar-brand img{
