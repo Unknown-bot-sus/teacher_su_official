@@ -98,7 +98,7 @@
           <div class="row d-flex justify-content-start justify-content-sm-around mega-box m-0">
             <div class="col-12 col-md-3 d-flex flex-column justify-content-around align-items-start align-items-sm-center">
               <h3 class="text-light border-bottom border-light p-2">Apply to study</h3>
-              <ul class="list-unstyled d-flex flex-column justify-content-center align-items-start">
+              <ul class="list-unstyled d-flex flex-column justify-content-start align-items-start">
                 <li><router-link to="#" class="nav-link">How to apply</router-link></li>
                 <li><router-link to="#" class="nav-link">New term start date</router-link></li>
                 <li><router-link to="#" class="nav-link">Scholarship</router-link></li>
@@ -108,7 +108,7 @@
 
              <div class="col-12 col-md-3 d-flex flex-column justify-content-around align-items-start align-items-sm-center">
               <h3 class="text-light border-bottom border-light p-2">Study tools and software</h3>
-              <ul class="list-unstyled d-flex flex-column justify-content-center align-items-start">
+              <ul class="list-unstyled d-flex flex-column justify-content-start align-items-start">
                 <li><router-link to="#" class="nav-link">Video-conferencing(zoom)</router-link></li>
                 <li><router-link to="#" class="nav-link">Powerpoint(persentation)</router-link></li>
                 <li><router-link to="#" class="nav-link">Video editing</router-link></li>
