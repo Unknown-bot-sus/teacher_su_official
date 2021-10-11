@@ -42,7 +42,7 @@
                 <i class="fs-1 fas fa-users item-hover"  style="border:2px solid black;border-radius:50%;padding:20px 15px;"></i>
                 <h3 class="fw-bold text-danger mt-2">Community</h3>
                 <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                <router-link :to="{name:''}"><p class="text-primary">Find out more</p></router-link>
+                <router-link :to="{name:'Community'}"><p class="text-primary">Find out more</p></router-link>
               </div>
 
               <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp">
