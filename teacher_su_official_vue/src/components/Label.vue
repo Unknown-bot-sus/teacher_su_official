@@ -19,6 +19,7 @@ export default {
 
     position: absolute;
     top: 8px;
+    z-index: -1;
 }
 
 textarea.form-control + label{

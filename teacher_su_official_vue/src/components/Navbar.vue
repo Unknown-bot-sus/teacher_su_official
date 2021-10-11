@@ -98,7 +98,7 @@
           <div class="row d-flex justify-content-start justify-content-sm-around mega-box m-0">
             <div class="col-12 col-md-3 d-flex flex-column justify-content-around align-items-start align-items-sm-center">
               <h3 class="text-light border-bottom border-light p-2">Apply to study</h3>
-              <ul class="list-unstyled d-flex flex-column justify-content-center align-items-start">
+              <ul class="list-unstyled d-flex flex-column justify-content-start align-items-start">
                 <li><router-link to="#" class="nav-link">How to apply</router-link></li>
                 <li><router-link to="#" class="nav-link">New term start date</router-link></li>
                 <li><router-link to="#" class="nav-link">Scholarship</router-link></li>
@@ -106,7 +106,7 @@
               </ul>
             </div>
 
-             <div class="col-12 col-md-3 d-flex flex-column justify-content-around align-items-start align-items-sm-center">
+             <div class="col-12 col-md-3 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
               <h3 class="text-light border-bottom border-light p-2">Study tools and software</h3>
               <ul class="list-unstyled d-flex flex-column justify-content-center align-items-start">
                 <li><router-link to="#" class="nav-link">Video-conferencing(zoom)</router-link></li>
@@ -115,10 +115,11 @@
               </ul>
              </div>
 
-              <div class="col-12 col-md-3 d-flex flex-column justify-content-around align-items-start align-items-sm-center">
+              <div class="col-12 col-md-3 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
                 <h3 class="text-light border-bottom border-light p-2">Study support and resources</h3>
-                <ul class="list-unstyled d-flex flex-column justify-content-center align-items-start">
+                <ul class="list-unstyled d-flex flex-column justify-content-start align-items-start">
                   <li><router-link to="#" class="nav-link">IT support</router-link></li>
+                  <li><router-link to="#" class="nav-link">Library</router-link></li>
                 </ul>
              </div>
 
@@ -243,7 +244,7 @@ nav{
 }
 
 #mega-menu .nav-link:hover{
-  border-bottom: 1px solid var(--light);
+  border: 1px solid var(--light);
 }
 
 .mega-box{
@@ -261,6 +262,8 @@ nav{
 
   transition: all 0.5s ease-out;
   z-index: 2;
+
+  border-bottom: 1px solid var(--dark);
 }
 
 .search-container{
@@ -286,9 +289,6 @@ nav{
   border-bottom: 1px solid var(--light);
 }
 
-// #megamenu .img{
-//   background: url(../assets/img/logo.png) no-repeat center;
-// }
 
 
 // End Mega Box
