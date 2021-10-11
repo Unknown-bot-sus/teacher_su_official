@@ -1,7 +1,6 @@
 <template>
   <div class="app">
-    <Navbar />
-    <ContactFab></ContactFab>
+    <Navbar/>
     <router-view></router-view>
     <Footer></Footer>
   </div>

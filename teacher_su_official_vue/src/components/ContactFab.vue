@@ -1,7 +1,7 @@
 <template>
     
 
-    <div class="btns">
+    <div class="btns-fab">
         <a class="btn-icon" href="#" target="_blank"><i class="fab fa-viber"></i></a>
 
         <a class="btn-icon" href="#" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
@@ -18,29 +18,10 @@ export default {
     
     methods: {
         popup(){
-            const btn_container = document.querySelector('.btns');
+            const btn_container = document.querySelector('.btns-fab');
             btn_container.classList.toggle('show');
         },
-        hide(){
-            const btn_container = document.querySelector('.btns');
-            btn_container.classList.remove('show');
-        },
-        getcontainer(){
-            return document.querySelector('.btns');
-        },
-        getbtn(){
-            return document.querySelector('#btn-primary');
-        }
     },
-
-    created(){
-        const scope = document.querySelector('body');
-        scope.addEventListener('click', (e)=>{
-            if (e.target.offsetParent != this.getcontainer() && e.target.offsetParent != this.getbtn()){
-                this.hide();
-            }
-        });
-    }
 }
 </script>
 
@@ -66,19 +47,19 @@ export default {
 
     transition: all 0.3s;
 
-    z-index: 100;
+    z-index: 1;
 }
 
 a.btn-icon, a.btn-icon:visited{
     text-decoration: none;
 }
 
-.btns.show .btn-icon:nth-of-type(1){
+.btns-fab.show .btn-icon:nth-of-type(1){
     color: blueviolet;
     transform: translate(-4rem, -4rem);
 }
 
-.btns.show .btn-icon:nth-of-type(2){
+.btns-fab.show .btn-icon:nth-of-type(2){
     background: linear-gradient(
         45deg,
         #0066ff 30%,
@@ -99,7 +80,7 @@ a.btn-icon, a.btn-icon:visited{
     display: flex;
     justify-content: start;
 }
-.btns.show .btn-icon:nth-of-type(3){
+.btns-fab.show .btn-icon:nth-of-type(3){
     color: #0bde98;
 
     transform: translate(-4rem, 10rem);
@@ -109,7 +90,7 @@ a.btn-icon, a.btn-icon:visited{
     font-size: 3rem;
 }
 
-.btns.btns.show + #btn-primary{
+.btns-fab.show + #btn-primary{
     width: 15rem;
     height: 20rem;
     right: -7.5rem;
@@ -118,5 +99,6 @@ a.btn-icon, a.btn-icon:visited{
 
 #btn-primary{
     background-color: var(--light);
+    z-index: 2;
 }
 </style>

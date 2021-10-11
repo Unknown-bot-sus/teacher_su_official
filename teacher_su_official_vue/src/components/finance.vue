@@ -6,7 +6,7 @@
                 <p class="text-center px-md-5 mx-md-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur exercitationem nam quia architecto nemo, aliquam quas reiciendis vel suscipit asperiores ab possimus impedit numquam nobis cum itaque natus ad! Dolor? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae similique porro, laboriosam aperiam iure voluptates. Incidunt laboriosam asperiores nulla, ut quis cupiditate deleniti libero fugiat eveniet aliquam sint, in labore!</p>
             </div>
             <div class="col-12">
-                <Form></Form>
+                <Form text_label="Reason"></Form>
             </div>
         </div>
     </div>
