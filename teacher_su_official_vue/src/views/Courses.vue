@@ -197,6 +197,8 @@ export default {
                     return 'Young learners';
                 case 'ielts':
                     return 'IELTS';
+                case 'all':
+                    return 'All';
                 default:
                     return 'Others';
             }

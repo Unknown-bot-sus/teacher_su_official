@@ -9,8 +9,8 @@
         </div>
 
         <div class="row d-flex align-items-center justify-content-center my-5">
-            <div class="col-6 text-center">
-                <Header title="How to apply" class="mb-3"></Header>
+            <div class="col-12 col-md-6">
+                <Header title="How to apply" class="text-center courses-text mb-4"></Header>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, voluptas perferendis ea tenetur est esse voluptatum, aliquam eveniet earum dicta cupiditate commodi. Eligendi ab repellendus perferendis, eaque alias architecto sit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea debitis eum molestiae, placeat architecto, mollitia quis quod, enim dicta eos aperiam repellat ex optio. Laudantium hic dolore nobis suscipit aut!
                 </p>
@@ -190,5 +190,10 @@ thead tr{
 .tables tbody td:hover{
     background-color: grey;
     color: var(--red);
+}
+@media only screen and (max-width: 484px){
+        .courses-text{
+        font-size: 1.5rem;
+        }
 }
 </style>

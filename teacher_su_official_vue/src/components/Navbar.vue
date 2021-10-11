@@ -108,7 +108,7 @@
 
              <div class="col-12 col-md-3 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
               <h3 class="text-light border-bottom border-light p-2">Study tools and software</h3>
-              <ul class="list-unstyled d-flex flex-column justify-content-center align-items-start">
+              <ul class="list-unstyled d-flex flex-column justify-content-start align-items-start">
                 <li><router-link to="#" class="nav-link">Video-conferencing(zoom)</router-link></li>
                 <li><router-link to="#" class="nav-link">Powerpoint(persentation)</router-link></li>
                 <li><router-link to="#" class="nav-link">Video editing</router-link></li>
