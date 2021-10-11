@@ -13,8 +13,8 @@
 
         <ul class="navbar-nav">
           <li class="navbar-item"><router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">Teacher Su Students</router-link></li>
-          <li class="navbar-item"><router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">Staff</router-link></li>
-          <li class="navbar-item"><router-link to="#" class="nav-link bg-transparent mx-2 menuitemcs">Alumni</router-link></li>
+          <li class="navbar-item"><a href="http://simp.teachersucenter.com/login" class="nav-link bg-transparent mx-2 menuitemcs">Staff</a></li>
+          <li class="navbar-item"><a href="#" class="nav-link bg-transparent mx-2 menuitemcs">Alumni</a></li>
           <li class="navbar-item">
             <div class="d-flex align-item-center position-relative">
               <div class="vertical-line bg-dark vertical-line1"></div>

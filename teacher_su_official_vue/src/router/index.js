@@ -56,21 +56,39 @@ const routes = [
     
   },
   {
-    path:'/levent/:id',
+    path:'/latestevent/:id',
     name:'Leventdetail',
     component: () => import('../views/Leventdetail.vue')
     
   },
   {
-    path:'/lnews/:id',
+    path:'/latestnews/:id',
     name:'Lnewsdetail',
     component: () => import('../views/Lnewsdetail.vue')
     
   },
   {
-    path:'/course',
+    path:'/course/:id',
     name:'coursedetail',
     component: () => import('../views/coursedetail.vue')
+    
+  },
+  {
+    path:'/event',
+    name:'eventdetail',
+    component: () => import('../views/eventdetail.vue')
+    
+  },
+  {
+    path:'/news',
+    name:'newsdetail',
+    component: () => import('../views/newsdetail.vue')
+    
+  },
+  {
+    path:'/community',
+    name:'Community',
+    component: () => import('../views/Community.vue')
     
   },
 ]

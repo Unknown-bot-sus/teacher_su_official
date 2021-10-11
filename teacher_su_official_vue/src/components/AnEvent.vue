@@ -7,7 +7,7 @@
                 <div class="card-text">
                     <p class="fw-bold">{{ list.title }}</p>
                     <p>{{ list.description }}</p>
-                    <p>read more</p>
+                    <router-link :to="{ name: 'eventdetail', params:  {name:list.title} }">Read more</router-link>
                 </div>
             </div>
         </div>
