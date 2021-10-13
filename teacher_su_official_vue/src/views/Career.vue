@@ -96,13 +96,13 @@ export default {
 
    .banner{
         background-color: rgba(148, 148, 148, 0.459);
-        height: 30vh;
+        height: 35vh;
         min-height: 30vh;
     }
     .banner-img{
-        background-image: url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGNhcmVlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+        background-image: url(../assets/img/Study10.png);
         background-size: cover;
-        background-position: center;
+        background-position: top;
         background-repeat: no-repeat;
     }
     

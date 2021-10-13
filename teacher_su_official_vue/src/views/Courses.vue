@@ -77,7 +77,7 @@
                     <div class="col-12 col-lg-6 mb-5 d-flex align-item-center justify-content-center">
                         <router-link :to="{name:'Register'}">
                             <div class="st-con d-flex align-items-center justify-content-between border border-1 border-dark item-hover wow animate__fadeInUp">
-                            <img src="../assets/img/Study.jpg" class="st-img" alt="">
+                            <img src="../assets/img/Study4.png" class="st-img" alt="">
                             <p class="m-0 ms-3  fw-bold">How to apply</p>
                             <i class="fas fa-chevron-circle-right mx-2 text-danger"></i>
                         </div>
@@ -86,7 +86,7 @@
                     <div class="col-12 col-lg-6 mb-5 d-flex align-item-center justify-content-center">
                         <router-link :to="{name:'Study'}">
                             <div class="st-con d-flex align-items-center justify-content-between border border-1 border-dark item-hover wow animate__fadeInUp">
-                            <img src="../assets/img/Study.jpg" class="st-img" alt="">
+                            <img src="../assets/img/Study3.png" class="st-img" alt="">
                             <p class="m-0 ms-3  fw-bold">Find your scholarship</p>
                             <i class="fas fa-chevron-circle-right mx-2 text-danger"></i>
                         </div>
@@ -95,7 +95,7 @@
                     <div class="col-12 col-lg-6 mb-5 d-flex align-item-center justify-content-center">
                         <router-link :to="{name:'pathway'}">
                             <div class="st-con d-flex align-items-center justify-content-between border border-1 border-dark item-hover wow animate__fadeInUp">
-                            <img src="../assets/img/Study.jpg" class="st-img" alt="">
+                            <img src="../assets/img/Study6.png" class="st-img" alt="">
                             <p class="m-0 mx-4  fw-bold">Pathways</p>
                             <i class="fas fa-chevron-circle-right mx-2 text-danger"></i>
                         </div>
@@ -104,7 +104,7 @@
                     <div class="col-12 col-lg-6 mb-5 d-flex align-item-center justify-content-center">
                         <router-link :to="{name:'Career'}">
                             <div class="st-con d-flex align-items-center justify-content-between border border-1 border-dark item-hover wow animate__fadeInUp">
-                            <img src="../assets/img/Study.jpg" class="st-img" alt="">
+                            <img src="../assets/img/Study5.png" class="st-img" alt="">
                             <p class="m-0 ms-3  fw-bold">Career opportunities</p>
                             <i class="fas fa-chevron-circle-right mx-2 text-danger"></i>
                         </div>
@@ -350,7 +350,7 @@ This exam is the logical step in your language learning journey between A2 Key a
 }
 .st-img{
     width: 200px;
-    height: 120px;
+    height: 130px;
 }
 .st-con{
     min-width: 300px;
@@ -370,7 +370,7 @@ This exam is the logical step in your language learning journey between A2 Key a
 @media only screen and (max-width: 629px){
     .st-img{
         width: 140px;
-        height: 70px;
+        height: 90px;
     }
 
     .courses-container{
