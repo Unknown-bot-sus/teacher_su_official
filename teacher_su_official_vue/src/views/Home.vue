@@ -77,7 +77,7 @@
             <Header title="Start your studies at Teacher Su Centre" class="text-center mb-5 courses-text wow animate__backInRight"></Header>
             <div class="d-flex align-items-center justify-content-evenly flex-column">
               <div class="stu-img">
-                <img src="../assets/img/Study.jpg" style="width:100%;height:100%;" alt="">
+                <img src="../assets/img/Study2.png" style="width:100%;height:100%;" alt="">
               </div>
               <div class="row st-con mt-5 px-3">
                 <div class="col-12 col-xl-6 p-3 ">
@@ -343,7 +343,7 @@ export default {
 
 .stu-img{
   width:600px;
-  height: 330px;
+  height: 360px;
   padding: 10px 30px;
 }
 

@@ -35,7 +35,7 @@
             <div class="col-12 d-lg-flex align-items-center justify-content-center p-1 p-md-5">
                 <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap p-3 wow animate__fadeInUp">
                     <div>
-                        <img src="../assets/img/man.jpg" class="rev-img mb-2" alt="">
+                        <img src="../assets/img/Study9.png" class="rev-img mb-2" alt="">
                         <div>
                             <p class="fw-bold text-center m-0">Su Htet Zaw</p>
                             <p class="text-muted text-center m-2">Founder and CEOf`</p>
@@ -140,9 +140,9 @@ import WOW from "wow.js"
         height: 20vh;
     }
     .banner-img{
-        background-image: url(https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fG9mZmljZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+        background-image: url(../assets/img/Study8.png);
         background-size: cover;
-        background-position: center;
+        background-position:center;
         background-repeat: no-repeat;
     }
       .rev-img{
@@ -172,7 +172,7 @@ import WOW from "wow.js"
             font-size: 4rem;
         }
         .banner{
-            height: 30vh;
+            height: 35vh;
         }
     }
     @media only screen and (max-width: 427px){
