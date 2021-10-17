@@ -11,10 +11,7 @@ import Navbar from "./components/Navbar.vue"
 import Footer from "./components/Footer"
   export default {
     name:"App",
-<<<<<<< HEAD
     components :{Navbar,Footer,
-=======
-    components :{Navbar,Footer,ContactFab,
     },
     data(){
       return{
@@ -27,7 +24,6 @@ import Footer from "./components/Footer"
         this.act_course = active;
         console.log(this.act_course)
       }
->>>>>>> a0088affd3d800945c24415e7bc090d8e593c88c
     }
   };
 </script>
