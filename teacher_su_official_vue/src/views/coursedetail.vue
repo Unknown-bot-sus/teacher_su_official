@@ -1,6 +1,9 @@
 <template>
     <div>
-        this is coursedetail {{ $route.params.id }}
+        this is coursedetail {{ $route.params.id }} 
+        {{ $route.params.title }}
+        {{ $route.params.description }}
+        
     </div>
 </template>
 
