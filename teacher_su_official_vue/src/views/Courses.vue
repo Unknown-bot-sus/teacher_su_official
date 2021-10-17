@@ -279,9 +279,6 @@ This exam is the logical step in your language learning journey between A2 Key a
     min-height: 30vh;
 }
 
-#courses-container{
-    border: 1px solid var(--dark);
-}
 .course-btn{
     width: 10rem;
     border: 1px solid var(--dark);
