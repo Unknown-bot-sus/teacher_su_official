@@ -2,7 +2,7 @@
   <header id="home">
     <nav>
       <div class="navbar navbar-expand navbar-dark d-flex align-items-center justify-content-between bg-danger m-0 px-3 py-0" id="small-menu" role="navigation">
-        <a href="#" class="navbar-brand d-flex">
+        <a href="#" class="navbar-brand d-flex justify-content-center align-items-center">
           <img src="../assets/img/logo.png" alt="logo" width="70" height="70" class="d-inline-block"/>
           <div class="vertical-line bg-light"></div>
           <div class="d-flex flex-column justify-content-around align-items-start text-light fw-bold mx-2 my-0 ">
@@ -56,13 +56,13 @@
                             <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'free')" class="text-light nav-link">Free classes</router-link></li>
                             <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'ylearner')" class="text-light nav-link">Young learners</router-link></li>
                             <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'others')" class="text-light nav-link">Research Writing Course</router-link></li>
-                            <li><router-link :to="{name: 'Register'}" class="text-light nav-link btns">How to apply</router-link></li>
+                            <li><router-link :to="{name: 'Register'}" class="btns form-control">How to apply</router-link></li>
                           </ul>
 
                           <ul class="list-unstyled mx-3 d-flex flex-column align-items-start">
                             <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'ielts')" class="text-light nav-link">IELTS</router-link></li>
                             <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'others')" class="text-light nav-link">Duolingo</router-link></li>
-                            <li><router-link :to="{name: 'Register'}" class="text-light nav-link btns">How to apply scholarship</router-link></li>
+                            <li><router-link :to="{name: 'Register'}" class="btns form-control">How to apply scholarship</router-link></li>
                           </ul>
                       </div>
                     </div>
@@ -87,7 +87,7 @@
               <li class="navbar-item">
                 <a href="#" class="desktop-item nav-link" id="study">Study with us<i class="fas fa-chevron-down m-3"></i></a>
                 <input type="checkbox" id="sm-study" class="tgbtn" hidden>
-                <label for="sm-study" class="mobile-item text-light">Study<i class="fas fa-chevron-down m-3"></i></label>
+                <label for="sm-study" class="mobile-item text-light">Study with us<i class="fas fa-chevron-down m-3"></i></label>
                 <div class="row d-flex justify-content-start justify-content-sm-around mega-box m-0">
                   <div class="col-12 col-lg-3 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
                     <h3 class="text-light border-bottom border-light p-2 heading">Apply to study</h3>
@@ -95,7 +95,7 @@
                       <li><router-link to="#" class="nav-link">How to apply</router-link></li>
                       <li><router-link to="#" class="nav-link">New term start date</router-link></li>
                       <li><router-link to="#" class="nav-link">Scholarship</router-link></li>
-                      <li><router-link to="#" class="form-control btns mx-3">View all courses</router-link></li>
+                      <li><router-link to="#" class="form-control btns">View all courses</router-link></li>
                     </ul>
                   </div>
 
@@ -138,9 +138,9 @@
                   <div class="col-12 col-lg-6 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
                     <h3 class="text-light border-bottom border-light p-2">Career</h3>
                     <ul class="list-unstyled d-flex flex-column justify-content-center align-items-start">
-                      <li><router-link :to="{name: 'Career'}">Maing teacher</router-link></li>
-                      <li><router-link :to="{name: 'Career'}">Assistant teacher</router-link></li>
-                      <li><router-link :to="{name: 'Career'}">Graphic designer</router-link></li>
+                      <li><router-link :to="{name: 'Career'}" class="nav-link">Maing teacher</router-link></li>
+                      <li><router-link :to="{name: 'Career'}" class="nav-link">Assistant teacher</router-link></li>
+                      <li><router-link :to="{name: 'Career'}" class="nav-link">Graphic designer</router-link></li>
                       <li><router-link :to="{name: 'Career'}" class="nav-link">Tech team</router-link></li>
                     </ul>
                   </div>
@@ -215,11 +215,10 @@ nav{
   display: none;
 }
   
-// #mega-menu{
+#mega-menu{
   .mobile-item{
     display: none;
   }
-
 
   // Start Mega Box
   .nav-link:hover + input + label + .mega-box,
@@ -264,68 +263,84 @@ nav{
   white-space: nowrap;
   }
 
-  .nav-link.focus{
-    border-bottom: 1px solid var(--light);
-  }
-
   .heading{
     white-space: nowrap;
   }
-// }
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #242526;
+}
+::-webkit-scrollbar-thumb {
+  background: #3A3B3C;
+}
 
 @media (max-width: 991.98px) {
   .vertical-line{
     display: none;
   }
    // Star mega menu
-  .desktop-item{
-    display: none;
-  }
 
-  .mobile-item{
-    display: inline-block;
-  }
+  #mega-menu{
+      // Mega box
+    .tgbtn:checked + label + .mega-box{
+      background: var(--dark);
+      position: relative;
+      visibility: visible;
+      opacity: 1;
+      width: 100%;
+    }
 
-  // Mega box
-  .tgbtn:checked + label + .mega-box{
-    position: relative;
-    visibility: visible;
-    opacity: 1;
-    width: 100%;
-  }
+    .mega-box:hover{
+      visibility: hidden;
+      opacity: 0;
+    }
 
-  .mega-box:hover{
-    visibility: hidden;
-    opacity: 0;
-  }
+    .menu-btn, .close-btn{
+      color: #fff;
+      display: block;
+    }
 
-  .menu-btn, .close-btn{
-    color: #fff;
-    display: block;
-  }
+    .close-btn{
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
 
-  .close-btn{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-  }
+    .desktop-item{
+      display: none;
+    }
 
-  #mega-menu .navbar-nav{
-    background-color: var(--primary);
-    width: 75%;
-    height: 120vh;
-    position: absolute;
-    top: 0;
-    left: -100%;
-    z-index: 100;
-    overflow: scroll;
-  }
+    .mobile-item{
+      display: inline-block;
+      cursor: pointer;
+    }
 
-  #mega-menu .navbar-nav .navbar-item{
+    .navbar-nav{
+      background-color: var(--primary);
+      width: 75%;
+      height: 120vh;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      z-index: 100;
+      overflow: scroll;
+
+      transition: all 0.5s;
+    }
+
+    .navbar-nav .navbar-item{
     width: 100%;
     text-align: center;
     margin-top: 2rem;
+    }
   }
+
+
 
   #menu-btn:checked ~ .btn.menu-btn{
     display: none;

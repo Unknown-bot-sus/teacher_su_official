@@ -26,7 +26,7 @@
         
         <Job v-for="(job, index) in data" :key=index 
         :bg="color_var[0][index % 2]" :color="color_var[1][index % 2]" 
-        :job_title="job.title" :description="job.description"></Job>
+        :job_title="job.title" :description="job.description" :id="job.title"></Job>
         
         <br>
     <br>
