@@ -32,7 +32,7 @@ export default {
 </script>
 <style scoped>
 .course-container{
-    width: 20rem;
+    width: 16.5rem;
     border: 1px solid var(--dark);
     padding: 1rem;
     margin-top: 1rem;

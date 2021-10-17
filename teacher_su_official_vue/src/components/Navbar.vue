@@ -92,10 +92,10 @@
                   <div class="col-12 col-lg-3 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
                     <h3 class="text-light border-bottom border-light p-2 heading">Apply to study</h3>
                     <ul class="list-unstyled d-flex flex-column justify-content-start align-items-start">
-                      <li><router-link to="#" class="nav-link">How to apply</router-link></li>
-                      <li><router-link to="#" class="nav-link">New term start date</router-link></li>
-                      <li><router-link to="#" class="nav-link">Scholarship</router-link></li>
-                      <li><router-link to="#" class="form-control btns">View all courses</router-link></li>
+                      <li><router-link :to="{name: 'Register'}" class="nav-link">How to apply</router-link></li>
+                      <li><router-link :to="{name: 'Register'}" class="nav-link">New term start date</router-link></li>
+                      <li><router-link :to="{name: 'Study'}" class="nav-link">Scholarship</router-link></li>
+                      <li><router-link :to="{name: 'Courses'}" class="form-control btns">View all courses</router-link></li>
                     </ul>
                   </div>
 
