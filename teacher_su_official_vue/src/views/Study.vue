@@ -208,7 +208,7 @@ import WOW from "wow.js"
         min-height: 30vh;
     }
     .banner-img{
-        background-image: url(../assets/img/Study9.png);
+        background-image: url(../assets/img/Study11.png);
         background-size:cover;
         background-position:center;
         background-repeat: no-repeat;

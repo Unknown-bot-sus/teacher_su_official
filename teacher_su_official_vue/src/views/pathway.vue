@@ -8,12 +8,12 @@
             </div>
         </div>
         <div class="row d-flex align-items-center justify-content-center">
-            <div class="col-12 col-md-6 my-3 my-md-5">
+            <div class="col-12 col-md-6 my-3 my-md-5 img-thumbnail">
                 <img src="../assets/img/register1.png" style="width:100%;" alt="">
             </div>
         </div>
         <div class="row d-flex align-items-center justify-content-center">
-            <div class="col-12 col-md-6 my-3 my-md-5">
+            <div class="col-12 col-md-6 my-3 my-md-5 img-thumbnail">
                 <img src="../assets/img/register.png" style="width:100%;" alt="">
             </div>
         </div>

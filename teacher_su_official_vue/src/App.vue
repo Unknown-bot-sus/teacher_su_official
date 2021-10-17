@@ -9,10 +9,9 @@
 <script>
 import Navbar from "./components/Navbar.vue"
 import Footer from "./components/Footer"
-import ContactFab from './components/ContactFab'
   export default {
     name:"App",
-    components :{Navbar,Footer,ContactFab,
+    components :{Navbar,Footer,
     }
   };
 </script>

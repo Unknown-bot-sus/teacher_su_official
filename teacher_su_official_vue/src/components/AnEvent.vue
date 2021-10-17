@@ -1,15 +1,23 @@
 <template>
         <div>
-            <div  v-for="list in lists" :key="list.id" class="d-flex align-items-center justify-content-between border border-2 p-1 p-md-3 mb-3" >
-                <div class="card-img d-flex align-items-center justify-content-center">
-                    <img :src="list.urlToImage" class="cimg" alt="">
-                </div>
-                <div class="card-text">
-                    <p class="fw-bold">{{ list.title }}</p>
-                    <p>{{ list.description }}</p>
-                    <router-link :to="{ name: 'eventdetail', params:  {name:list.title} }">Read more</router-link>
+            <h1 class="text-center">Events</h1>
+            <div class="d-flex align-items-center justify-content-evenly flex-wrap">
+            <div v-for="list in lists" :key="list.id" class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4 d-flex align-items-center justify-content-center p-1">
+                    <img :src="list.urlToImage" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ renderTitle(list.title) }}</h5>
+                        <p class="card-text">{{ renderDescription(list.description) }}</p>
+                        <router-link :to="{ name: 'eventdetail', params:  {name:list.title} }">Read more</router-link>
+                    </div>
+                    </div>
                 </div>
             </div>
+           
+        </div>
         </div>
 </template>
 
@@ -19,8 +27,22 @@ import axios from "axios"
         name:"AnEvent",
         data() {
             return {
-                lists: []
+                lists: [],
             } 
+        },
+        methods: {
+            renderDescription(listDesc) {
+                
+                if(listDesc.length > 100) return listDesc.slice(0,100)+ "...";
+                else if (listDesc.length === 0 ) return "no description";
+                else return listDesc
+            },
+            renderTitle(listTitle) {
+                
+                if(listTitle.length > 50) return listTitle.slice(0,50)+ "...";
+                else if (listTitle.length === 0 ) return "no title";
+                else return listTitle
+            }
         },
          mounted(){
             axios.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=af767d5fb9574acbb3fa4a7a0959f9dd")
@@ -29,24 +51,16 @@ import axios from "axios"
                     console.log(this.lists);
                     
                 })
-        }
+        },
+        
        
     }
 </script>
 
 <style scoped>
-   .card-img{
-       width: 40%;
-   }
+
    .cimg{
        width: 300px;
    }
-   .card-text{
-       width: 60%;
-   }
-   @media only screen and (max-width: 1383px){
-       .cimg{
-           width: 200px;
-        }
-   }
+  
 </style>
