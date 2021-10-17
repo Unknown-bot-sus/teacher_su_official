@@ -52,17 +52,16 @@
                     <div class="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-center m-0 p-1">
                       <h3 class="text-light">Browse all courses</h3>
                       <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
-                          <ul class="list-unstyled mx-3">
-                            <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">Free classes</router-link></li>
-                            <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">Young learners</router-link></li>
-                            <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">Research Writing Course</router-link></li>
-                            <li><router-link :to="{name: 'Register'}" class="text-light btns">How to apply</router-link></li>
+                          <ul class="list-unstyled mx-3 d-flex flex-column align-items-start">
+                            <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'free')" class="text-light nav-link">Free classes</router-link></li>
+                            <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'ylearner')" class="text-light nav-link">Young learners</router-link></li>
+                            <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'others')" class="text-light nav-link">Research Writing Course</router-link></li>
+                            <li><router-link :to="{name: 'Register'}" class="text-light nav-link btns">How to apply</router-link></li>
                           </ul>
 
-                          <ul class="list-unstyled mx-3">
-                            <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">IELTS</router-link></li>
-                            <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">Duolingo</router-link></li>
-                            <li><router-link :to="{name: 'Courses'}" class="text-light nav-link">Speak English Professionally &amp; <br/>English Grammar</router-link></li>
+                          <ul class="list-unstyled mx-3 d-flex flex-column align-items-start">
+                            <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'ielts')" class="text-light nav-link">IELTS</router-link></li>
+                            <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'others')" class="text-light nav-link">Duolingo</router-link></li>
                             <li><router-link :to="{name: 'Register'}" class="text-light nav-link btns">How to apply scholarship</router-link></li>
                           </ul>
                       </div>
@@ -93,38 +92,38 @@
                   <div class="col-12 col-lg-3 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
                     <h3 class="text-light border-bottom border-light p-2 heading">Apply to study</h3>
                     <ul class="list-unstyled d-flex flex-column justify-content-start align-items-start">
-                      <li><router-link :to="{name: 'Register'}" class="nav-link">How to apply</router-link></li>
-                      <li><router-link :to="{name: 'Register'}" class="nav-link">New term start date</router-link></li>
-                      <li><router-link :to="{name: 'Study'}" class="nav-link">Scholarship</router-link></li>
-                      <li><router-link :to="{name: 'Courses'}" class="form-control btns mx-3">View all courses</router-link></li>
+                      <li><router-link to="#" class="nav-link">How to apply</router-link></li>
+                      <li><router-link to="#" class="nav-link">New term start date</router-link></li>
+                      <li><router-link to="#" class="nav-link">Scholarship</router-link></li>
+                      <li><router-link to="#" class="form-control btns mx-3">View all courses</router-link></li>
                     </ul>
                   </div>
 
                   <div class="col-12 col-lg-3 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
                     <h3 class="text-light border-bottom border-light p-2 heading">Study tools and software</h3>
                     <ul class="list-unstyled d-flex flex-column justify-content-start align-items-start">
-                      <li><router-link :to="{name: 'Help'}" class="nav-link">Video-conferencing(zoom)</router-link></li>
-                      <li><router-link :to="{name: 'Help'}" class="nav-link">Powerpoint(persentation)</router-link></li>
-                      <li><router-link :to="{name: 'Help'}" class="nav-link">Video editing</router-link></li>
+                      <li><router-link to="#" class="nav-link">Video-conferencing(zoom)</router-link></li>
+                      <li><router-link to="#" class="nav-link">Powerpoint(persentation)</router-link></li>
+                      <li><router-link to="#" class="nav-link">Video editing</router-link></li>
                     </ul>
                   </div>
 
                     <div class="col-12 col-lg-3 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
                       <h3 class="text-light border-bottom border-light p-2 heading">Study support and resources</h3>
                       <ul class="list-unstyled d-flex flex-column justify-content-start align-items-start">
-                        <li><router-link :to="{name: 'Help'}" class="nav-link">IT support</router-link></li>
-                        <li><a to="http://library.teachersucenter.com" class="nav-link">Library</a></li>
+                        <li><router-link to="#" class="nav-link">IT support</router-link></li>
+                        <li><router-link to="#" class="nav-link">Library</router-link></li>
                       </ul>
                   </div>
 
                     <div class="col-12 col-lg-3 d-flex flex-column justify-content-around align-items-start align-items-sm-center">
                       <h3 class="text-light border-bottom border-light p-2 heading">Extra-curriculum activites</h3>
                       <ul class="list-unstyled d-flex flex-column justify-content-center align-items-start">
-                        <li><router-link :to="{name: 'Community'}" class="nav-link">Art Club</router-link></li>
-                        <li><router-link :to="{name: 'Community'}" class="nav-link">Comet Conversation Club</router-link></li>
-                        <li><router-link :to="{name: 'Community'}" class="nav-link">Debate Club</router-link></li>
-                        <li><router-link :to="{name: 'Community'}" class="nav-link">Entertainment Club</router-link></li>
-                        <li><router-link :to="{name: 'Community'}" class="nav-link">Health &#38; Well-being</router-link></li>
+                        <li><router-link to="#" class="nav-link">Art Club</router-link></li>
+                        <li><router-link to="#" class="nav-link">Comet Conversation Club</router-link></li>
+                        <li><router-link to="#" class="nav-link">Debate Club</router-link></li>
+                        <li><router-link to="#" class="nav-link">Entertainment Club</router-link></li>
+                        <li><router-link to="#" class="nav-link">Health &#38; Well-being</router-link></li>
                       </ul>
                   </div>
                 </div>
@@ -149,7 +148,7 @@
                   <div class="col-12 col-lg-6 d-flex flex-column justify-content-around align-items-start align-items-sm-center">
                     <h3 class="text-light border-bottom border-light p-2">Contact us</h3>
                     <ul class="list-unstyled d-flex flex-column justify-content-center align-items-start">
-                      <li><a href="tel:093454343" class="nav-link">Phone no. 093454343</a></li>
+                      <li><router-link to="#" class="nav-link">Phone no. 093454343</router-link></li>
                       <li><router-link to="#" class="nav-link">Address: 12/7B 2 Zay St, angonk</router-link></li>
                     </ul>
 
@@ -263,8 +262,6 @@ nav{
 
   .btns{
   white-space: nowrap;
-  text-decoration: none;
-  font-weight: bold;
   }
 
   .nav-link.focus{
