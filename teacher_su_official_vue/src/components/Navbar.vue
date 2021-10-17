@@ -189,27 +189,27 @@ export default {
 <style lang="scss" scoped>
 nav{
   z-index: 1000;
-
-  .vertical-line{
-    display: inline-block;
-    width: 1px;
-    height: 70px;
-  }
-
-  .vertical-line1{
-    height: 30px;
-    position: absolute;
-    top: 30px;
-    right: 50%;
-  }
-
-  .vertical-line2{
-    height: 30px;
-    position: absolute;
-    bottom: 30px;
-    right: 50%;
-  }
 }
+.vertical-line{
+  display: inline-block;
+  width: 1px;
+  height: 70px;
+}
+
+.vertical-line1{
+  height: 30px;
+  position: absolute;
+  top: 30px;
+  right: 50%;
+}
+
+.vertical-line2{
+  height: 30px;
+  position: absolute;
+  bottom: 30px;
+  right: 50%;
+}
+
 
 .menu-btn, .close-btn{
   display: none;
