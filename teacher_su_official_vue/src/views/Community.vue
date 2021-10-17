@@ -23,10 +23,10 @@
         <div class="row my-3 my-md-5 d-flex align-items-center justify-content-center">
             <div class="col-12 col-md-8">
 
-                <div class="d-flex align-items-center justify-content-center my-4">
+                <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
                     <img src="../assets/img/debate.png" class="image">
                 </div>
-                <div>
+                <div class="wow animate__fadeInUp">
                     <Header title="Debate club" class="text-center courses-text mb-4"></Header>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!lo
@@ -38,10 +38,10 @@
         <div class="row my-3 my-md-5 d-flex align-items-center justify-content-center">
             <div class="col-12 col-md-8">
 
-                <div class="d-flex align-items-center justify-content-center my-4">
+                <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
                     <img src="../assets/img/enter.png" class="image">
                 </div>
-                <div>
+                <div class="wow animate__fadeInUp">
                     <Header title="Entertainment club" class="text-center courses-text mb-4"></Header>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!lo
@@ -53,10 +53,10 @@
         <div class="row my-3 my-md-5 d-flex align-items-center justify-content-center">
             <div class="col-12 col-md-8">
 
-                <div class="d-flex align-items-center justify-content-center my-4">
+                <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
                     <img src="../assets/img/art.png" class="image">
                 </div>
-                <div>
+                <div class="wow animate__fadeInUp">
                     <Header title="Art club" class="text-center courses-text mb-4"></Header>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!lo
@@ -68,10 +68,10 @@
         <div class="row my-3 my-md-5 d-flex align-items-center justify-content-center">
             <div class="col-12 col-md-8">
 
-                <div class="d-flex align-items-center justify-content-center my-4">
+                <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
                     <img src="../assets/img/yoga.png" class="image">
                 </div>
-                <div>
+                <div class="wow animate__fadeInUp">
                     <Header title="Yoga club" class="text-center courses-text mb-4"></Header>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!lo
@@ -83,10 +83,10 @@
         <div class="row my-3 my-md-5 d-flex align-items-center justify-content-center">
             <div class="col-12 col-md-8">
 
-                <div class="d-flex align-items-center justify-content-center my-4">
+                <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
                     <img src="../assets/img/counselling.jpg" class="image">
                 </div>
-                <div>
+                <div class="wow animate__fadeInUp">
                     <Header title="Telecounselling club" class="text-center courses-text mb-4"></Header>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!lo
@@ -98,10 +98,10 @@
         <div class="row my-3 my-md-5 d-flex align-items-center justify-content-center">
             <div class="col-12 col-md-8">
 
-                <div class="d-flex align-items-center justify-content-center my-4">
-                    <img src="../assets/img/comet.jpg" class="image">
+                <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
+                    <img src="../assets/img/comet.jpg"  class="image">
                 </div>
-                <div>
+                <div class="wow animate__fadeInUp">
                     <Header title="Comet conversation club" class="text-center courses-text mb-4"></Header>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!lo
@@ -113,10 +113,10 @@
         <div class="row my-3 my-md-5 d-flex align-items-center justify-content-center">
             <div class="col-12 col-md-8">
 
-                <div class="d-flex align-items-center justify-content-center my-4">
+                <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
                     <img src="../assets/img/tandl.jpg" class="image">
                 </div>
-                <div>
+                <div class="wow animate__fadeInUp">
                     <Header title="Teaching and Learning English club" class="text-center courses-text mb-4"></Header>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!lo
@@ -130,28 +130,29 @@
 
 <script>
 import Header from "../components/Header.vue"
+import WOW from "wow.js"
     export default {
         name:"Community",
         components: {
             Header,
         },
-//         mounted () {
-//         var wow = new WOW(
-//       {
-//         boxClass:     'wow',      
-//         animateClass: 'animate__animated', 
-//         offset:       0,          
-//         mobile:       true,       
-//         live:         true,       
-//         callback:     function(box) {
-//         },
-//         scrollContainer: null,   
-//         resetAnimation: true,     
-//       }
-//     );
-//     wow.init();
+        mounted () {
+        var wow = new WOW(
+      {
+        boxClass:     'wow',      
+        animateClass: 'animate__animated', 
+        offset:       0,          
+        mobile:       true,       
+        live:         true,       
+        callback:     function(box) {
+        },
+        scrollContainer: null,   
+        resetAnimation: true,     
+      }
+    );
+    wow.init();
 
-//   },
+  },
     }
 </script>
 

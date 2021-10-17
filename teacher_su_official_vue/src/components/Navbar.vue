@@ -2,14 +2,14 @@
   <header id="home">
     <nav>
       <div class="navbar navbar-expand navbar-dark d-flex align-items-center justify-content-between bg-danger m-0 px-3 py-0" id="small-menu" role="navigation">
-        <a href="#" class="navbar-brand d-flex justify-content-center align-items-center">
+        <router-link to="/" class="navbar-brand d-flex justify-content-center align-items-center">
           <img src="../assets/img/logo.png" alt="logo" width="70" height="70" class="d-inline-block"/>
           <div class="vertical-line bg-light"></div>
           <div class="d-flex flex-column justify-content-around align-items-start text-light fw-bold mx-2 my-0 ">
             <span>Teacher Su</span>
             <span>Centre</span>
           </div>
-        </a>
+        </router-link>
 
         <ul class="navbar-nav">
           <li class="navbar-item"><router-link to="#" class="nav-link mx-2 menu-items">Teacher Su Students</router-link></li>
