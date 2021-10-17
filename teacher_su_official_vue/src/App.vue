@@ -1,7 +1,7 @@
 <template>
   <div class="app">
-    <Navbar/>
-    <router-view></router-view>
+    <Navbar @act_course='chgActCourse' />
+    <router-view v-model="act_course"></router-view>
     <Footer></Footer>
   </div>
 </template>
@@ -11,7 +11,23 @@ import Navbar from "./components/Navbar.vue"
 import Footer from "./components/Footer"
   export default {
     name:"App",
+<<<<<<< HEAD
     components :{Navbar,Footer,
+=======
+    components :{Navbar,Footer,ContactFab,
+    },
+    data(){
+      return{
+        act_course: 'free',
+      }
+    },
+    methods: {
+      chgActCourse(active){
+        console.log(active)
+        this.act_course = active;
+        console.log(this.act_course)
+      }
+>>>>>>> a0088affd3d800945c24415e7bc090d8e593c88c
     }
   };
 </script>

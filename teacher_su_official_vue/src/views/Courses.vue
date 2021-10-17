@@ -23,16 +23,16 @@
         <div class="row flex-column justify-content-center align-items-center mx-3 mt-5 my-md-5 py-0 px-0">
             <div class="d-flex justify-content-start my-0 mx-0 p-0">
                 <button v-for="(button, index) in buttons" :key="button" :id="button"
-                        class="btn course-btn" :class="{active: activeButton === button}" 
-                        @click="activeButton = button, rendercourse(data[index])">
+                        class="btn course-btn" :class="{active: modelValue === button}"
+                        @click="$emit('update:modelValue', button),rendercourse(data[index])">
                         {{ renderButtonname(index) }}
                 </button>
             </div>
 
-            <div class="d-flex justify-content-center flex-wrap align-items-center py-sm-4 py-0 px-0 courses-container">
+            <div class="d-flex justify-content-center flex-wrap align-items-center py-sm-4 py-0 px-0" id="courses-container">
                 <Course v-for="(course, index) in min_courses" :key="index" 
                 :title="course.title" :description="course.description" 
-                :link="{name:'coursedetail',params:{id:course.id}}" :theme="activeButton"
+                :link="{name:'coursedetail',params:{id:course.id}}" :theme="modelValue"
                 ></Course>
                 <div class="row col-12 justify-content-center align-items-center mt-5">
                     <button class="btn view-btn" 
@@ -136,6 +136,8 @@ import WOW from "wow.js"
 export default {
     name:'Courses',
     components:{Header,Form,Header,Course},
+    props: ['modelValue'],
+    emits: ['update:modelValue'],
     data(){
         return{
             data: [],
@@ -144,7 +146,6 @@ export default {
             viewbtn_shown: true,
             isActive: true,
             buttons: ['free', 'ylearner', 'ielts', 'others'],
-            activeButton: 'free',
         }
     },
     mounted () {
@@ -162,9 +163,7 @@ export default {
       }
     );
     wow.init();
-
   },
-  
     methods:{
         get_mincourse(array, max_index=4){
             try{
@@ -280,7 +279,7 @@ This exam is the logical step in your language learning journey between A2 Key a
     min-height: 30vh;
 }
 
-.courses-container{
+#courses-container{
     border: 1px solid var(--dark);
 }
 .course-btn{
