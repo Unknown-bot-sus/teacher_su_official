@@ -9,9 +9,11 @@
 <script>
 import Navbar from "./components/Navbar.vue"
 import Footer from "./components/Footer"
-import ContactFab from './components/ContactFab'
   export default {
     name:"App",
+<<<<<<< HEAD
+    components :{Navbar,Footer,
+=======
     components :{Navbar,Footer,ContactFab,
     },
     data(){
@@ -25,6 +27,7 @@ import ContactFab from './components/ContactFab'
         this.act_course = active;
         console.log(this.act_course)
       }
+>>>>>>> a0088affd3d800945c24415e7bc090d8e593c88c
     }
   };
 </script>

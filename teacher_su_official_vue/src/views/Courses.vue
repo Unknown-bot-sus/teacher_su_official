@@ -70,7 +70,7 @@
 
         <div class="row mb-5 d-flex align-items-center justify-content-center">
             <Header title="Your study experience" class="text-center Banner-text p-0 wow animate__fadeInUp"></Header>
-            <div class="col-8 p-0">
+            <div class="col-9 p-0">
                 
 
                 <div class="row my-5">

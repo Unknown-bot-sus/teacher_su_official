@@ -9,7 +9,7 @@
         </div>
         
         <div class="row">
-            <div class="col-12 col-lg-8 p-md-5">
+            <div class="col-12 col-lg-8 pt-2 p-md-5">
                 <button @click="activeTab = 'AnEvent'" class="btn btn-primary outline-none me-2">events</button>
                 <button @click="activeTab = 'AnNews'" class="btn btn-primary outline-none">news</button>
                 <div class="card-con mt-2 py-3">

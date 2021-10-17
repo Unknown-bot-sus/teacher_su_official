@@ -89,10 +89,12 @@
                 </router-link>
                 </div>
                 <div class="col-12 col-xl-6 p-3 ">
-                <div class=" d-flex align-items-center justify-content-between border border-dark text-danger item-hover2 wow animate__backInRight">
+                <router-link :to="{name:'Career'}">
+                  <div class=" d-flex align-items-center justify-content-between border border-dark text-danger item-hover2 wow animate__backInRight">
                     <p class="m-0 px-1 fs-6 fw-bold ">Student opportunities</p>
                     <span class="w-50 p-0" style="border-left:25px solid transparent;border-bottom: 50px solid #103B7B;"></span>
                 </div>
+                </router-link>
                 </div>
                 <div class="col-12 col-xl-6 p-3 ">
                 <router-link :to="{name:'Register'}">
