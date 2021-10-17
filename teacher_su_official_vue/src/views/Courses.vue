@@ -283,6 +283,7 @@ This exam is the logical step in your language learning journey between A2 Key a
     width: 10rem;
     border: 1px solid var(--dark);
     border-radius: 0;
+    font-size: 1rem;
 
     transition: font-weight 0s;
     margin: 0;
@@ -299,18 +300,22 @@ This exam is the logical step in your language learning journey between A2 Key a
 .course-btn:hover{
     font-weight: 900;
 }
+
 #free.course-btn:hover{
     border-color: var(--lightgreen);
     color: var(--lightgreen);
 }
+
 #ylearner.course-btn:hover{
     border-color: var(--danger);
     color: var(--danger);
 }
+
 #ielts.course-btn:hover{
     border-color: var(--primary);
     color: var(--primary);
 }
+
 #others.course-btn:hover{
     border-color: skyblue;
     color: skyblue;
@@ -324,45 +329,55 @@ This exam is the logical step in your language learning journey between A2 Key a
     background-color: var(--lightgreen);
     color: var(--light);
 }
+
 #ylearner.active.course-btn{
     background-color: var(--danger);
     color: var(--light);
 }
+
 #ielts.active.course-btn{
     background-color: var(--primary);
     color: var(--light);
 }
+
 #others.active.course-btn{
     background-color: skyblue;
     color: var(--light);
 }
+
 .Banner-text{
     padding: 10px;
 }
+
 .rev-img{
     width: 200px;
     height: 200px;
     border-radius: 50%;
 }
+
 .st-img{
     width: 200px;
     height: 130px;
 }
+
 .st-con{
     min-width: 300px;
 }
+
 .item-hover:hover{
     color: white;
     background: var(--primary);
     transition: 0.5s;
     transform: translateY(-15px);
 }
+
 @media only screen and (max-width: 400px){
-.Banner-text{
-    font-weight: normal;
-    font-size: 1.5rem;
+    .Banner-text{
+        font-weight: normal;
+        font-size: 1.5rem;
+    }
 }
-}
+
 @media only screen and (max-width: 629px){
     .st-img{
         width: 140px;
@@ -371,6 +386,10 @@ This exam is the logical step in your language learning journey between A2 Key a
 
     .courses-container{
         padding-top: 0;
+    }
+
+    .course-btn{
+        font-size: 10px;
     }
 }
 </style>
