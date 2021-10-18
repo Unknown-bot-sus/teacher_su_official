@@ -14,7 +14,6 @@
         <ul class="navbar-nav">
           <li class="navbar-item"><router-link to="#" class="nav-link mx-2 menu-items">Teacher Su Students</router-link></li>
           <li class="navbar-item"><a href="http://simp.teachersucenter.com/login" class="nav-link text-light mx-2 menu-items">Staff</a></li>
-          <li class="navbar-item"><router-link :to="{name: 'Community'}" class="nav-link text-light mx-2 menu-items">Alumni</router-link></li>
           <li class="navbar-item">
             <div class="d-flex align-item-center position-relative">
               <div class="vertical-line bg-dark vertical-line1"></div>
@@ -23,7 +22,7 @@
             </div>
           </li>
           <li class="navbar-item"><router-link :to="{name:'Announcement'}" class="nav-link text-light mx-2 menu-items">News</router-link></li>
-          <li class="navbar-item"><router-link to="#" class="nav-link text-light  mx-2 menu-items">Contacts</router-link></li>
+          <li class="navbar-item"><a href="tel:+959422490839" class="nav-link text-light  mx-2 menu-items">Contacts</a></li>
         </ul>
       </div>
 
@@ -39,23 +38,12 @@
                 <input type="checkbox" id="sm-course" class="tgbtn" hidden>
                 <label for="sm-course" class="mobile-item text-light">Courses<i class="fas fa-chevron-down m-3"></i></label>
                 <div class="row d-flex justify-content-sm-around mega-box m-0">
-                    <div class="col-12 col-lg-4 d-flex flex-column justify-content-around align-items-center">
-                      <div class="input-group search-container">
-                        <input type="text" id="search-bar" class="form-control" placeholder="Search for a course"/>
-                        <div class="input-group-prepend">
-                          <button class="btn btn-outline-secondary" type="button"><i class="fad fa-search text-light"></i></button>
-                        </div>
-                      </div>
-                      <router-link :to="{name: 'Courses'}" class="nav-link text-center">View all courses</router-link>
-                    </div>
-
-                    <div class="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-center m-0 p-1">
+                    <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center m-0 p-1">
                       <h3 class="text-light">Browse all courses</h3>
                       <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
                           <ul class="list-unstyled mx-3 d-flex flex-column align-items-start">
                             <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'free')" class="text-light nav-link">Free classes</router-link></li>
                             <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'ylearner')" class="text-light nav-link">Young learners</router-link></li>
-                            <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'others')" class="text-light nav-link">Research Writing Course</router-link></li>
                             <li><router-link :to="{name: 'Register'}" class="btns form-control">How to apply</router-link></li>
                           </ul>
 
@@ -65,22 +53,11 @@
                             <li><router-link :to="{name: 'Register'}" class="btns form-control">How to apply scholarship</router-link></li>
                           </ul>
                       </div>
-                    </div>
-
-                    <div class="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-center m-0 p-1">
-                      <h3 class="text-light">Contact Us</h3>
-                      <ul class="mega-links list-unstyled">
-                        <li class="m-3"><span class="text-light">Phone no:09999</span></li>
-                        <li class="m-3"><span class="text-light">Address: 13/7B 2 Zay St Tharkayta, Yangon</span></li>
-                      </ul>
-                      <div class="d-flex my-3">
-                        <a  href="#" target="_blank" class="d-block mx-2"><i class="fab fa-viber btn-icon"></i></a>
-
-                        <a href="#" target="_blank" class="d-block mx-2"><i class="fab fa-facebook-messenger btn-icon"></i></a>
-
-                        <a href="#" target="_blank" class="d-block mx-2"><i class="fab fa-telegram btn-icon"></i></a>
+                      <div class="form-group m-3">
+                        <router-link :to="{name: 'Courses'}" class="col-4 text-start form-control btns">View all courses</router-link>
                       </div>
                     </div>
+
                 </div>
             </li>
 
@@ -109,21 +86,11 @@
                   </div>
 
                     <div class="col-12 col-lg-3 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
-                      <h3 class="text-light border-bottom border-light p-2 heading">Study support and resources</h3>
-                      <ul class="list-unstyled d-flex flex-column justify-content-start align-items-start">
-                        <li><router-link to="#" class="nav-link">IT support</router-link></li>
-                        <li><router-link to="#" class="nav-link">Library</router-link></li>
-                      </ul>
-                  </div>
-
-                    <div class="col-12 col-lg-3 d-flex flex-column justify-content-around align-items-start align-items-sm-center">
                       <h3 class="text-light border-bottom border-light p-2 heading">Extra-curriculum activites</h3>
                       <ul class="list-unstyled d-flex flex-column justify-content-center align-items-start">
-                        <li><router-link to="#" class="nav-link">Art Club</router-link></li>
-                        <li><router-link to="#" class="nav-link">Comet Conversation Club</router-link></li>
-                        <li><router-link to="#" class="nav-link">Debate Club</router-link></li>
-                        <li><router-link to="#" class="nav-link">Entertainment Club</router-link></li>
-                        <li><router-link to="#" class="nav-link">Health &#38; Well-being</router-link></li>
+                        <li><router-link :to="{name: community}" class="form-control btns">Clubs</router-link></li>
+                        <li><router-link :to="{name: community}" class="nav-link">Academic consultation</router-link></li>
+                        <li><router-link :to="{name: community}" class="nav-link">Health and well-beings</router-link></li>
                       </ul>
                   </div>
                 </div>
@@ -138,10 +105,7 @@
                   <div class="col-12 col-lg-6 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
                     <h3 class="text-light border-bottom border-light p-2">Career</h3>
                     <ul class="list-unstyled d-flex flex-column justify-content-center align-items-start">
-                      <li><router-link :to="{name: 'Career'}" class="nav-link">Maing teacher</router-link></li>
-                      <li><router-link :to="{name: 'Career'}" class="nav-link">Assistant teacher</router-link></li>
-                      <li><router-link :to="{name: 'Career'}" class="nav-link">Graphic designer</router-link></li>
-                      <li><router-link :to="{name: 'Career'}" class="nav-link">Tech team</router-link></li>
+                      <li><router-link :to="{name: 'Career'}" class="form-control btns">View careers</router-link></li>
                     </ul>
                   </div>
 
@@ -149,15 +113,15 @@
                     <h3 class="text-light border-bottom border-light p-2">Contact us</h3>
                     <ul class="list-unstyled d-flex flex-column justify-content-center align-items-start">
                       <li><router-link to="#" class="nav-link">Phone no. 093454343</router-link></li>
-                      <li><router-link to="#" class="nav-link">Address: 12/7B 2 Zay St, angonk</router-link></li>
+                      <li><router-link to="#" class="nav-link">Address: Pa 129, Myo Ma Market, Zabuthiri Township, Naypyidaw, Naypyidaw, Myanmar</router-link></li>
                     </ul>
 
                       <div class="d-flex justify-content-md-center my-3">
-                        <a  href="#" target="_blank" class="d-block mx-2"><i class="fab fa-viber btn-icon"></i></a>
+                        <a href="https://www.facebook.com/Teacher-Su-270139473932097" title="facebook" target="_blank" class="d-block mx-2"><i class="fab fa-facebook-square btn-icon"></i></a>
 
-                        <a href="#" target="_blank" class="d-block mx-2"><i class="fab fa-facebook-messenger btn-icon"></i></a>
+                        <a href="https://www.facebook.com/messages/t/270139473932097" title="messenger" target="_blank" class="d-block mx-2"><i class="fab fa-facebook-messenger btn-icon"></i></a>
 
-                        <a href="#" target="_blank" class="d-block mx-2"><i class="fab fa-telegram btn-icon"></i></a>
+                        <a href="mailto:hello@teachersucenter.com" title="gmail" target="_blank" class="d-block mx-2"><i class="fal fa-envelope btn-icon"></i></a>
                       </div>
                   </div>
                 </div>
@@ -240,7 +204,7 @@ nav{
     visibility: hidden;
     opacity: 0;
 
-    transition: all 0.5s ease-out;
+    transition: all 0.2s ease-out;
     z-index: 2;
 
     border-bottom: 1px solid var(--dark);
@@ -386,8 +350,7 @@ nav{
   }
 
   #small-menu .navbar-nav .navbar-item:nth-of-type(1),
-  #small-menu .navbar-nav .navbar-item:nth-of-type(2),
-  #small-menu .navbar-nav .navbar-item:last-of-type{
+  #small-menu .navbar-nav .navbar-item:nth-of-type(2){
     display: none;
   }
 }
