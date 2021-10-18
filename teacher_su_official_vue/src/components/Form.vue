@@ -88,6 +88,7 @@ input.form-control{
     border-radius: 0;
 
     appearance: texfield;
+    -webkit-appearance: textfield;
     -moz-appearance: textfield;
 }
 

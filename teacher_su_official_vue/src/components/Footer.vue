@@ -30,10 +30,9 @@
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center align-items-center social-media-container">
-                <a href="#" title="facebook"><i class="fab fa-facebook-square"></i></a>
-                <a href="#" title="viber"><i class="fab fa-viber"></i></a>
-                <a href="#" title="linkedin"><i class="fab fa-linkedin"></i></a>
-                <a href="#" title="telegram"><i class="fab fa-telegram"></i></a>
+              <a href="https://www.facebook.com/Teacher-Su-270139473932097" title="facebook" target="_blank"><i class="fab fa-facebook-square"></i></a>
+              <a href="https://www.facebook.com/messages/t/270139473932097" title="messenger" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+              <a href="mailto:hello@teachersucenter.com" title="gmail" target="_blank" ><i class="fal fa-envelope"></i></a>
             </div>
 
         </div>
@@ -72,7 +71,7 @@ li, span{
     cursor: pointer;
 }
 
-.fab{
+.fab,.fal{
     font-size: 3rem;
     margin: 1rem;
     color: var(--light);

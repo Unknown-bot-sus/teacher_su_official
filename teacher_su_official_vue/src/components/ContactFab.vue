@@ -2,11 +2,11 @@
     
 
     <div class="btns-fab">
-        <a class="btn-icon" href="#" target="_blank"><i class="fab fa-viber"></i></a>
+        <a class="btn-icon" href="#" target="_blank"><i class="fab fa-viber btns"></i></a>
 
-        <a class="btn-icon" href="#" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+        <a class="btn-icon" href="#" target="_blank"><i class="fab fa-facebook-messenger btns"></i></a>
 
-        <a class="btn-icon" href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+        <a class="btn-icon" href="#" target="_blank"><i class="fab fa-telegram btns"></i></a>
     </div>
 
     <div id="btn-primary" class="btn-icon" @click="popup"><i class="fad fa-chevron-left"></i></div>
