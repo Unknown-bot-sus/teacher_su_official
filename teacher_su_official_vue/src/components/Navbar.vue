@@ -58,6 +58,10 @@
                       </div>
                     </div>
 
+                    <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+                      <img src="../assets/img/Study4.png" />
+                    </div>
+
                 </div>
             </li>
 
@@ -66,7 +70,7 @@
                 <input type="checkbox" id="sm-study" class="tgbtn" hidden>
                 <label for="sm-study" class="mobile-item text-light">Study with us<i class="fas fa-chevron-down m-3"></i></label>
                 <div class="row d-flex justify-content-start justify-content-sm-around mega-box m-0">
-                  <div class="col-12 col-lg-3 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
+                  <div class="col-12 col-lg-4 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
                     <h3 class="text-light border-bottom border-light p-2 heading">Apply to study</h3>
                     <ul class="list-unstyled d-flex flex-column justify-content-start align-items-start">
                       <li><router-link :to="{name: 'Register'}" class="nav-link">How to apply</router-link></li>
@@ -76,7 +80,7 @@
                     </ul>
                   </div>
 
-                  <div class="col-12 col-lg-3 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
+                  <div class="col-12 col-lg-4 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
                     <h3 class="text-light border-bottom border-light p-2 heading">Study tools and software</h3>
                     <ul class="list-unstyled d-flex flex-column justify-content-start align-items-start">
                       <li><router-link to="#" class="nav-link">Video-conferencing(zoom)</router-link></li>
@@ -85,7 +89,7 @@
                     </ul>
                   </div>
 
-                    <div class="col-12 col-lg-3 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
+                    <div class="col-12 col-lg-4 d-flex flex-column justify-content-start align-items-start align-items-sm-center">
                       <h3 class="text-light border-bottom border-light p-2 heading">Extra-curriculum activites</h3>
                       <ul class="list-unstyled d-flex flex-column justify-content-center align-items-start">
                         <li><router-link :to="{name: community}" class="form-control btns">Clubs</router-link></li>
