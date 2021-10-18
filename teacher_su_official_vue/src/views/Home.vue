@@ -3,7 +3,7 @@
       <div class="row hero-banner">
         <div class="col-12 col-lg-12 py-3 py-md-5 d-flex align-items-center  homebanner-containercs">
           <div class="col-lg-6 py-5 BannerTesti">
-            <Header class="BannerText text-light fw-light pe-lg-5 wow animate__backInRight" title="A world-class education, wherever you are"></Header>
+            <Header class="BannerText text-light fw-light pe-lg-5 wow animate__backInRight" title="Providing quality education, wherever you are"></Header>
             <p class="text-light wow animate__backInRight">Start studying online now</p>
             <router-link :to="{name:'Register'}"><button class="btn btn-outline-light wow animate__backInRight" >REGISTER NOW <i class="fas fa-chevron-right"></i></button></router-link>
           </div>
@@ -17,8 +17,8 @@
       <div class="row mt-5 m-md-0">
         <div class="col-12 d-flex align-items-center justify-content-center">
             <div class="bg-light  p-md-5 d-flex flex-column align-items-center courses">
-                <Header title="Try One-on-One Learning" class="text-center courses-text wow animate__fadeInUp"></Header>
-                <p class="text-center">Get personalized instruction and tutoring on any subject</p>
+                <Header title="Education Through Virtualization" class="text-center courses-text wow animate__fadeInUp"></Header>
+                <p class="text-center">Start your academic journey at one of the largest online education institutes in Myanmar.</p>
                   <router-link :to="{name:'Courses'}"><button class="btn btn-outline-dark wow animate__fadeInUp">BROWSE CLASSES <i class="fas fa-chevron-right"></i></button></router-link>
             </div>
         </div>
@@ -34,37 +34,32 @@
               <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp">
                 <i class="fs-1 fas fa-briefcase item-hover"  style="border:2px solid black;border-radius:50%;padding:20px;"></i>
                 <h3 class="fw-bold text-danger mt-2">Career</h3>
-                <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                <p class="text-center">See the career opportunities provided at our center.</p>
                 <router-link :to="{name:'Career'}"><p class="text-primary">Find out more</p></router-link>
               </div>
 
               <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp">
                 <i class="fs-1 fas fa-users item-hover"  style="border:2px solid black;border-radius:50%;padding:20px 15px;"></i>
                 <h3 class="fw-bold text-danger mt-2">Community</h3>
-                <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                <p class="text-center">Have a look at the Teacher Su community.</p>
                 <router-link :to="{name:'Community'}"><p class="text-primary">Find out more</p></router-link>
               </div>
 
               <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp">
                 <i class="fs-1 fas fa-hands-helping item-hover"  style="border:2px solid black;border-radius:50%;padding:20px 15px;"></i>
                 <h3 class="fw-bold text-danger mt-2">Help</h3>
-                <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                <p class="text-center">Are you lost? Unfamiliar with the tools we are using? You can find the resources here.</p>
                 <router-link :to="{name:'Help'}"><p class="text-primary">Find out more</p></router-link>
               </div>
 
               <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp">
                 <i class="fs-1 fas fa-book item-hover"  style="border:2px solid black;border-radius:50%;padding:20px 22px;"></i>
-                <h3 class="fw-bold text-danger mt-2">Standard</h3>
-                <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                <h3 class="fw-bold text-danger mt-2">About</h3>
+                <p class="text-center">Learn more about our center's vision and our young founder.</p>
                 <router-link :to="{name:'About'}"><p class="text-primary">Find out more</p></router-link>
               </div>
 
-              <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp">
-                <i class="fs-1 fas fa-award item-hover"  style="border:2px solid black;border-radius:50%;padding:20px 25px;"></i>
-                <h3 class="fw-bold text-danger mt-2">Awards</h3>
-                <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                <router-link :to="{name:'About'}"><p class="text-primary">Find out more</p></router-link>
-              </div>
+              
 
             </div>
 
