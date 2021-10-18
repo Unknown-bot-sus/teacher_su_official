@@ -20,11 +20,11 @@
         </div>
 
 
-        <div class="row my-3 my-md-5 d-flex align-items-center justify-content-center">
-            <div class="col-12 col-md-8">
+        <div class="row my-3 mx-1 my-md-5 d-flex align-items-center justify-content-center">
+            <div class="col-12 col-md-8 border border-2 ">
 
                 <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
-                    <img src="../assets/img/debate.png" class="image">
+                    <img src="../assets/img/debate.png" class="image img-thumbnail">
                 </div>
                 <div class="wow animate__fadeInUp">
                     <Header title="Debate club" class="text-center courses-text mb-4"></Header>
@@ -35,11 +35,11 @@
                 </div>
             </div>
         </div>
-        <div class="row my-3 my-md-5 d-flex align-items-center justify-content-center">
-            <div class="col-12 col-md-8">
+        <div class="row my-3 mx-1 my-md-5 d-flex align-items-center justify-content-center">
+            <div class="col-12 col-md-8 border border-2 ">
 
                 <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
-                    <img src="../assets/img/enter.png" class="image">
+                    <img src="../assets/img/enter.png" class="image img-thumbnail">
                 </div>
                 <div class="wow animate__fadeInUp">
                     <Header title="Entertainment club" class="text-center courses-text mb-4"></Header>
@@ -50,11 +50,11 @@
                 </div>
             </div>
         </div>
-        <div class="row my-3 my-md-5 d-flex align-items-center justify-content-center">
-            <div class="col-12 col-md-8">
+        <div class="row my-3 mx-1 my-md-5 d-flex align-items-center justify-content-center">
+            <div class="col-12 col-md-8 border border-2 ">
 
                 <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
-                    <img src="../assets/img/art.png" class="image">
+                    <img src="../assets/img/art.png" class="image img-thumbnail">
                 </div>
                 <div class="wow animate__fadeInUp">
                     <Header title="Art club" class="text-center courses-text mb-4"></Header>
@@ -65,11 +65,11 @@
                 </div>
             </div>
         </div>
-        <div class="row my-3 my-md-5 d-flex align-items-center justify-content-center">
-            <div class="col-12 col-md-8">
+        <div class="row my-3 mx-1 my-md-5 d-flex align-items-center justify-content-center">
+            <div class="col-12 col-md-8 border border-2 ">
 
                 <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
-                    <img src="../assets/img/yoga.png" class="image">
+                    <img src="../assets/img/yoga.png" class="image img-thumbnail">
                 </div>
                 <div class="wow animate__fadeInUp">
                     <Header title="Yoga club" class="text-center courses-text mb-4"></Header>
@@ -80,11 +80,11 @@
                 </div>
             </div>
         </div>
-        <div class="row my-3 my-md-5 d-flex align-items-center justify-content-center">
-            <div class="col-12 col-md-8">
+        <div class="row my-3 mx-1 my-md-5 d-flex align-items-center justify-content-center">
+            <div class="col-12 col-md-8 border border-2 ">
 
                 <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
-                    <img src="../assets/img/counselling.jpg" class="image">
+                    <img src="../assets/img/counselling.jpg" class="image img-thumbnail">
                 </div>
                 <div class="wow animate__fadeInUp">
                     <Header title="Telecounselling club" class="text-center courses-text mb-4"></Header>
@@ -95,11 +95,11 @@
                 </div>
             </div>
         </div>
-        <div class="row my-3 my-md-5 d-flex align-items-center justify-content-center">
-            <div class="col-12 col-md-8">
+        <div class="row my-3 mx-1 my-md-5 d-flex align-items-center justify-content-center">
+            <div class="col-12 col-md-8 border border-2 ">
 
                 <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
-                    <img src="../assets/img/comet.jpg"  class="image">
+                    <img src="../assets/img/comet.jpg"  class="image img-thumbnail">
                 </div>
                 <div class="wow animate__fadeInUp">
                     <Header title="Comet conversation club" class="text-center courses-text mb-4"></Header>
@@ -110,11 +110,11 @@
                 </div>
             </div>
         </div>
-        <div class="row my-3 my-md-5 d-flex align-items-center justify-content-center">
-            <div class="col-12 col-md-8">
+        <div class="row my-3 mx-1 my-md-5 d-flex align-items-center justify-content-center">
+            <div class="col-12 col-md-8 border border-2 ">
 
                 <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
-                    <img src="../assets/img/tandl.jpg" class="image">
+                    <img src="../assets/img/tandl.jpg" class="image img-thumbnail">
                 </div>
                 <div class="wow animate__fadeInUp">
                     <Header title="Teaching and Learning English club" class="text-center courses-text mb-4"></Header>
