@@ -34,12 +34,12 @@
             <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
 
             <li class="navbar-item">
-                <a href="#" class="desktop-item nav-link">Courses<i class="fas fa-chevron-down m-3"></i></a>
+                <a href="#" class="desktop-item nav-link">Courses<i class="fas fa-chevron-down mx-3"></i></a>
                 <input type="checkbox" id="sm-course" class="tgbtn" hidden>
-                <label for="sm-course" class="mobile-item text-light">Courses<i class="fas fa-chevron-down m-3"></i></label>
+                <label for="sm-course" class="mobile-item text-light">Courses<i class="fas fa-chevron-down mx-3"></i></label>
                 <ul class="mega-box">
                   <li class="nav-link position-relative">
-                    courses<i class="fas fa-chevron-down m-3"></i>
+                    courses<i class="fas fa-chevron-down mx-3"></i>
                     <ul class="mini-box">
                       <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'free')" class="nav-link">Free classes</router-link></li>
                       <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'ylearner')" class="nav-link">Young learners</router-link></li>
@@ -53,11 +53,11 @@
             </li>
 
             <li class="navbar-item">
-              <a href="#" class="desktop-item nav-link" id="study">Study with us<i class="fas fa-chevron-down m-3"></i></a>
+              <a href="#" class="desktop-item nav-link" id="study">Study with us<i class="fas fa-chevron-down mx-3"></i></a>
               <input type="checkbox" id="sm-study" class="tgbtn" hidden>
-              <label for="sm-study" class="mobile-item text-light">Study with us<i class="fas fa-chevron-down m-3"></i></label>
+              <label for="sm-study" class="mobile-item text-light">Study with us<i class="fas fa-chevron-down mx-3"></i></label>
               <ul class="mega-box">
-                <li class="nav-link">Apply to study<i class="fas fa-chevron-down m-3"></i>
+                <li class="nav-link">Apply to study<i class="fas fa-chevron-down mx-3"></i>
                   <ul class="mini-box">
                     <li><router-link :to="{name: 'Register'}" class="nav-link">How to apply</router-link></li>
                     <li><router-link :to="{name: 'Register'}" class="nav-link">New term start date</router-link></li>
@@ -66,7 +66,7 @@
                   </ul>
                 </li>
 
-                <li class="nav-link">Study tools and software<i class="fas fa-chevron-down m-3"></i>
+                <li class="nav-link">Study tools and software<i class="fas fa-chevron-down mx-3"></i>
                   <ul class="mini-box">
                     <li><router-link :to="{name: 'Help'}" class="nav-link">Video-conferencing(zoom)</router-link></li>
                     <li><router-link :to="{name: 'Help'}" class="nav-link">Powerpoint(persentation)</router-link></li>
@@ -74,7 +74,7 @@
                   </ul>
                 </li>
 
-                <li class="nav-link">Extra-curriculum activites<i class="fas fa-chevron-down m-3"></i>
+                <li class="nav-link">Extra-curriculum activites<i class="fas fa-chevron-down mx-3"></i>
                   <ul class="mini-box">
                       <li><router-link :to="{name: community}" class="nav-link">Clubs</router-link></li>
                       <li><router-link :to="{name: community}" class="nav-link">Academic consultation</router-link></li>
@@ -163,9 +163,9 @@ nav{
   .mega-box{
     width: 100%;
 
+    font-size: 1.2rem;
+
     background-color: var(--primary);
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
 
     position: absolute;
     top: 100%;
@@ -175,20 +175,23 @@ nav{
     margin: 0;
     padding: 0;
 
+    text-align: left;
+
     visibility: hidden;
     opacity: 0;
 
     transition: all 0.2s ease-out;
     z-index: 2;
 
-    border-bottom: 2px solid var(--dark);
+    box-shadow: 1px 1px 5px var(--dark);
 
     .nav-link{
       position: relative;
 
+      border-bottom: 1px solid #666;
+
       .mini-box{
-        width: 50%;
-        min-width: 20rem;
+        width: 120%;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -197,6 +200,7 @@ nav{
         top: 0;
         left: 100%;
 
+        display: none;
         visibility: hidden;
         opacity: 0;
 
@@ -209,6 +213,7 @@ nav{
     }
 
     .nav-link:hover > .mini-box{
+      display: block;
       visibility: visible;
       opacity: 1;
     }
@@ -260,23 +265,28 @@ nav{
   #mega-menu{
       // Mega box
     .tgbtn:checked + label + .mega-box{
-      top: 0;
-      left: 100%;
+      top: 100%;
+      left: 0;
 
+      display: block;
+      position: relative;
       visibility: visible;
       opacity: 1;
     }
 
     .mega-box:hover{
+      display: none;
       visibility: hidden;
       opacity: 0;
     }
 
     .mega-box{
+      font-size: 0.98rem;
       background-color: var(--dark);
 
       .nav-link{
         .mini-box{
+          width: 100%;
           position: relative;
           display: none;
           left: 0;
