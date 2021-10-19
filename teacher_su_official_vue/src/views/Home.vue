@@ -29,30 +29,30 @@
             <Header title="Why Choose Teacher Su" class="text-center courses-text wow animate__fadeInUp"></Header>
             <div class="chItem-con wow animate__fadeInUp">
 
-                <div class="d-flex align-items-center justify-content-left justify-content-lg-evenly flex-lg-wrap mt-5 chItem" >
+                <div class="d-flex align-items-center justify-content-left justify-content-lg-evenly flex-lg-wrap mt-2 mt-md-5 chItem" >
             
-              <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp">
+              <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp item">
                 <i class="fs-1 fas fa-briefcase item-hover"  style="border:2px solid black;border-radius:50%;padding:20px;"></i>
                 <h3 class="fw-bold text-danger mt-2">Career</h3>
                 <p class="text-center">See the career opportunities provided at our center.</p>
                 <router-link :to="{name:'Career'}"><p class="text-primary">Find out more</p></router-link>
               </div>
 
-              <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp">
+              <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp item">
                 <i class="fs-1 fas fa-users item-hover"  style="border:2px solid black;border-radius:50%;padding:20px 15px;"></i>
                 <h3 class="fw-bold text-danger mt-2">Community</h3>
                 <p class="text-center">Have a look at the Teacher Su community.</p>
                 <router-link :to="{name:'Community'}"><p class="text-primary">Find out more</p></router-link>
               </div>
 
-              <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp">
+              <div style="min-width:300px;margin-top:20px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp item">
                 <i class="fs-1 fas fa-hands-helping item-hover"  style="border:2px solid black;border-radius:50%;padding:20px 15px;"></i>
                 <h3 class="fw-bold text-danger mt-2">Help</h3>
                 <p class="text-center">Are you lost? Unfamiliar with the tools we are using? You can find the resources here.</p>
                 <router-link :to="{name:'Help'}"><p class="text-primary">Find out more</p></router-link>
               </div>
 
-              <div style="min-width:300px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp">
+              <div style="min-width:300px;margin-top:20px;" class="d-flex align-items-center justify-content-center flex-column p-3 wow animate__fadeInUp item">
                 <i class="fs-1 fas fa-book item-hover"  style="border:2px solid black;border-radius:50%;padding:20px 22px;"></i>
                 <h3 class="fw-bold text-danger mt-2">About</h3>
                 <p class="text-center">Learn more about our center's vision and our young founder.</p>
@@ -399,6 +399,11 @@ export default {
   background: var(--primary);
   transition: 0.5s;
   transform: translateY(-10px);
+}
+@media only screen and (min-width:979px){
+  .item{
+    width: 250px;
+  }
 }
 @media only screen and (min-width:1589px){
     .BannerTesti{

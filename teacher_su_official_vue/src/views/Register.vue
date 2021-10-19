@@ -8,26 +8,34 @@
             </div>
         </div>
 
-        <div class="row d-flex align-items-center justify-content-center my-5">
+        <div class="row d-flex align-items-center justify-content-center mt-5">
             <div class="col-12 col-md-6">
                 <Header title="How to apply" class="text-center courses-text mb-4"></Header>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, voluptas perferendis ea tenetur est esse voluptatum, aliquam eveniet earum dicta cupiditate commodi. Eligendi ab repellendus perferendis, eaque alias architecto sit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea debitis eum molestiae, placeat architecto, mollitia quis quod, enim dicta eos aperiam repellat ex optio. Laudantium hic dolore nobis suscipit aut!
-                </p>
             </div>
         </div>
 
-         <div class="row">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="col-12 col-md-6 my-3 my-md-5 img-thumbnail">
+                <img src="../assets/img/register1.png" style="width:100%;" alt="">
+            </div>
+        </div>
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="col-12 col-md-6 my-3 my-md-5 img-thumbnail">
+                <img src="../assets/img/register.png" style="width:100%;" alt="">
+            </div>
+        </div>
+
+         <div class="row my-5">
             
-            <div class="col-12">
+            <div class="col-12 d-flex align-items-center flex-column justify-content-evenly">
                 <Header title="Apply now!" class="text-center"></Header>
-                <Form text_label="Comment" class="my-5"></Form>
+                <a href="https://www.facebook.com/messages/t/270139473932097"><i class="fab fa-facebook-messenger" style="font-size:3rem;"></i></a>
             </div>
         </div>
 
         <div class="row d-flex justify-content-center align-items-center">
             <div class="col-10">
-                 <Header class="text-center mb-5" title="New terms start date"></Header>
+                 <Header class="text-center mb-5 courses-text" title="New terms start date"></Header>
                  <div class="form-group my-5">
                      <input type="text" class="form-control" placeholder="Search a class" v-model="search"/><i></i>
                  </div>
