@@ -29,7 +29,7 @@
             
             <div class="col-12 d-flex align-items-center flex-column justify-content-evenly">
                 <Header title="Apply now!" class="text-center"></Header>
-                <a href="https://www.facebook.com/messages/t/270139473932097"><i class="fab fa-facebook-messenger" style="font-size:3rem;"></i></a>
+                <a href="https://www.facebook.com/messages/t/270139473932097" target="_blank"><i class="fab fa-facebook-messenger" style="font-size:3rem;"></i></a>
             </div>
         </div>
 

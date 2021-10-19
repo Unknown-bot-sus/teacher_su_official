@@ -1,6 +1,6 @@
 <template>
 
-    <footer class="container-fluid bg-secondary px-0 py-4 p-md-5">
+    <footer class="container-fluid bg-secondary py-3">
         <div class="logo-container">
             <img src="../assets/img/logo.png" alt="logo" width="70" height="70">
             <div class="vertical-line bg-light align-middle d-inline-block"></div>
@@ -11,7 +11,7 @@
         </div>
         
     
-        <div class="row content-container">
+        <div class="content-container">
             <div class="col-lg-4 col-sm-6 col-12">
                 <ul class="text-light list-unstyled">
                     <li><router-link class="text-decoration-none" to="/">Home </router-link><i class="fas fa-chevron-right"></i></li>
@@ -36,7 +36,7 @@
             </div>
 
         </div>
-        <div class="footer row">
+        <div class="footer">
             <span class="text-light">&COPY; Copyright 2021 Teacher Su Centre. All right reserved.</span>
         </div>
     </footer>

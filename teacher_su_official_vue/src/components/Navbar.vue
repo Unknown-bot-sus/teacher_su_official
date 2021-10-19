@@ -13,16 +13,16 @@
 
         <ul class="navbar-nav">
           <li class="navbar-item"><router-link to="#" class="nav-link mx-2 menu-items">Teacher Su Students</router-link></li>
-          <li class="navbar-item"><a href="http://simp.teachersucenter.com/login" class="nav-link text-light mx-2 menu-items">Staff</a></li>
+          <li class="navbar-item"><a href="http://simp.teachersucenter.com/login" target="_blank" class="nav-link text-light mx-2 menu-items">Staff</a></li>
           <li class="navbar-item">
             <div class="d-flex align-item-center position-relative">
               <div class="vertical-line bg-dark vertical-line1"></div>
-              <a href="http://library.teachersucenter.com" class="nav-link text-light mx-2 menu-items">Library</a>
+              <a href="http://library.teachersucenter.com" target="_blank" class="nav-link text-light mx-2 menu-items">Library</a>
               <div class="vertical-line bg-dark vertical-line2"></div>
             </div>
           </li>
           <li class="navbar-item"><router-link :to="{name:'Announcement'}" class="nav-link text-light mx-2 menu-items">News</router-link></li>
-          <li class="navbar-item"><a href="tel:+959422490839" class="nav-link text-light  mx-2 menu-items">Contacts</a></li>
+          <li class="navbar-item"><a href="tel:+959422490839" target="_blank" class="nav-link text-light  mx-2 menu-items">Contacts</a></li>
         </ul>
       </div>
 

@@ -133,8 +133,8 @@
                                 <img src="../assets/img/man.jpg" style="width:100%;height:100%;border-radius:50%;" alt="">
                               </div>
                               <div class="mc-text d-flex align-items-center justify-content-evenly flex-column text-center">
-                                <h3>James</h3>
-                                <p>"Eveniet voluptatibus voluptates suscipit minima, cum voluptatum ut dolor, sed facere corporis qui, ea quisquam quis odit minus nulla vitae. Sit, voluptatem."</p>
+                                <h3>Wine Su Waddy</h3>
+                                <p>"My english got a lot better. I was very motivated by the opportunities given here at the center, got a lot of nice friends and have always been feeling blissful by the kindness and warmness of Teacher Su."</p>
                               </div>
                               
                                
@@ -149,8 +149,8 @@
                                 <img src="../assets/img/man.jpg" style="width:100%;height:100%;border-radius:50%;" alt="">
                               </div>
                               <div class="mc-text d-flex align-items-center justify-content-evenly flex-column text-center">
-                                <h3>James</h3>
-                                <p>"Eveniet voluptatibus voluptates suscipit minima, cum voluptatum ut dolor, sed facere corporis qui, ea quisquam quis odit minus nulla vitae. Sit, voluptatem."</p>
+                                <h3>Su Myat Min Khin</h3>
+                                <p>"Teacher Su plus some teachers assisted me well. My very first bands in IELTS mock tests were just 5.5 and 6 in a nut shell but at the end of my IELTS journey, overall 7 with band 8 in Listening were what I have tried hard for."</p>
                               </div>
                               
                                
@@ -165,8 +165,8 @@
                                 <img src="../assets/img/man.jpg" style="width:100%;height:100%;border-radius:50%;" alt="">
                               </div>
                               <div class="mc-text d-flex align-items-center justify-content-evenly flex-column text-center">
-                                 <h3>James</h3>
-                                <p>"Eveniet voluptatibus voluptates suscipit minima, cum voluptatum ut dolor, sed facere corporis qui, ea quisquam quis odit minus nulla vitae. Sit, voluptatem."</p>
+                                 <h3>Bhone Myat Oo </h3>
+                                <p>"I had such great preparation in Duolingo English Test Class that I scored higher than my expectations. Teacher Su and assistant teachers were patient and paid close attention to every student. "</p>
                               </div>
                               
                                
@@ -189,8 +189,24 @@
                           <div class="col-12 d-flex align-items-center justify-content-center rev-con">
                             <div class="rev-box d-flex align-items-center justify-content-evenly flex-column p-5">
                               <div class="rev-text d-flex align-items-center justify-content-evenly flex-column">
-                                <p class="text-dark fs-2 text-center">"Eveniet voluptatibus voluptates suscipit minima, cum voluptatum ut dolor, sed facere corporis qui, ea quisquam quis odit minus nulla vitae. Sit, voluptatem."</p>
-                                <p class="fw-bold fs-4">James</p>
+                                <p class="text-dark fs-2 text-center">"My english got a lot better. I was very motivated by the opportunities given here at the center, got a lot of nice friends and have always been feeling blissful by the kindness and warmness of Teacher Su."</p>
+                                <p class="fw-bold fs-4">Wine Su Waddy</p>
+                                <p class="text-muted">IELTS student</p>
+                              </div>
+                                <button class="btn btn-danger next py-3 px-4" @click="next()"> <i class="fas fs-1 fa-chevron-right"></i> </button>
+                                <button class="btn btn-danger prev py-3 px-4" @click="prev()"> <i class="fas fs-1 fa-chevron-left"></i> </button>
+                              <div class="rev-img shadow">
+                                <img src="../assets/img/man.jpg" style="width:100%;height:100%;" alt="">
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                       <div class="carousel-item bg-primary">
+                          <div class="col-12 d-flex align-items-center justify-content-center rev-con">
+                            <div class="rev-box d-flex align-items-center justify-content-evenly flex-column p-5">
+                              <div class="rev-text d-flex align-items-center justify-content-evenly flex-column">
+                                <p class="text-dark fs-2 text-center">"Teacher Su plus some teachers assisted me well. My very first bands in IELTS mock tests were just 5.5 and 6 in a nut shell but at the end of my IELTS journey, overall 7 with band 8 in Listening were what I have tried hard for."</p>
+                                <p class="fw-bold fs-4">Su Myat Min Khin</p>
                                 <p class="text-muted">IELT student</p>
                               </div>
                                 <button class="btn btn-danger next py-3 px-4" @click="next()"> <i class="fas fs-1 fa-chevron-right"></i> </button>
@@ -205,25 +221,9 @@
                           <div class="col-12 d-flex align-items-center justify-content-center rev-con">
                             <div class="rev-box d-flex align-items-center justify-content-evenly flex-column p-5">
                               <div class="rev-text d-flex align-items-center justify-content-evenly flex-column">
-                                <p class="text-dark fs-2 text-center">"Eveniet voluptatibus voluptates suscipit minima, cum voluptatum ut dolor, sed facere corporis qui, ea quisquam quis odit minus nulla vitae. Sit, voluptatem."</p>
-                                <p class="fw-bold fs-4">James</p>
-                                <p class="text-muted">IELT student</p>
-                              </div>
-                                <button class="btn btn-danger next py-3 px-4" @click="next()"> <i class="fas fs-1 fa-chevron-right"></i> </button>
-                                <button class="btn btn-danger prev py-3 px-4" @click="prev()"> <i class="fas fs-1 fa-chevron-left"></i> </button>
-                              <div class="rev-img shadow">
-                                <img src="../assets/img/man.jpg" style="width:100%;height:100%;" alt="">
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                       <div class="carousel-item bg-primary">
-                          <div class="col-12 d-flex align-items-center justify-content-center rev-con">
-                            <div class="rev-box d-flex align-items-center justify-content-evenly flex-column p-5">
-                              <div class="rev-text d-flex align-items-center justify-content-evenly flex-column">
-                                <p class="text-dark fs-2 text-center">"Eveniet voluptatibus voluptates suscipit minima, cum voluptatum ut dolor, sed facere corporis qui, ea quisquam quis odit minus nulla vitae. Sit, voluptatem."</p>
-                                <p class="fw-bold fs-4">James</p>
-                                <p class="text-muted">IELT student</p>
+                                <p class="text-dark fs-2 text-center">"I had such great preparation in Duolingo English Test Class that I scored higher than my expectations. Teacher Su and assistant teachers were patient and paid close attention to every student. "</p>
+                                <p class="fw-bold fs-4">Bhone Myat Oo</p>
+                                <p class="text-muted">Duolingo student</p>
                               </div>
                                 <button class="btn btn-danger next py-3 px-4" @click="next()"> <i class="fas fs-1 fa-chevron-right"></i> </button>
                                 <button class="btn btn-danger prev py-3 px-4" @click="prev()"> <i class="fas fs-1 fa-chevron-left"></i> </button>
@@ -348,7 +348,7 @@ export default {
   height: 600px;
 }
 .rev-box{
-  width: 1000px;
+  width: 900px;
   height: 500px;
   background-color: #fff;
   position: relative;

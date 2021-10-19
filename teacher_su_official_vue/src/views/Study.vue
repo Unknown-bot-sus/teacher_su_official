@@ -62,14 +62,14 @@
 
                         <div class="d-flex align-items-center justify-content-left justify-content-lg-evenly flex-lg-wrap mt-2 mt-sm-5 chItem" >
                     
-                            <a href="mailto:hello@teachersucenter.com" class="text-light text-decoration-none"> 
+                            <a href="mailto:hello@teachersucenter.com" target="_blank" class="text-light text-decoration-none"> 
                                 <div style="min-width:300px;" class="border border-2 border-light d-flex align-items-center justify-content-center p-3 mx-1 item-hover wow animate__fadeInUp">
                                 <i class="fs-1 fas fa-headset"  style="border:2px solid white;border-radius:50%;padding:20px 20px;"></i>
                                 <h3 class="fw-bold ms-3 mt-2">IT support</h3>
                             </div>
                             </a>
 
-                            <a href="http://library.teachersucenter.com/" class="text-light text-decoration-none">
+                            <a href="http://library.teachersucenter.com/" target="_blank" class="text-light text-decoration-none">
                                 <div style="min-width:300px;" class="border border-2 border-light d-flex align-items-center justify-content-center p-3 mx-1 item-hover wow animate__fadeInUp">
                                 <i class="fs-1 fas fa-book-open"  style="border:2px solid white;border-radius:50%;padding:20px 20px;"></i>
                                 <h3 class="fw-bold ms-3 mt-2">Library</h3>
