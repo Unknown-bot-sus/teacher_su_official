@@ -29,7 +29,7 @@
                 </button>
             </div>
 
-            <div class="d-flex justify-content-center flex-wrap align-items-center py-sm-4 py-0 px-0" id="courses-container">
+            <div class="d-flex justify-content-center flex-wrap align-items-center mt-4 py-sm-4 py-0 px-0" id="courses-container">
                 <Course v-for="(course, index) in min_courses" :key="index" 
                 :title="course.title" :description="course.description" 
                 :link="{name:'coursedetail',params:{id:course.id,title:course.title,description:course.description,age:course.age}}" :theme="modelValue"
@@ -49,18 +49,18 @@
             <div class="col-12 d-lg-flex align-items-center justify-content-center p-3 p-md-5">
                 <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap p-3 wow animate__backInLeft">
                     <div>
-                        <img src="../assets/img/man.jpg" class="rev-img mb-2" alt="">
+                        <img src="../assets/img/kst.jpg" class="rev-img mb-2" alt="">
                         <div>
-                            <p class="fw-bold text-center m-0">Thiha Swan Htet</p>
+                            <p class="fw-bold text-center m-0">Kyi Shin Thant</p>
                             <p class="text-muted text-center m-2">IELTS student</p>
                         </div>
                     </div>
                     <div class="ms-md-5">
-                        <p>
-                            ‘of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos ‘
+                        <p style="text-indent:3rem;">
+                            The classes are not only informative but also fun to learn. Looking back the time I was a student at the centre, I could experience a great organized study environment and learning system. 
                         </p>
-                        <p>
-                            ‘of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos ‘
+                        <p style="text-indent:3rem;">
+                            This is really good practice for professional life in general. On top of that, open discussions for speaking practices played a role in not only preparing for the test but also improving communication skills.
                         </p>
                         
                     </div>
@@ -360,8 +360,8 @@ export default {
 }
 
 .rev-img{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
 }
 

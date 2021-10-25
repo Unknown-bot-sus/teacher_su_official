@@ -130,7 +130,7 @@
                           <div class="col-12 d-flex align-items-center justify-content-center mc-con">
                             <div class="mc-box d-flex align-items-center justify-content-evenly flex-column p-3">
                               <div class="mc-img">
-                                <img src="../assets/img/man.jpg" style="width:100%;height:100%;border-radius:50%;" alt="">
+                                <img src="../assets/img/wsw.jpeg" style="width:100%;height:100%;border-radius:50%;" alt="">
                               </div>
                               <div class="mc-text d-flex align-items-center justify-content-evenly flex-column text-center">
                                 <h3>Wine Su Waddy</h3>
@@ -146,7 +146,7 @@
                           <div class="col-12 d-flex align-items-center justify-content-center mc-con">
                             <div class="mc-box d-flex align-items-center justify-content-evenly flex-column p-3">
                               <div class="mc-img">
-                                <img src="../assets/img/man.jpg" style="width:100%;height:100%;border-radius:50%;" alt="">
+                                <img src="../assets/img/smmk.jpg" style="width:100%;height:100%;border-radius:50%;" alt="">
                               </div>
                               <div class="mc-text d-flex align-items-center justify-content-evenly flex-column text-center">
                                 <h3>Su Myat Min Khin</h3>
@@ -162,7 +162,7 @@
                           <div class="col-12 d-flex align-items-center justify-content-center mc-con">
                             <div class="mc-box d-flex align-items-center justify-content-evenly flex-column p-3">
                               <div class="mc-img">
-                                <img src="../assets/img/man.jpg" style="width:100%;height:100%;border-radius:50%;" alt="">
+                                <img src="../assets/img/bmo.jpeg" style="width:100%;height:100%;border-radius:50%;" alt="">
                               </div>
                               <div class="mc-text d-flex align-items-center justify-content-evenly flex-column text-center">
                                  <h3>Bhone Myat Oo </h3>
@@ -196,7 +196,7 @@
                                 <button class="btn btn-danger next py-3 px-4" @click="next()"> <i class="fas fs-1 fa-chevron-right"></i> </button>
                                 <button class="btn btn-danger prev py-3 px-4" @click="prev()"> <i class="fas fs-1 fa-chevron-left"></i> </button>
                               <div class="rev-img shadow">
-                                <img src="../assets/img/man.jpg" style="width:100%;height:100%;" alt="">
+                                <img src="../assets/img/wsw.jpeg" style="width:100%;height:100%;" alt="">
                               </div>
                             </div>
                           </div>
@@ -207,12 +207,12 @@
                               <div class="rev-text d-flex align-items-center justify-content-evenly flex-column">
                                 <p class="text-dark fs-2 text-center">"Teacher Su plus some teachers assisted me well. My very first bands in IELTS mock tests were just 5.5 and 6 in a nut shell but at the end of my IELTS journey, overall 7 with band 8 in Listening were what I have tried hard for."</p>
                                 <p class="fw-bold fs-4">Su Myat Min Khin</p>
-                                <p class="text-muted">IELT student</p>
+                                <p class="text-muted">IELTS student</p>
                               </div>
                                 <button class="btn btn-danger next py-3 px-4" @click="next()"> <i class="fas fs-1 fa-chevron-right"></i> </button>
                                 <button class="btn btn-danger prev py-3 px-4" @click="prev()"> <i class="fas fs-1 fa-chevron-left"></i> </button>
                               <div class="rev-img shadow">
-                                <img src="../assets/img/man.jpg" style="width:100%;height:100%;" alt="">
+                                <img src="../assets/img/smmk.jpg" style="width:100%;height:100%;" alt="">
                               </div>
                             </div>
                           </div>
@@ -228,7 +228,7 @@
                                 <button class="btn btn-danger next py-3 px-4" @click="next()"> <i class="fas fs-1 fa-chevron-right"></i> </button>
                                 <button class="btn btn-danger prev py-3 px-4" @click="prev()"> <i class="fas fs-1 fa-chevron-left"></i> </button>
                               <div class="rev-img shadow">
-                                <img src="../assets/img/man.jpg" style="width:100%;height:100%;" alt="">
+                                <img src="../assets/img/bmo.jpeg" style="width:100%;height:100%;" alt="">
                               </div>
                             </div>
                           </div>
@@ -354,10 +354,10 @@ export default {
   position: relative;
 }
 .rev-img{
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 150px;
   position: absolute;
-  bottom: -50px;
+  bottom: -80px;
 }
 .next{
   position: absolute;

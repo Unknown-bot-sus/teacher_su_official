@@ -165,7 +165,7 @@ nav{
 
     font-size: 1.2rem;
 
-    background-color: var(--primary);
+    background-color: var(--dark);
 
     position: absolute;
     top: 100%;
@@ -183,13 +183,13 @@ nav{
     transition: all 0.2s ease-out;
     z-index: 2;
 
-    box-shadow: 1px 1px 5px var(--dark);
+    
 
     .nav-link{
       position: relative;
-
+      padding: 20px;
       border-bottom: 1px solid #666;
-
+      font-size: 1.2rem;
       .mini-box{
         width: 120%;
         list-style: none;
@@ -204,11 +204,11 @@ nav{
         visibility: hidden;
         opacity: 0;
 
-        box-shadow: 1px 1px 10px var(--dark);
+        
 
         transition: all 0.3s;
 
-        background-color: var(--primary);
+        background-color: var(--dark);
       }
     }
 
@@ -320,7 +320,7 @@ nav{
 
     .navbar-nav{
       background-color: var(--primary);
-      width: 50%;
+      width: 70%;
       height: 120vh;
 
       position: fixed;

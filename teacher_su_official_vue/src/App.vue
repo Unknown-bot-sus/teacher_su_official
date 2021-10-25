@@ -2,6 +2,7 @@
   <div class="app">
     <Navbar @act_course='chgActCourse' />
     <router-view v-model="act_course"></router-view>
+    <floaty></floaty>
     <Footer></Footer>
   </div>
 </template>
@@ -9,10 +10,10 @@
 <script>
 import Navbar from "./components/Navbar.vue"
 import Footer from "./components/Footer"
+import floaty from "./components/floaty.vue"
   export default {
     name:"App",
-    components :{Navbar,Footer,
-    },
+    components :{Navbar,Footer,floaty},
     data(){
       return{
         act_course: 'free',
@@ -34,6 +35,8 @@ $danger:#BD2222;
 $secondary:#363636;
 $light:#FFFFFF;
 $dark:#000000;
+
+
 
 :root{
   --primary: #103B7B;

@@ -22,6 +22,22 @@
                 </div>
             </div>
         </div>
+        <div class="row wow animate__fadeInUp mt-4">
+            <Header class="text-center mb-5 courses-text" title="Scholarships"></Header>
+
+            <div class="col-12 flex-wrap d-flex align-items-center justify-content-center">
+
+                
+                    
+                        <button @click="activeTab = 'meritBase'" class="btn btn-outline-danger p-3 fs-1 fw-bold mx-5 rounded rounded-3 mb-3 s-btn">Merit-based scholarhip</button>
+                        <button @click="activeTab = 'finance'" class="btn btn-outline-danger p-3 fs-1 fw-bold mx-5 rounded rounded-3 mb-3 s-btn">Financial-aid scholarhip</button>
+                    
+                        
+            </div>
+            <div class="col-12">
+                <component :is ="activeTab" />
+            </div>
+        </div>
         <div class="row my-5 mb-5">
             <div class="col-12">
                 <Header title="Study tool and software" class="text-center courses-text wow animate__fadeInUp"></Header>
@@ -132,22 +148,7 @@
                 </div>
             </div>
         </div>
-        <div class="row wow animate__fadeInUp">
-            <Header class="text-center mb-5 courses-text" title="Scholarships"></Header>
-
-            <div class="col-12 flex-wrap d-flex align-items-center justify-content-center">
-
-                
-                    
-                        <button @click="activeTab = 'meritBase'" class="btn btn-outline-danger p-3 fs-1 fw-bold mx-5 rounded rounded-3 mb-3 s-btn">Merit-based scholarhip</button>
-                        <button @click="activeTab = 'finance'" class="btn btn-outline-danger p-3 fs-1 fw-bold mx-5 rounded rounded-3 mb-3 s-btn">Financial-aid scholarhip</button>
-                    
-                        
-            </div>
-            <div class="col-12">
-                <component :is ="activeTab" />
-            </div>
-        </div>
+        
     </div>
 </template>
 
