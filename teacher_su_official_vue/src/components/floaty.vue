@@ -22,7 +22,8 @@
         height: 60px;
         position: fixed;
         right: 10px;
-        top: 400px;
+        top: 50%;
+        transform: translateY(-50%);
         box-shadow: -1px 2px 21px 3px rgba(0,0,0,0.28);
     }
     div:hover{

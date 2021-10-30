@@ -44,7 +44,7 @@
                       <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'free')" class="nav-link">Free classes</router-link></li>
                       <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'ylearner')" class="nav-link">Young learners</router-link></li>
                       <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'ielts')" class="nav-link">IELTS</router-link></li>
-                      <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'others')" class="nav-link">Duolingo</router-link></li>
+                      <li><router-link to="/courses#courses-container" @click="$emit('act_course', 'others')" class="nav-link">Others</router-link></li>
                     </ul>
                   </li>
                   <li><router-link :to="{name: 'Register'}" class="nav-link">How to apply</router-link></li>

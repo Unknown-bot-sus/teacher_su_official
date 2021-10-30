@@ -25,8 +25,7 @@ export default {
         }
     },
     created(){
-        this.classdescription = this.description;
-        if(this.classdescription.length > 200) this.classdescription = this.classdescription.slice(0, 200) + " ....";
+        this.classdescription = this.description.length > 100 ? this.description.slice(0,100) + "..." : this.description;
     }
 }
 </script>
