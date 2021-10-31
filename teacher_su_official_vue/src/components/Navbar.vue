@@ -4,8 +4,7 @@
       <div class="navbar navbar-expand navbar-dark d-flex align-items-center justify-content-between bg-danger m-0 px-3 py-0" id="small-menu" role="navigation">
         <router-link to="/" class="navbar-brand d-flex justify-content-center align-items-center">
           <img src="../assets/img/logo.png" alt="logo" width="70" height="70" class="d-inline-block"/>
-          <div class="vertical-line bg-light"></div>
-          <div class="d-flex flex-column justify-content-around align-items-start text-light fw-bold mx-2 my-0 ">
+          <div class="vertical-line d-flex flex-column justify-content-around align-items-start text-light fw-bold mx-2 my-0 ">
             <span>Teacher Su</span>
             <span>Centre</span>
           </div>
@@ -15,10 +14,8 @@
           <li class="navbar-item"><router-link to="#" class="nav-link mx-2 menu-items">Teacher Su Students</router-link></li>
           <li class="navbar-item"><a href="http://simp.teachersucenter.com/login" target="_blank" class="nav-link text-light mx-2 menu-items">Staff</a></li>
           <li class="navbar-item">
-            <div class="d-flex align-item-center position-relative">
-              <div class="vertical-line bg-dark vertical-line1"></div>
+            <div class="d-flex align-item-center position-relative vertical-lines">
               <a href="http://library.teachersucenter.com" target="_blank" class="nav-link text-light mx-2 menu-items">Library</a>
-              <div class="vertical-line bg-dark vertical-line2"></div>
             </div>
           </li>
           <li class="navbar-item"><router-link :to="{name:'Announcement'}" class="nav-link text-light mx-2 menu-items">News</router-link></li>
@@ -115,23 +112,61 @@ nav{
 }
 
 .vertical-line{
-  display: inline-block;
+  position: relative;
+}
+
+.vertical-line::before{
+  position: absolute;
+  top: 0;
+  left: -0.5rem;
+}
+
+.vertical-line:hover::before{
+  left: calc(100% + 00.5rem);
+}
+
+.vertical-line span{
+  transition: all 0.5s;
+}
+
+.vertical-line:hover span{
+  color: var(--primary);
+}
+
+.vertical-line{
+  position: relative;
+}
+
+.vertical-line::before,
+.vertical-lines::before,
+.vertical-lines::after{
+  content: '';
   width: 1px;
-  height: 70px;
+  height: 100%;
+  background-color: white;
+  transition: all 0.5s;
 }
 
-.vertical-line1{
-  height: 30px;
+.vertical-lines::before{
   position: absolute;
-  top: 30px;
-  right: 50%;
+  top: -100%;
+  left: 50%;
+
+  transform: translate(-50%, 25%);
 }
 
-.vertical-line2{
-  height: 30px;
+.vertical-lines::after{
   position: absolute;
-  bottom: 30px;
-  right: 50%;
+  bottom: -100%;
+  left: 50%;
+
+  transform: translate(-50%, -25%);
+}
+
+.vertical-lines:hover::before,
+.vertical-lines:hover::after{
+  width: 2px;
+  transform: none;
 }
 
 .menu-btn, .close-btn{
@@ -265,24 +300,16 @@ nav{
   #mega-menu{
       // Mega box
     .tgbtn:checked + label + .mega-box{
-      top: 100%;
-      left: 0;
-
-      display: block;
-      position: relative;
       visibility: visible;
       opacity: 1;
-    }
-
-    .mega-box:hover{
-      display: none;
-      visibility: hidden;
-      opacity: 0;
+      display: block;
     }
 
     .mega-box{
       font-size: 0.98rem;
       background-color: var(--dark);
+      position: relative;
+      display: none;
 
       .nav-link{
         .mini-box{

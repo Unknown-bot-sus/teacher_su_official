@@ -30,5 +30,6 @@
         background-color: rgb(230, 230, 230);
         color: black;
         transition: 0.5s;
+        transform: translateY(100%);
     }
 </style>

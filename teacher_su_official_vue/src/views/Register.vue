@@ -39,11 +39,11 @@
                  <div class="form-group my-5">
                      <input type="text" class="form-control" placeholder="Search a class" v-model="search"/><i></i>
                  </div>
-                <table class="table table-responsive table-bordered table-success tables">
+                <table class="table table-responsive table-bordered tables">
                     <thead>
                         <tr>
-                            <td @click="sort_title()" class="text-center">Class name</td>
-                            <td @click="sort_date()" class="text-center">Term start date</td>
+                            <th @click="sort_title()" class="text-center">Class name</th>
+                            <th @click="sort_date()" class="text-center">Term start date</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -89,6 +89,9 @@ export default {
         }
     },
     methods:{
+        showResult(){
+            console.log(this.data);
+        },
         renderDate(date){
             if(typeof date === 'string'){
                 let year, month, day; 
@@ -115,10 +118,10 @@ export default {
         
         
         sorter_date(array, array2, index=0){
-            if(index >= array.length) return 1;
-            return (+array[index] > +array2[index] ? 1 :
-                    +array[index] < +array2[index] ? -1 :
-                    this.sorter_date(array, array2, ++index));
+            if(index >= array.length) return 0;
+            let result = parseInt(array[index]) - parseInt(array2[index]);
+            if(result == 0) this.sorter_date(array, array2, --index);
+            return result;
         }
     },
 
