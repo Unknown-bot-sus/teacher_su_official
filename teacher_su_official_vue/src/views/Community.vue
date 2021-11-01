@@ -19,122 +19,36 @@
             </div>
         </div>
 
-
-        <div class="row my-3 mx-1 my-md-5 d-flex align-items-center justify-content-center">
-            <div class="col-12 col-md-8 border border-2 ">
-
-                <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
-                    <img src="../assets/img/debate.png" class="image img-thumbnail">
-                </div>
-                <div class="wow animate__fadeInUp">
-                    <Header title="Debate club" class="text-center courses-text mb-4"></Header>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!lo
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi animi quidem similique iste, tenetur voluptatem repellat error dolores tempora accusantium, autem fugiat nemo, quisquam esse necessitatibus reiciendis ratione vitae. Labore.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row my-3 mx-1 my-md-5 d-flex align-items-center justify-content-center">
-            <div class="col-12 col-md-8 border border-2 ">
-
-                <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
-                    <img src="../assets/img/enter.png" class="image img-thumbnail">
-                </div>
-                <div class="wow animate__fadeInUp">
-                    <Header title="Entertainment club" class="text-center courses-text mb-4"></Header>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!lo
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi animi quidem similique iste, tenetur voluptatem repellat error dolores tempora accusantium, autem fugiat nemo, quisquam esse necessitatibus reiciendis ratione vitae. Labore.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row my-3 mx-1 my-md-5 d-flex align-items-center justify-content-center">
-            <div class="col-12 col-md-8 border border-2 ">
-
-                <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
-                    <img src="../assets/img/art.png" class="image img-thumbnail">
-                </div>
-                <div class="wow animate__fadeInUp">
-                    <Header title="Art club" class="text-center courses-text mb-4"></Header>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!lo
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi animi quidem similique iste, tenetur voluptatem repellat error dolores tempora accusantium, autem fugiat nemo, quisquam esse necessitatibus reiciendis ratione vitae. Labore.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row my-3 mx-1 my-md-5 d-flex align-items-center justify-content-center">
-            <div class="col-12 col-md-8 border border-2 ">
-
-                <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
-                    <img src="../assets/img/yoga.png" class="image img-thumbnail">
-                </div>
-                <div class="wow animate__fadeInUp">
-                    <Header title="Yoga club" class="text-center courses-text mb-4"></Header>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!lo
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi animi quidem similique iste, tenetur voluptatem repellat error dolores tempora accusantium, autem fugiat nemo, quisquam esse necessitatibus reiciendis ratione vitae. Labore.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row my-3 mx-1 my-md-5 d-flex align-items-center justify-content-center">
-            <div class="col-12 col-md-8 border border-2 ">
-
-                <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
-                    <img src="../assets/img/counselling.jpg" class="image img-thumbnail">
-                </div>
-                <div class="wow animate__fadeInUp">
-                    <Header title="Telecounselling club" class="text-center courses-text mb-4"></Header>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!lo
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi animi quidem similique iste, tenetur voluptatem repellat error dolores tempora accusantium, autem fugiat nemo, quisquam esse necessitatibus reiciendis ratione vitae. Labore.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row my-3 mx-1 my-md-5 d-flex align-items-center justify-content-center">
-            <div class="col-12 col-md-8 border border-2 ">
-
-                <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
-                    <img src="../assets/img/comet.jpg"  class="image img-thumbnail">
-                </div>
-                <div class="wow animate__fadeInUp">
-                    <Header title="Comet conversation club" class="text-center courses-text mb-4"></Header>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!lo
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi animi quidem similique iste, tenetur voluptatem repellat error dolores tempora accusantium, autem fugiat nemo, quisquam esse necessitatibus reiciendis ratione vitae. Labore.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row my-3 mx-1 my-md-5 d-flex align-items-center justify-content-center">
-            <div class="col-12 col-md-8 border border-2 ">
-
-                <div class="d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
-                    <img src="../assets/img/tandl.jpg" class="image img-thumbnail">
-                </div>
-                <div class="wow animate__fadeInUp">
-                    <Header title="Teaching and Learning English club" class="text-center courses-text mb-4"></Header>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!lo
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi animi quidem similique iste, tenetur voluptatem repellat error dolores tempora accusantium, autem fugiat nemo, quisquam esse necessitatibus reiciendis ratione vitae. Labore.
-                    </p>
-                </div>
-            </div>
-        </div>
+        <Club
+        v-for="(club, index) in data"
+        :key="index"
+        v-bind="club"
+        :img_dir="img_dir[index % 2]"
+        ></Club>
     </div>
 </template>
 
 <script>
-import Header from "../components/Header.vue"
+import Club from "../components/Club.vue"
 import WOW from "wow.js"
     export default {
         name:"Community",
         components: {
-            Header,
+            Club,
+        },
+        data() {
+            return {
+                img_dir: ['left', 'right'],
+                data: [
+                    {fileName:"debate.png", title: "Debate Club", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!loLorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi animi quidem similique iste, tenetur voluptatem repellat error dolores tempora accusantium, autem fugiat nemo, quisquam esse necessitatibus reiciendis ratione vitae. Labore."},
+                    {fileName:"enter.png", title: "Entertainment Club", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!loLorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi animi quidem similique iste, tenetur voluptatem repellat error dolores tempora accusantium, autem fugiat nemo, quisquam esse necessitatibus reiciendis ratione vitae. Labore."},
+                    {fileName:"art.png", title: "Art Club", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!loLorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi animi quidem similique iste, tenetur voluptatem repellat error dolores tempora accusantium, autem fugiat nemo, quisquam esse necessitatibus reiciendis ratione vitae. Labore."},
+                    {fileName:"yoga.png", title: "Yoga Club", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!loLorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi animi quidem similique iste, tenetur voluptatem repellat error dolores tempora accusantium, autem fugiat nemo, quisquam esse necessitatibus reiciendis ratione vitae. Labore."},
+                    {fileName:"counselling.jpg", title: "Telecounselling Club", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!loLorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi animi quidem similique iste, tenetur voluptatem repellat error dolores tempora accusantium, autem fugiat nemo, quisquam esse necessitatibus reiciendis ratione vitae. Labore."},
+                    {fileName:"comet.jpg", title: "Comet Conversation Club", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!loLorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi animi quidem similique iste, tenetur voluptatem repellat error dolores tempora accusantium, autem fugiat nemo, quisquam esse necessitatibus reiciendis ratione vitae. Labore."},
+                    {fileName:"tandl.jpg", title: "Teaching and Learning English Club", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi placeat optio unde vero eum illo nemo laboriosam ipsum, officiis deserunt praesentium aperiam beatae et provident cupiditate fugiat dolores. Incidunt!loLorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi animi quidem similique iste, tenetur voluptatem repellat error dolores tempora accusantium, autem fugiat nemo, quisquam esse necessitatibus reiciendis ratione vitae. Labore."},
+                ],
+            }
         },
         mounted () {
         var wow = new WOW(
@@ -151,9 +65,8 @@ import WOW from "wow.js"
       }
     );
     wow.init();
-
   },
-    }
+}
 </script>
 
 <style  scoped>
