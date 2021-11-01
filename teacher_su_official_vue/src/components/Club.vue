@@ -1,9 +1,9 @@
 <template>
     <div class="row my-3 mx-1 my-md-5 d-flex align-items-center justify-content-between" :class="img_dir">
-            <div class="col-6 d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center my-4 wow animate__fadeInUp">
                 <img :src="require(`../assets/img/${fileName}`)" :alt="title + 'pic'" class="image img-thumbnail">
             </div>
-            <div class="col-6 wow animate__fadeInUp">
+            <div class="col-12 col-md-6 wow animate__fadeInUp">
                 <Header :title="title" class="text-center courses-text mb-4"></Header>
                 <p>{{ description }}</p>
             </div>
