@@ -23,8 +23,8 @@
         <div class="row flex-column justify-content-center align-items-center mx-3 mt-5 my-md-5 py-0 px-0">
             <div class="d-flex justify-content-start my-0 mx-0 p-0">
                 <button v-for="(button, index) in buttons" :key="button" :id="button"
-                        class="btn course-btn" :class="{active: modelValue === button}"
-                        @click="$emit('update:modelValue', button),rendercourse(data[index])">
+                        class="btn course-btn" :class="{active: act_course === button}"
+                        @click="chgActCourse(button), rendercourse(data[index])">
                         {{ renderButtonname(index) }}
                 </button>
             </div>
@@ -32,7 +32,7 @@
             <div class="d-flex justify-content-center flex-wrap align-items-center mt-4 py-sm-4 py-0 px-0" id="courses-container">
                 <Course v-for="(course, index) in min_courses" :key="index" 
                 :title="course.title" :description="course.description" 
-                :link="{name:'coursedetail',params:{id:course.id,title:course.title,description:course.description,age:course.age}}" :theme="modelValue"
+                :link="{name:'coursedetail',params:{id:course.id,title:course.title,description:course.description,age:course.age}}" :theme="act_course"
                 ></Course>
                 <div class="row col-12 justify-content-center align-items-center mt-5">
                     <button class="btn view-btn" 
@@ -129,15 +129,14 @@
 
 <script>
 import Header from "../components/Header"
-
+import { mapMutations } from 'vuex'
+import { mapState } from 'vuex'
 import Course from '../components/Course'
 import WOW from "wow.js"
 
 export default {
     name:'Courses',
     components:{Header,Header,Course},
-    props: ['modelValue'],
-    emits: ['update:modelValue'],
     data(){
         return{
             
@@ -148,6 +147,11 @@ export default {
             isActive: true,
             buttons: ['free', 'ylearner', 'ielts', 'others'],
         }
+    },
+    computed: {
+        ...mapState({
+            act_course: state => state.act_course,
+        })
     },
     mounted () {
         var wow = new WOW(
@@ -166,6 +170,10 @@ export default {
     wow.init();
   },
     methods:{
+        ...mapMutations([
+            'chgActCourse',
+        ]),
+        
         get_mincourse(array, max_index=4){
             try{
                 return array.slice(0, max_index);

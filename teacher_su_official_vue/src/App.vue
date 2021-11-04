@@ -1,7 +1,7 @@
 <template>
   <div class="app">
-    <Navbar @act_course='chgActCourse' />
-    <router-view v-model="act_course"></router-view>
+    <Navbar/>
+    <router-view></router-view>
     <floaty></floaty>
     <Footer></Footer>
   </div>
@@ -9,23 +9,14 @@
 
 <script>
 import Navbar from "./components/Navbar.vue"
-import Footer from "./components/Footer"
 import floaty from "./components/floaty.vue"
+import { defineAsyncComponent } from '@vue/runtime-core';
   export default {
     name:"App",
-    components :{Navbar,Footer,floaty},
-    data(){
-      return{
-        act_course: 'free',
-      }
-    },
-    methods: {
-      chgActCourse(active){
-        console.log(active)
-        this.act_course = active;
-        console.log(this.act_course)
-      }
-    }
+    components :{Navbar,
+    Footer: defineAsyncComponent(()=>
+      import('./components/Footer.vue')),
+    floaty},
   };
 </script>
 
