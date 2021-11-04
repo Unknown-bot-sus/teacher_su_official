@@ -26,7 +26,7 @@
         
         <Job v-for="(job, index) in data" :key=index 
         :bg="color_var[0][index % 2]" :color="color_var[1][index % 2]" 
-        :job_title="job.title" :description="job.description" :id="job.title"></Job>
+        :job_title="job.title" :description="job.description" :requirement="job.requirement" :responsibility="job.responsibility" :id="job.title"></Job>
         
         <br>
     <br>
@@ -58,21 +58,35 @@ export default {
         // Data will be replaced with data from api
         this.data = [
             {
-                title: 'Main teacher',
-                description: 'of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos '
+                title: 'Main Teacher',
+                description: 'The main teacher is the decision-maker for the whole class and leads assistant lecturers. An MT should be able to teach young learners and reaches them with engaging lesson plans.',
+                requirement: 'Bachelor’s degree in teaching or relevant field,  In-depth knowledge of teaching methodologies and practices, Good communication and organizational skills, Cool-tempered and positive attitude, Strong leadership skill, Familiar with online teaching tools (preferable)',
+                responsibility: 'Prepare effective lesson plans, tests and assignments, Assign date and time for the tests, Grade homework, assignments and tests, Choose award-worthy students, Decide and prove if each student is qualified for the next level, Manage assistants lecturers and give appropriate instructions, Check the daily/monthly reports from the assistant lecturers, Check class information on the internal staff management platform',
             },
             {
-                title: 'Assistant teacher',
-                description: 'of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos '
+                title: 'Assistant Lecturer',
+                description: 'The assistant lecturer supports the main teacher in presenting lessons and helps students learn effectively. The duties of an assistant lecturer can be varied on the age of students.',
+                requirement: 'Be a former student at the Teacher Su Language Centre, Sufficient qualification in English, Good communication and organizational skills, Cool-tempered and positive attitude, Familiar with online teaching tools (preferable), A college degree is not mandatory',
+                responsibility: 'Help the main teacher plan and upload tests, Track students attendance and class schedules, Work with smaller groups to enhance the learning process and give attention to the progress of individuals, Upload daily lessons and necessary announcements on google classroom, Organize test marks and prepare daily/monthly reports for consultation, Call students if they are not taking the test'
             },
             {
-                title: 'Tech team',
-                description: 'of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos '
+                title: 'Graphic Designer',
+                description: 'The graphic designer creates eye-catching visual texts and posters for social media posts, advertisements and announcements of the centre.',
+                requirement: 'Knowledge of design techniques,  principles and professional tools, Strong interest in design thinking, Creativity and originality, Proper understanding of the commercial environment, Ability to work with little supervision, Good communication and teamwork, Professional Portfolio (preferable)',
+                responsibility: 'Create designs in accordance with brand guidelines, Professional approach to time, costs and deadlines, Stay on top of the latest trends, Clearly articulate ideas and suggestions, Collaborate closely with the content writers'
             },
             {
-                title: 'Designer',
-                description: 'of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos '
+                title: 'Content Writer',
+                description: 'A content writer creates print or digital content for the centre that provides information and showcases the classes and services it offers.  The content writer should be able to write proficiently in both Burmese and English.',
+                requirement: 'Knowledge of writing techniques, principles and tools, An impeccable grasp of both Burmese and English, along with  idioms and current trends, Creativity and originality, Proper understanding of the commercial environment, Ability to work with little supervision, Good communication and teamwork, Professional Portfolio (preferable)',
+                responsibility: 'Produce well-researched and grammatically correct content in both languages, Professional approach to time, costs and deadlines, Stay on top of the latest trends, Clearly articulate ideas and suggestions, Collaborate closely with the graphic designers'
             },
+            {
+                title: 'Other Positions',
+                description: 'We have other positions: class coordinators, student service, human resource management, developers for the Tech team, just to name a few. If you have solid skills in something and are interested in working at the Teacher Su Language Centre, feel free to reach out via hello@teachersucenter.com along with your curriculum vitae.',
+                requirement: 'Varied according to the position',
+                responsibility: 'Varied according to the position'
+            }
         ];
 
         this.color_var = [
