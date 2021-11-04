@@ -1,13 +1,7 @@
 <template>
 
     <footer class="container-fluid bg-secondary py-3">
-        <div class="logo-container">
-            <a href="#"><img src="../assets/img/logo.png" alt="logo" width="70" height="70"></a>
-            <div class="logo-link-container text-light h2 fw-bold h4 mx-2 my-0">
-                <a href="#" class="my-auto">Teacher Su<br/>Centre</a>
-            </div>
-        </div>
-        
+        <LogoContainer></LogoContainer>
     
         <div class="row content-container">
             <div class="col-lg-4 col-sm-6 col-12">
@@ -47,62 +41,14 @@
 </template>
 
 <script>
+import LogoContainer from '../components/LogoContainer.vue'
 export default {
     name: "Footer",
+    components: {LogoContainer},
 }
 </script>
 
 <style lang="scss" scoped>
-@mixin background-clip($value){
-    background-clip: $value;
-    -webkit-background-clip: $value;
-    -moz-background-clip: $value;
-}
-.logo-container{
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-
-    .logo-link-container{
-        position: relative;
-        z-index: 0;
-        a{
-            color: white;
-            text-decoration: none;
-            position: relative;
-            z-index: 0;
-            transition: all 0.5s;
-        }
-
-    }
-
-    .logo-link-container::before{
-        content: '';
-        width: 2px;
-        height: 100%;
-
-        background-color: white;
-
-        position: absolute;
-        top: 0;
-        left: -0.5rem;
-        z-index: -1;
-
-        transition: all 0.5s;
-    }
-
-    .logo-link-container:hover::before{
-        left: calc(100% + 0.5rem);
-    }
-
-    .logo-link-container:hover a{
-        color: var(--primary);
-    }
-    
-}
-
 li, span{
     margin: 1.5rem;
 }
@@ -125,7 +71,7 @@ li, span{
 
 
 .icon-container{
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 10%;
     margin: 1rem;
     width: 4rem;
@@ -165,6 +111,10 @@ li, span{
     transform: rotate(45deg) translate(0%, -50%);
 }
 
+.icon-container:hover{
+    border-color: var(--primary);
+}
+
 
 
 @keyframes icon_ani {
@@ -202,13 +152,8 @@ li, span{
     font-size: 3rem;
 }
 
-@media only screen and (max-width: 652px){
-    .logo-container img{
-        width: 50px;
-        height: 50px;
-    }
 
-    .logo-container span,
+@media (max-width:767.98px){
     .content-container span{
         font-size: 0.8rem;
     }
@@ -219,6 +164,15 @@ li, span{
 
     .footer span{
         font-size: 0.5rem;
+    }
+
+    .icon-container{
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .icon{
+        font-size: 2rem;
     }
 }
 </style>
