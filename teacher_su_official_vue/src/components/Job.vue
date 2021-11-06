@@ -5,11 +5,11 @@
                 <h1 class="fw-bold" v-text="job_title"></h1>
                 <p>{{ description}}</p>
                 <ul> Requirements 
-                    <li> {{ requirement }} </li>
+                    <li v-for="requirement in deconstructArray(requirements, ', ')" :key="requirement"> {{ requirement }} </li>
                 </ul>
 
                 <ul> Responsibilities
-                    <li> {{ responsibility }} </li>
+                    <li v-for="responsibility in deconstructArray(responsibilities, ', ')" :key="responsibility"> {{ responsibility }} </li>
                 </ul>
             </div>
         </div>
@@ -24,9 +24,15 @@ export default {
         color: String,
         job_title: String,
         description: String,
-        requirement: String,
-        responsibility: String,
-    }  
+        requirements: String,
+        responsibilities: String,
+    },
+
+    methods: {
+        deconstructArray(array, deli){
+            return array.indexOf(deli) != -1 ? array.split(deli) : [array];
+        }
+    },
 }
 </script>
 
