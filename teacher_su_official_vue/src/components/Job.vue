@@ -2,14 +2,14 @@
     <div :class="'row ' + bg">
         <div class="col-12">
             <div :class="'p-3 p-md-5 ' + color">
-                <h1 class="fw-bold" v-text="job_title"></h1>
+                <h1 class="fw-bold" v-text="title"></h1>
                 <p>{{ description}}</p>
-                <ul> <b>Requirements </b>
-                    <li> {{ requirement }} </li>
+                <ul> Requirements 
+                    <li v-for="requirement in deconstructArray(requirements, ', ')" :key="requirement"> {{ requirement }} </li>
                 </ul>
 
-                <ul> <b>Responsibilities</b>
-                    <li> {{ responsibility }} </li>
+                <ul> Responsibilities
+                    <li v-for="responsibility in deconstructArray(responsibilities, ', ')" :key="responsibility"> {{ responsibility }} </li>
                 </ul>
             </div>
         </div>
@@ -22,11 +22,17 @@ export default {
     props: {
         bg: String,
         color: String,
-        job_title: String,
+        title: String,
         description: String,
-        requirement: String,
-        responsibility: String,
-    }  
+        requirements: String,
+        responsibilities: String,
+    },
+
+    methods: {
+        deconstructArray(array, deli){
+            return array.indexOf(deli) != -1 ? array.split(deli) : [array];
+        }
+    },
 }
 </script>
 

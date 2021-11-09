@@ -5,7 +5,7 @@
             </div>
             <div class="col-12 col-md-6 wow animate__fadeInUp">
                 <Header :title="title" class="text-center courses-text mb-4"></Header>
-                <p>{{ description }}</p>
+                <p v-for="(desc, index) in getDescription" :key="index">{{ desc }}</p>
             </div>
     </div>
 </template>
@@ -21,6 +21,11 @@ export default {
         title: String,
         description: String,
         img_dir: String,
+    },
+    computed: {
+        getDescription(){
+            return this.description.indexOf('.') != 1 ? this.description.split('.') : [this.description];
+        }
     },
     mounted () {
         var wow = new WOW(

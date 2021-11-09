@@ -41,16 +41,25 @@
                         <img src="../assets/img/Study9.png" class="rev-img mb-2" alt="">
                         <div>
                             <p class="fw-bold text-center m-0">Su Htet Zaw</p>
-                            <p class="text-muted text-center m-2">Founder and CEOf`</p>
+                            <p class="text-muted text-center m-2">Founder and CEO</p>
                         </div>
                     </div>
                     <div class="ms-md-5">
                         <p>
-                            ‘of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos ‘
+                            Su Htet Zaw (Teacher Su) is the CEO and Founder of the Teacher Su Language Centre, established in 2018. She received her Bachelor’s degree from Yangon University of Education (YUOE) in 2013. 
+                            She got the Myanmar Presidential Scholarship while working as a high school teacher in Yangon; thus, pursued her Master’s degree in Educational Leadership and Management at La Trobe University, Melbourne. 
+                            After receiving her Master’s degree, she worked as a deputy planning officer at the Department of Educational Research, Planning and Training, Ministry of Education, Myanmar. 
+                            She is passionate about volunteering and leadership activities. 
+                            During her two years in Australia, Teacher Su outstandingly engaged in eleven volunteering activities and was hired for three professional works. 
+                            She founded the Red Cross University Club and served as the President of the club. 
+                            Her volunteering works include being an Executive Assistant at the National Education office (CISA), an Executive Assistant at the National Undergraduate office (CISA), a volunteer tutor, 
+                            a CISA National Conference Program Coordinator, a postgraduate student representative at Library consultative committee, a Connect Mentor, Social Media Communication Assistant and International Host at La Trobe. 
+                            Moreover, she worked as a School Partnership Program facilitator, casual registration staff and connect leader at La Trobe University (Melbourne). 
+                            She is also a member of the Golden Key International Honour Society, which membership is invitation only and applies to the top 15% of the respective university. 
+                            Due to her excellent leadership and academic skills, she was proudly awarded ‘Victoria International Student of the Year - Higher Education (2017)’. 
+                            She is currently working as the CEO of the centre to bring quality education and provide international standard facilities to young students.
                         </p>
-                        <p>
-                            ‘of the printing and typesetting Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos ‘
-                        </p>
+
                         
                     </div>
                 </div>

@@ -110,19 +110,11 @@ export default {
 
         sort_date(){
             this.data.sort((first, second)=>{
-                this.sorter_date(first.date.split('-'), second.date.split('-'));
+                return +first.date.replace(/-/g, '') - +second.date.replace(/-/g, '');
             });
             if(!this.order_date) this.data.reverse();
             this.order_date = !this.order_date;
         },
-        
-        
-        sorter_date(array, array2, index=0){
-            if(index >= array.length) return 0;
-            let result = parseInt(array[index]) - parseInt(array2[index]);
-            if(result == 0) this.sorter_date(array, array2, --index);
-            return result;
-        }
     },
 
     created(){
