@@ -2,7 +2,7 @@
     <div :class="'row ' + bg">
         <div class="col-12">
             <div :class="'p-3 p-md-5 ' + color">
-                <h1 class="fw-bold" v-text="job_title"></h1>
+                <h1 class="fw-bold" v-text="title"></h1>
                 <p>{{ description}}</p>
                 <ul> Requirements 
                     <li v-for="requirement in deconstructArray(requirements, ', ')" :key="requirement"> {{ requirement }} </li>
@@ -22,7 +22,7 @@ export default {
     props: {
         bg: String,
         color: String,
-        job_title: String,
+        title: String,
         description: String,
         requirements: String,
         responsibilities: String,
