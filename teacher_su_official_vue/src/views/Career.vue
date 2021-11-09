@@ -27,10 +27,6 @@
         <Job v-for="(job, index) in data" :key=index 
         :bg="color_var[0][index % 2]" :color="color_var[1][index % 2]" 
         v-bind="job" :id="job.title"></Job>
-        
-        <br>
-    <br>
-    <br>
     </div>
 
     
