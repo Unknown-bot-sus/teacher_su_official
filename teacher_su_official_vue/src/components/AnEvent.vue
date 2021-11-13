@@ -1,6 +1,6 @@
 <template>
         <div>
-            <h1 class="text-center">Events</h1>
+            <h1 class="text-center">Announcements</h1>
             <div class="d-flex align-items-center justify-content-evenly flex-wrap">
             <div v-for="list in lists" :key="list.id" class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">

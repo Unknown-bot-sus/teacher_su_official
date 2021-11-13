@@ -10,10 +10,8 @@
         
         <div class="row">
             <div class="col-12 col-lg-8 pt-2 p-md-5">
-                <button @click="activeTab = 'AnEvent'" class="btn btn-primary outline-none me-2">events</button>
-                <button @click="activeTab = 'AnNews'" class="btn btn-primary outline-none">news</button>
                 <div class="card-con mt-2 py-3">
-                    <component :is ="activeTab" />
+                    <AnEvent></AnEvent>
                 </div>
             </div>
             <div class="col-12 col-lg-4 d-lg-flex align-items-center justify-content-center flex-column">
@@ -21,22 +19,10 @@
                     <div class="col-12 d-lg-flex align-items-center justify-content-center">
                         <div class="card">
                             <div class="card-header">
-                                latest events
+                                Latest announcements
                             </div>
                             <div class="card-body">
                                 <LatestEvents></LatestEvents>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row my-4">
-                    <div class="col-12 d-lg-flex align-items-center justify-content-center">
-                        <div class="card">
-                            <div class="card-header">
-                                latest news
-                            </div>
-                            <div class="card-body">
-                                <LatestNews></LatestNews>
                             </div>
                         </div>
                     </div>
@@ -50,19 +36,13 @@
 <script>
 
 import AnEvent from "../components/AnEvent.vue"
-import AnNews from "../components/AnNews.vue"
 import LatestEvents from "../components/LatestEvents.vue"
-import LatestNews from "../components/LatestNews.vue"
 
     export default {
         name:"Announcement",
-        data() {
-            return {
-                activeTab: "AnEvent",
-            }
-        },
+        
         components: {
-            AnEvent,AnNews,LatestEvents,LatestNews
+            AnEvent,LatestEvents
         }
     }
 </script>

@@ -4,11 +4,11 @@
             <div :class="'p-3 p-md-5 ' + color">
                 <h1 class="fw-bold" v-text="title"></h1>
                 <p>{{ description}}</p>
-                <ul> Requirements 
+                <ul><b> Requirements </b>
                     <li v-for="requirement in deconstructArray(requirements, ', ')" :key="requirement"> {{ requirement }} </li>
                 </ul>
 
-                <ul> Responsibilities
+                <ul> <b>Responsibilities</b>
                     <li v-for="responsibility in deconstructArray(responsibilities, ', ')" :key="responsibility"> {{ responsibility }} </li>
                 </ul>
             </div>

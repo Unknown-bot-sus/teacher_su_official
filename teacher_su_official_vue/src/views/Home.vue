@@ -241,19 +241,12 @@
       </div>
 
       <div class="row my-5">
-        <div class="col-12 col-md-6 d-flex align-items-center justify-content-center wow animate__backInRight">
+        <div class="col-12 d-flex align-items-center justify-content-center wow animate__backInRight">
           <div class="mt-3">
-            <h3 style="font-family:'Roboto Slab', serif;" class="mb-4 fs-1">Events</h3>
+            <h3 style="font-family:'Roboto Slab', serif;" class="mb-4 fs-1 text-center">Announcements</h3>
             
             <LatestEvents></LatestEvents>
             
-          </div>
-        </div>
-      <div class="col-12 col-md-6 d-flex align-items-center justify-content-center wow animate__backInRight">
-          <div class="my-3">
-            <h3 style="font-family:'Roboto Slab', serif;" class="mb-4 fs-1">News</h3>
-            
-            <LatestNews></LatestNews>
           </div>
         </div>
       </div>
@@ -266,12 +259,11 @@
 // @ is an alias to /src
 import Header from "../components/Header"
 import LatestEvents from '../components/LatestEvents'
-import LatestNews from '../components/LatestNews'
 import WOW from "wow.js"
 
 export default {
   name: 'Home',
-  components:{Header,LatestEvents,LatestNews},
+  components:{Header,LatestEvents},
   mounted () {
         var wow = new WOW(
       {
