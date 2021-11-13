@@ -31,8 +31,8 @@
 
             <div class="d-flex justify-content-center flex-wrap align-items-center mt-4 py-sm-4 py-0 px-0" id="courses-container">
                 <Course v-for="(course, index) in min_courses" :key="index" 
-                :title="course.title" :description="course.description" 
-                :link="{name:'coursedetail',params:{id:course.id,title:course.title,description:course.description,age:course.age}}" :theme="act_course"
+                :title="course.name" :description="course.description" 
+                :link="{name:'coursedetail',params:{id:course.id,title:course.name,description:course.description,age:course.age}}" :theme="act_course"
                 ></Course>
                 <div class="row col-12 justify-content-center align-items-center mt-5">
                     <button class="btn view-btn" 
@@ -133,6 +133,7 @@ import { mapMutations } from 'vuex'
 import { mapState } from 'vuex'
 import Course from '../components/Course'
 import WOW from "wow.js"
+import axios from "axios"
 
 export default {
     name:'Courses',
@@ -140,7 +141,7 @@ export default {
     data(){
         return{
             
-            data: [],
+            data: [[], [], [], []],
             min_courses: [],
             all_courses: [],
             viewbtn_shown: true,
@@ -168,8 +169,38 @@ export default {
       }
     );
     wow.init();
-  },
+    },
+    created(){
+        axios.get("https://api.teachersucenter.com/api/temp/category")
+        .then(response =>{
+            for (let course of response.data){
+                console.log(course)
+                console.log(this.catergorying_courses(course.name, ['Starters']))
+                if(this.catergorying_courses(course.name, ['Free'])){
+                    this.data[0].push(course);
+                } else if(this.catergorying_courses(course.name,['Starters', 'Movers', 'Flyers', 'KET', 'FCE', 'PET', 'CAE', 'CPE'])){
+                    this.data[1].push(course);
+                } else if(this.catergorying_courses(course.name, ['ielts'])){
+                    this.data[2].push(course)
+                } else {
+                    this.data[3].push(course)
+                }
+            }
+        })
+        .then(()=>this.rendercourse(this.data[0]));
+    },
     methods:{
+        catergorying_courses(title, array){
+            let contained = false;
+            for(let el of array){
+                if(title.toLowerCase().includes(el.toLowerCase())){
+                    contained = true;
+                    break;
+                }
+            }
+            return contained;
+        },
+        
         ...mapMutations([
             'chgActCourse',
         ]),
@@ -213,74 +244,6 @@ export default {
         },
 
     },
-
-    created(){
-        this.data = [
-            [
-                {   id:1,
-                    title: "Grammar for starters",
-                    age:"12",
-                    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-                }
-            ],
-
-            [
-                {   id:2,
-                    title: "Starters",
-                    age:"12",
-                    description: "Pre A1 Starters is the first of three Cambridge English Qualifications designed for young learners. These tests introduce children to everyday written and spoken English and are an excellent way for them to gain confidence and improve their English."
-                },
-                {   id:3,
-                    title: "Movers",
-                    age:"12",
-                    description: "A1 Movers is the second of three Cambridge English Qualifications designed for young learners. These tests introduce children to everyday written and spoken English and are an excellent way for them to gain confidence and improve their English."
-                },
-                {   id:4,
-                    title: "Flyers",
-                    age:"12",
-                    description: "A2 Flyers is the third of three Cambridge English Qualifications designed for young learners. These tests introduce children to everyday written and spoken English and are an excellent way for them to gain confidence and improve their English."
-                },
-                {   id:5,
-                    title: "KET",
-                    age:"12",
-                    description:   `An A2 Key qualification is proof of your ability to use English to communicate in simple situations.
-                                        The exam tests all four English language skills – reading, writing, listening and speaking. It should give you the confidence to go on and study for higher-level exams such as  B1 Preliminary and B2 First.`
-                },
-                {   id:6,
-                    title: "PET",
-                    age:"12",
-                    description: `A B1 Preliminary qualification shows that you have mastered the basics of English and now have practical language skills for everyday use.
-                                This exam is the logical step in your language learning journey between A2 Key and B2 First.`
-                },
-            ],
-
-            [
-                {   id:7,
-                    title: "IELTS",
-                    age:"12",
-                    description: ` IELTS (International English Language Testing System)
-                                Educational institutions, employers, professional registration bodies and government immigration agencies often require proof of English language skills as part of their recruitment or admission procedures. IELTS is widely accepted for these purposes.
-                                IELTS is designed to test the language ability of people who want to study or work where English is used as the language of communication. Over 3.5 million tests are taken each year.`
-                },    
-            ],
-
-            [
-                {   id:8,
-                    title: "Dulingo",
-                    age:"12",
-                    description: `The Duolingo English Test is a modern language proficiency tool designed for today's international students and institutions. It offers an English proficiency score, video interview, and writing sample in an accessible, efficient, and secure testing experience.`
-                },
-                {   id:9,
-                    title: "Speak English Professionally & English Grammar (Intermediate)",
-                    age:"12",
-                    description: `A B1 Preliminary qualification shows that you have mastered the basics of English and now have practical language skills for everyday use.
-                                This exam is the logical step in your language learning journey between A2 Key and B2 First.` 
-                }
-            ]
-        ];
-
-        this.rendercourse(this.data[0]);
-    }
 }
 </script>
 
