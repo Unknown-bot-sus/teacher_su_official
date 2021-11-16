@@ -1,5 +1,5 @@
 <template>
-    <div class="d-flex flex-column course-container mx-auto mb-2">
+    <div class="d-flex flex-column course-container mx-5 mb-2">
         <h3 v-text="title" class="fw-bold h4 titlecs text-truncate" :class="theme"></h3>
         <span v-text="classdescription" class="description"></span>
         <div class="line"></div>

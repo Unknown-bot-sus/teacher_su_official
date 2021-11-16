@@ -18,7 +18,7 @@ export default {
     width: 100%;
     height: 70px;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
 
     .img-container{

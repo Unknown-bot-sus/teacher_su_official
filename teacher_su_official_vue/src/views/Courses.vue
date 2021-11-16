@@ -29,10 +29,10 @@
                 </button>
             </div>
 
-            <div class="d-flex justify-content-center flex-wrap align-items-center mt-4 py-sm-4 py-0 px-0" id="courses-container">
+            <div class="d-flex justify-content-around flex-wrap align-items-center mt-4 py-sm-4 py-0 px-0" id="courses-container">
                 <Course v-for="(course, index) in min_courses" :key="index" 
                 :title="course.name" :description="course.description" 
-                :link="{name:'coursedetail',params:{id:course.id,title:course.name,description:course.description,age:course.age}}" :theme="act_course"
+                :link="{name:'coursedetail',params:{id:course.id}}" :theme="act_course"
                 ></Course>
                 <div class="row col-12 justify-content-center align-items-center mt-5">
                     <button class="btn view-btn" 
@@ -174,8 +174,6 @@ export default {
         axios.get("https://api.teachersucenter.com/api/temp/category")
         .then(response =>{
             for (let course of response.data){
-                console.log(course)
-                console.log(this.catergorying_courses(course.name, ['Starters']))
                 if(this.catergorying_courses(course.name, ['Free'])){
                     this.data[0].push(course);
                 } else if(this.catergorying_courses(course.name,['Starters', 'Movers', 'Flyers', 'KET', 'FCE', 'PET', 'CAE', 'CPE'])){
