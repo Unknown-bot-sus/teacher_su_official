@@ -16,9 +16,9 @@
             </div>
 
             <div class="col-lg-4 col-sm-6 col-12 d-flex flex-column align-items-start justify-content-space-between text-light nav-link-container">
-                <span>Phone: <a href="tel:+959422490839" target="_blank">+959422490839</a></span>
-                <span>Address: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book </span>
-                <span>Email: <a href="mailto:example@gmail.com" target="_blank">exmaple&commat;gmail.com</a></span>
+                <span>Phone: <a href="tel:+959422490839" target="_blank">+95 9422490839</a></span>
+                <span>Address: 129, Myo Ma Market, Zabuthiri Township, Naypyidaw, Myanmar. 15011 </span>
+                <span>Email: <a href="mailto:example@gmail.com" target="_blank">hello&commat;teachersucenter.com</a></span>
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center align-items-center social-media-container text-dark">
@@ -35,7 +35,7 @@
 
         </div>
         <div class="footer">
-            <span class="text-light">&COPY; Copyright 2021 Teacher Su Centre. All right reserved.</span>
+            <span class="text-light">&COPY; Copyright 2021 Teacher Su Centre. All rights reserved.</span>
         </div>
     </footer>
 </template>
