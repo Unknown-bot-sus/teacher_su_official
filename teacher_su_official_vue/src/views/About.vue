@@ -35,17 +35,19 @@
 
        <div class="row mt-5 my-md-5">
             <h2 class="header1 text-center mt-3 wow animate__fadeInUp">About <span class="text-danger">Teacher Su</span></h2>
-            <div class="col-12 d-lg-flex align-items-center justify-content-center p-1 p-md-5">
-                <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center flex-wrap flex-md-nowrap p-3 wow animate__fadeInUp">
-                    <div>
+            
+                <div class="col-12 wow animate__fadeInUp my-3 my-md-5">
+                    <div class="d-flex align-items-center justify-content-center flex-column">
                         <img src="../assets/img/Study9.png" class="rev-img mb-2" alt="">
                         <div>
                             <p class="fw-bold text-center m-0">Su Htet Zaw</p>
                             <p class="text-muted text-center m-2">Founder and CEO</p>
                         </div>
                     </div>
-                    <div class="ms-md-5">
-                        <p>
+                </div>    
+                <div class="wow animate__fadeInUp para-t">
+                    
+                        <p style="text-indent:3rem;" >
                             Su Htet Zaw (Teacher Su) is the CEO and Founder of the Teacher Su Language Centre, established in 2018. She received her Bachelor’s degree from Yangon University of Education (YUOE) in 2013. 
                             She got the Myanmar Presidential Scholarship while working as a high school teacher in Yangon; thus, pursued her Master’s degree in Educational Leadership and Management at La Trobe University, Melbourne. 
                             After receiving her Master’s degree, she worked as a deputy planning officer at the Department of Educational Research, Planning and Training, Ministry of Education, Myanmar. 
@@ -61,9 +63,9 @@
                         </p>
 
                         
-                    </div>
+                    
                 </div>
-            </div>
+            
         </div>
 
       <div class="row my-5">

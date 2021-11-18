@@ -1,11 +1,11 @@
 <template>
         <div>
-            <h1 class="text-center">Events</h1>
+            <h1 class="text-center">Announcements</h1>
             <div class="d-flex align-items-center justify-content-evenly flex-wrap">
             <div v-for="list in lists" :key="list.id" class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4 d-flex align-items-center justify-content-center p-1">
-                    <img :src="list.urlToImage" class="img-fluid rounded-start" alt="...">
+                    <img :src="'http://api.teachersucenter.com' + list.image" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8">
                     <div class="card-body">
@@ -45,11 +45,11 @@ import axios from "axios"
             }
         },
          mounted(){
-            axios.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=af767d5fb9574acbb3fa4a7a0959f9dd")
+            axios.get("http://api.teachersucenter.com/api/temp/news")
                 .then(response =>{
-                    this.lists = response.data.articles;
-                    console.log(this.lists);
                     
+                    this.lists = response.data
+                    console.log(this.lists)
                 })
         },
         
