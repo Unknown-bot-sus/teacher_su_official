@@ -1,9 +1,10 @@
 <template>
   <div class="logo-container">
         <a href="#" class="img-container mx-2"><img src="../assets/img/logo.png" alt="logo" width="70" height="70"></a>
-        <div class="logo-link-container text-light h2 fw-bold h4 mx-2 my-0">
-            <a href="#">Teacher Su<br/>Centre</a>
-        </div>
+        <a class="logo-link-container h2 mx-2 my-0" href="#">
+            <span text='Teacher Su'>Teacher Su</span>
+            <span text='Centre'>Centre</span>
+        </a>
     </div>
 </template>
 
@@ -62,38 +63,41 @@ export default {
     }
 
     .logo-link-container{
-        position: relative;
-        z-index: 0;
-        a{
-            color: white;
-            text-decoration: none;
+        display: flex;
+        flex-direction: column;
+
+        text-decoration: none;
+
+        span{
+            font-family: sans-serif;
+            width: 12rem;
+            color: #222;
+            letter-spacing: 3px;
             position: relative;
+        }
+
+        span::before{
+            content: attr(text);
+            width: 0%;
+            height: 100%;
+            color: #fff;
+            box-sizing: border-box;
+
+            position: absolute;
+            top: 0;
+            left: 0;
             z-index: 0;
-            transition: all 0.5s;
+
+            border-right: 4px solid #fff;
+
+            transition: all 1.4s;
+
+            overflow: hidden;
         }
     }
 
-    .logo-link-container::before{
-        content: '';
-        width: 2px;
-        height: 100%;
-
-        background-color: white;
-
-        position: absolute;
-        top: 0;
-        left: -0.5rem;
-        z-index: -1;
-
-        transition: all 0.5s;
-    }
-
-    .logo-link-container:hover::before{
-        left: calc(100% + 0.5rem);
-    }
-
-    .logo-link-container:hover a{
-        color: var(--primary);
+    .logo-link-container:hover span::before{
+        width: 100%;
     }
 }
 
