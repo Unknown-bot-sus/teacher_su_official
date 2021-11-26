@@ -250,6 +250,45 @@
           </div>
         </div>
       </div>
+
+      <div class="row my-5 bg-primary">
+        <Header title="Hall of fame" class="text-light text-center my-4 courses-text"></Header>
+        <div class="col-12">
+            
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="single-box">
+                      <div class="up-area">
+                        <div class="up-img">
+                            <img src="../assets/img/bmo.jpeg" style="width:100%;height:100%;" alt="">
+                        </div>
+                        <div class="up-text">
+                          <p>a person</p>
+                          <p>something conforting</p>
+                        </div>
+                      </div>
+                      <div class="bottom-area">
+
+                      </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="..." class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="..." class="d-block w-100" alt="...">
+                </div>
+              </div>
+          </div>
+
+        </div>
+      </div>
       
 </div>
 
@@ -304,7 +343,20 @@ export default {
 }
 </script>
 <style scoped>
+.single-box{
+  width: 320px;
+  border-radius: 15px;
+}
+.up-area{
 
+}
+.up-text{
+
+}
+.up-img{
+  width: 150px;
+  border-radius: 50%;
+}
 #homebanner{
   background:url(../assets/img/homebanner.jpeg);
   height: inherit;
@@ -392,6 +444,7 @@ export default {
   transition: 0.5s;
   transform: translateY(-10px);
 }
+
 @media only screen and (min-width:979px){
   .item{
     width: 250px;
