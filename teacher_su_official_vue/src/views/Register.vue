@@ -63,7 +63,7 @@
 <script>
 import Header from "../components/Header.vue"
 import Form from "../components/Form.vue"
-
+import axios from 'axios'
 export default {
     name:"Register",
     components: {
@@ -83,15 +83,13 @@ export default {
     computed:{
         filter_class(){
             return this.data.filter((course)=> 
-            course.title.toLowerCase().includes(this.search.toLowerCase()) || 
-            course.date.toLowerCase().includes(this.search.toLowerCase()) ||
-            this.renderDate(course.date).toLowerCase().includes(this.search.toLowerCase()));
+                course.title.toLowerCase().includes(this.search.toLowerCase()) || 
+                course.date.toLowerCase().includes(this.search.toLowerCase()) ||
+                this.renderDate(course.date).toLowerCase().includes(this.search.toLowerCase())
+                );
         }
     },
     methods:{
-        showResult(){
-            console.log(this.data);
-        },
         renderDate(date){
             if(typeof date === 'string'){
                 let year, month, day; 
@@ -117,61 +115,24 @@ export default {
         },
     },
 
-    created(){
-        this.data = [
-            {
-                title: "Starters 11",
-                date: "2021-06-19",
-            },
-            {
-                title: "Starters 12",
-                date: "2020-06-19"
-            },
-            {
-                title: "Starters 13",
-                date: "2020-05-19"
-            },
-            {
-                title: "Starters 14",
-                date: "2021-12-19"
-            },
-            {
-                title: "Starters 15",
-                date: "2021-06-18"
-            },
-            {
-                title: "Starters 16",
-                date: "2021-06-16"
-            },
-            {
-                title: "Movers 11",
-                date: "2021-06-13"
-            },{
-                title: "KET 11",
-                date: "2021-08-19"
-            },{
-                title: "PET 11",
-                date: "2028-06-19"
-            },{
-                title: "IELTS reading",
-                date: "2019-03-19"
-            },{
-                title: "Starters 35",
-                date: "2021-04-19"
-            },{
-                title: "Flyers 11",
-                date: "2021-05-19"
-            },{
-                title: "Flyers 12",
-                date: "2021-03-19"
-            },{
-                title: "Flyers 13",
-                date: "2021-03-19"
-            },{
-                title: "Flyers 13",
-                date: "2021-04-19"
-            },
-        ]
+    created() {
+        let data = [];
+        let date = new Date();
+        date = `${date.getUTCFullYear()}-${date.getUTCMonth() + 1 < 10 ? '0' + (date.getUTCMonth() + 1) : date.getUTCMonth() + 1}-${date.getUTCDate() < 10 ? '0' + date.getUTCDate() : date.getUTCDate()}`;
+        axios.get('https://api.teachersucenter.com/api/verify/works')
+            .then(response=>{
+                this.data = response.data.filter(course=>{
+                    return +course.date_from.replace(/-/g, '') > (+date.replace(/-/g, '') - 10)
+                })
+            })
+            .then(()=>{
+                this.data = this.data.map((course)=>{
+                    return {
+                        title: course.name,
+                        date: course.date_from
+                    }
+                })
+            })
     }
 }
 </script>
