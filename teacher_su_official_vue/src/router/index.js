@@ -124,6 +124,14 @@ const routes = [
       title:"Our community"
     }
   },
+  {
+    path:'/halloffame',
+    name:'Hall',
+    component: () => import('../views/Hall.vue'),
+    meta:{
+      title:"Hall of fame"
+    }
+  },
 ]
 
 const router = createRouter({

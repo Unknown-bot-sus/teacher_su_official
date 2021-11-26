@@ -253,10 +253,10 @@
 
       <div class="row my-5 bg-primary">
         <Header title="Hall of fame" class="text-light text-center my-4 courses-text"></Header>
-        <div class="col-12">
+        <div class="col-12 mb-4">
             
-          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-indicators">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="position:relative;">
+              <div class="carousel-indicators bg-danger" style="position:absolute;width:150px;border-radius:30px;bottom:-20px;margin:10px auto;">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
@@ -266,23 +266,90 @@
                   <div class="single-box">
                       <div class="up-area">
                         <div class="up-img">
-                            <img src="../assets/img/bmo.jpeg" style="width:100%;height:100%;" alt="">
+                            <img src="../assets/img/bmo.jpeg" style="width:100%;height:100%;border-radius:50%;border:5px solid black;" alt="">
                         </div>
                         <div class="up-text">
-                          <p>a person</p>
-                          <p>something conforting</p>
+                          <p style="padding:0 5px;border-radius:20px;background:black;color:white;display:inline;">a person</p>
+                          <p style="border-bottom:3px solid black;padding:0 5px;">something conforting</p>
                         </div>
                       </div>
+                      <div class="p-2 text-center my-2 fs-1 fw-bolder shadow">
+                          overall 7
+                      </div>
                       <div class="bottom-area">
-
+                        
+                        <div>
+                          <ul style="list-style-type:none;padding:0;">
+                            <li>speaking 1</li>
+                            <li>speaking 1</li>
+                            <li>speaking 1</li>
+                            <li>speaking 1</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <button class="btn btn-outline-dark"><router-link :to="{name:'Hall'}">See more</router-link></button>
                       </div>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="..." class="d-block w-100" alt="...">
+                  <div class="single-box">
+                      <div class="up-area">
+                        <div class="up-img">
+                            <img src="../assets/img/bmo.jpeg" style="width:100%;height:100%;border-radius:50%;border:5px solid black;" alt="">
+                        </div>
+                        <div class="up-text">
+                          <p style="padding:0 5px;border-radius:20px;background:black;color:white;display:inline;">a person</p>
+                          <p style="border-bottom:3px solid black;padding:0 5px;">something conforting</p>
+                        </div>
+                      </div>
+                      <div class="p-2 text-center my-2 fs-1 fw-bolder shadow">
+                          overall 7
+                      </div>
+                      <div class="bottom-area">
+                        
+                        <div>
+                          <ul style="list-style-type:none;padding:0;">
+                            <li>speaking 1</li>
+                            <li>speaking 1</li>
+                            <li>speaking 1</li>
+                            <li>speaking 1</li>
+                          </ul>
+                        </div>
+                      </div>
+                         <div>
+                        <button class="btn btn-outline-dark"><router-link :to="{name:'Hall'}">See more</router-link></button>
+                      </div>
+                  </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="..." class="d-block w-100" alt="...">
+                  <div class="single-box">
+                      <div class="up-area">
+                        <div class="up-img">
+                            <img src="../assets/img/bmo.jpeg" style="width:100%;height:100%;border-radius:50%;border:5px solid black;" alt="">
+                        </div>
+                        <div class="up-text">
+                          <p style="padding:0 5px;border-radius:20px;background:black;color:white;display:inline;">a person</p>
+                          <p style="border-bottom:3px solid black;padding:0 5px;">something conforting</p>
+                        </div>
+                      </div>
+                      <div class="p-2 text-center my-2 fs-1 fw-bolder shadow">
+                          overall 7
+                      </div>
+                      <div class="bottom-area">
+                        <div>
+                          <ul style="list-style-type:none;padding:0;">
+                            <li>speaking 1</li>
+                            <li>speaking 1</li>
+                            <li>speaking 1</li>
+                            <li>speaking 1</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <button class="btn btn-outline-dark"><router-link :to="{name:'Hall'}">See more</router-link></button>
+                      </div>
+                  </div>
                 </div>
               </div>
           </div>
@@ -346,16 +413,28 @@ export default {
 .single-box{
   width: 320px;
   border-radius: 15px;
+  background: white;
+  padding: 20px 10px;
+  margin: 20px auto;
+  box-shadow: 0px 1px 11px 0px rgba(0,0,0,1);
+
 }
 .up-area{
-
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-.up-text{
-
+.up-text>p{
+  margin: 0%;
 }
 .up-img{
-  width: 150px;
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.bottom-area{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #homebanner{
   background:url(../assets/img/homebanner.jpeg);
