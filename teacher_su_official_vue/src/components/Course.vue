@@ -31,7 +31,8 @@ export default {
     mounted() {
         VanillaTilt.init(document.querySelectorAll(".card"), {
             max: 25,
-            speed: 400
+            speed: 400,
+            scale: 1.15,
         });
     }
 }

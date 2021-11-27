@@ -19,7 +19,6 @@
     </nav>
 </template>
 <script>
-import { Tooltip } from 'bootstrap/dist/js/bootstrap.esm.min.js'
 export default {
     name: "Fab",
     data() {
@@ -57,11 +56,6 @@ export default {
         },
 
         invisible(e) {
-            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-                return new bootstrap.Tooltip(tooltipTriggerEl)
-            });
-
             const menu = document.querySelector('.menu');
             menu.classList.toggle('active');
             let target = e.target.firstElementChild;
@@ -73,8 +67,12 @@ export default {
             } else {
                 if (this.del_time_out) {
                     clearTimeout(this.del_time_out);
-                    console.log('hello')
                 }
+
+                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                    return new bootstrap.Tooltip(tooltipTriggerEl)
+                });
             }
             target.classList.toggle('triggered');
         }
