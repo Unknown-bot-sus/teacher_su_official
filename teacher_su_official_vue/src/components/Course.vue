@@ -1,15 +1,18 @@
 <template>
-    <div class="d-flex flex-column course-container mx-5 mb-2">
-        <h3 v-text="title" class="fw-bold h4 titlecs text-truncate" :class="theme"></h3>
-        <span v-text="classdescription" class="description"></span>
-        <div class="line"></div>
-        <router-link :to="link" class="bg-transparent link" :class="theme">
-            Read More <i class="fad fa-chevron-right "></i>
-        </router-link>
+    <div class="card" style="width: 16.5rem; height: 15rem" data-tilt>
+        <div class="card-body">
+            <h5 class="card-title text-truncate" :class="theme">{{ title }}</h5>
+            <p class="card-text">{{ getDescription }}</p>
+            
+            <router-link :to="link" class="btn" :class="theme">
+                Read More <i class="fad fa-chevron-right "></i>
+            </router-link>
+        </div>
     </div>
 </template>
 <script>
 import Header from '../components/Header'
+import VanillaTilt from 'vanilla-tilt'
 export default {
     name: 'Course',
     components: {Header},
@@ -19,28 +22,32 @@ export default {
         link: Object,
         theme: String,
     },
-    data(){
-        return{
-            classdescription: String
+    computed: {
+        getDescription(){
+            return this.description.length > 100 ? this.description.slice(0,100) + "..." : this.description;
         }
     },
-    created(){
-        this.classdescription = this.description.length > 100 ? this.description.slice(0,100) + "..." : this.description;
+
+    mounted() {
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400
+        });
     }
 }
 </script>
-<style scoped>
-.course-container{
-    width: 16.5rem;
-    border: 1px solid var(--dark);
-    padding: 1rem;
+<style lang="scss" scoped>
+.card{
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
     margin-top: 1rem;
-    cursor: pointer;
-} 
 
-.description{
-    display: inline-block;
-    margin: 1rem 0;
+    .card-body{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
 }
 .line{
     width: 90%;

@@ -30,10 +30,11 @@
             </div>
 
             <div class="d-flex justify-content-around flex-wrap align-items-center mt-4 py-sm-4 py-0 px-0" id="courses-container">
-                <Course v-for="(course, index) in min_courses" :key="index" 
-                :title="course.name" :description="course.description" 
-                :link="{name:'coursedetail',params:{id:course.id}}" :theme="act_course"
-                ></Course>
+                    <Course v-for="(course, index) in min_courses" :key="index" 
+                    :title="course.name" :description="course.description" 
+                    :link="{name:'coursedetail',params:{id:course.id}}" :theme="act_course">
+                    </Course>
+ 
                 <div class="row col-12 justify-content-center align-items-center mt-5">
                     <button class="btn view-btn" 
                             v-show="viewbtn_shown" 
@@ -243,6 +244,7 @@ export default {
 
     },
 }
+
 </script>
 
 <style scoped>
