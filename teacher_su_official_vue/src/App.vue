@@ -9,7 +9,6 @@
 
 <script>
 import Navbar from "./components/Navbar.vue"
-import floaty from "./components/floaty.vue"
 import Fab from '@/components/Fab.vue'
 import { defineAsyncComponent } from '@vue/runtime-core';
   export default {

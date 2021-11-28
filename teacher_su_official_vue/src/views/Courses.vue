@@ -24,21 +24,21 @@
             <div class="d-flex justify-content-start my-0 mx-0 p-0">
                 <button v-for="(button, index) in buttons" :key="button" :id="button"
                         class="btn course-btn" :class="{active: act_course === button}"
-                        @click="chgActCourse(button), rendercourse(data[index])">
+                        @click="chgActCourse(button)">
                         {{ renderButtonname(index) }}
                 </button>
             </div>
 
             <div class="d-flex justify-content-around flex-wrap align-items-center mt-4 py-sm-4 py-0 px-0" id="courses-container">
-                    <Course v-for="(course, index) in min_courses" :key="index" 
+                    <Course v-for="(course, index) in rendercourse" :key="index" 
                     :title="course.name" :description="course.description" 
                     :link="{name:'coursedetail',params:{id:course.id}}" :theme="act_course">
                     </Course>
  
                 <div class="row col-12 justify-content-center align-items-center mt-5">
                     <button class="btn view-btn" 
-                            v-show="viewbtn_shown" 
-                            @click="renderall()">
+                            v-show="!rendered_all" 
+                            @click="renderall">
                             View All
                     </button>
                 </div>
@@ -141,19 +141,15 @@ export default {
     components:{Header,Header,Course},
     data(){
         return{
-            
-            data: [[], [], [], []],
-            min_courses: [],
-            all_courses: [],
-            viewbtn_shown: true,
-            isActive: true,
+            data: {
+                'free': [],
+                'ylearner': [],
+                'ielts': [],
+                'others': []
+            },
+            rendered_all: Boolean,
             buttons: ['free', 'ylearner', 'ielts', 'others'],
         }
-    },
-    computed: {
-        ...mapState({
-            act_course: state => state.act_course,
-        })
     },
     mounted () {
         var wow = new WOW(
@@ -173,21 +169,45 @@ export default {
     },
     created(){
         axios.get("https://api.teachersucenter.com/api/temp/category")
+
         .then(response =>{
             for (let course of response.data){
                 if(this.catergorying_courses(course.name, ['Free'])){
-                    this.data[0].push(course);
+                    this.data['free'].push(course);
                 } else if(this.catergorying_courses(course.name,['Starters', 'Movers', 'Flyers', 'KET', 'FCE', 'PET', 'CAE', 'CPE'])){
-                    this.data[1].push(course);
+                    this.data['ylearner'].push(course);
                 } else if(this.catergorying_courses(course.name, ['ielts'])){
-                    this.data[2].push(course)
+                    this.data['ielts'].push(course)
                 } else {
-                    this.data[3].push(course)
+                    this.data['others'].push(course)
                 }
             }
         })
-        .then(()=>this.rendercourse(this.data[0]));
+
+        .then(()=>{
+            this.chgActCourse('free');
+            this.isRenderedAll();
+        });
     },
+    computed: {
+        ...mapState({
+            act_course: state => state.act_course,
+        }),
+
+        rendercourse(){
+            let chosen_course = this.data[this.act_course]
+            if(this.rendered_all){
+                return this.get_courses(chosen_course, chosen_course.length);
+            }
+            return this.get_courses(chosen_course);
+        },
+    },
+    watch: {
+        act_course(afterChange, beforeChange) {
+            this.isRenderedAll();
+        }
+    },
+
     methods:{
         catergorying_courses(title, array){
             let contained = false;
@@ -204,27 +224,24 @@ export default {
             'chgActCourse',
         ]),
         
-        get_mincourse(array, max_index=4){
+        get_courses(array, max_index=4){
             try{
                 return array.slice(0, max_index);
             } catch {
-                return this.get_mincourse(array, --max_index);
-            }
-        },
-
-        rendercourse(array){
-            this.all_courses = array;
-            this.min_courses = this.get_mincourse(this.all_courses);
-            if(this.all_courses.length <= 4){
-                this.viewbtn_shown = false;
-            } else {
-                this.viewbtn_shown = true;
+                return this.get_courses(array, --max_index);
             }
         },
 
         renderall(){
-            this.min_courses = this.all_courses;
-            this.viewbtn_shown = false;
+            this.rendered_all = true;
+        },
+
+        isRenderedAll(){
+            if(this.data[this.act_course].length <= 4){
+                this.rendered_all = true;
+            } else {
+                this.rendered_all = false;
+            }
         },
 
         renderButtonname(index){
@@ -241,7 +258,6 @@ export default {
                     return 'Others';
             }
         },
-
     },
 }
 

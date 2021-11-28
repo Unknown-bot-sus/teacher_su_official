@@ -73,9 +73,9 @@
 
                 <li class="nav-link">Extra-curriculum activites<i class="fas fa-chevron-down mx-3"></i>
                   <ul class="mini-box">
-                      <li><router-link :to="{name: community}" class="nav-link">Clubs</router-link></li>
-                      <li><router-link :to="{name: community}" class="nav-link">Academic consultation</router-link></li>
-                      <li><router-link :to="{name: community}" class="nav-link">Health and well-beings</router-link></li>
+                      <li><router-link :to="{name: 'Community'}" class="nav-link">Clubs</router-link></li>
+                      <li><router-link :to="{name: 'Community'}" class="nav-link">Academic consultation</router-link></li>
+                      <li><router-link :to="{name: 'Community'}" class="nav-link">Health and well-beings</router-link></li>
                   </ul>
                 </li>
               </ul>

@@ -1,5 +1,5 @@
 <template>
-    <div class="card" style="width: 16.5rem; height: 15rem" data-tilt>
+    <div class="card mx-2" style="width: 16.5rem; height: 15rem" data-tilt>
         <div class="card-body">
             <h5 class="card-title text-truncate" :class="theme">{{ title }}</h5>
             <p class="card-text">{{ getDescription }}</p>
