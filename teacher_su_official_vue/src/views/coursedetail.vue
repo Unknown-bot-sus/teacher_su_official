@@ -11,23 +11,23 @@
                 <tbody>
                     <tr>
                         <th >CEFR level:</th>
-                        <td>{{ course.cefr_level }}</td>
+                        <td :class="{'text-center': course.cefr_level === '-'}">{{ course.cefr_level }}</td>
                     </tr>
                     <tr>
                         <th >Scale score:</th>
-                        <td>{{ course.scale_score }}</td>
+                        <td :class="{'text-center': course.scale_score === '-'}">{{ course.scale_score }}</td>
                     </tr>
                     <tr>
                         <th >Test format:</th>
-                        <td>{{ course.test_format }}</td>
+                        <td :class="{'text-center': course.test_format === '-'}">{{ course.test_format }}</td>
                     </tr>
                     <tr>
                         <th >No. of papers:</th>
-                        <td>{{ course.paper_count }}</td>
+                        <td :class="{'text-center': course.paper_count === '-'}">{{ course.paper_count }}</td>
                     </tr>
                     <tr>
                         <th >Exam length:</th>
-                        <td>{{ course.test_length }}</td>
+                        <td :class="{'text-center': course.test_length === '-'}">{{ course.test_length }}</td>
                     </tr>
                 </tbody>
             </table>
