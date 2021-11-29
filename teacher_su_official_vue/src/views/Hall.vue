@@ -28,7 +28,7 @@
                               <p style="border-bottom:3px solid black;padding:0 5px;">{{ person.title }}</p>
                             </div>
                           </div>
-                          <div class="p-2 text-center my-2 fs-1 fw-bolder shadow">
+                          <div class="p-2 text-center my-2 fs-1 fw-bolder shadow overall">
                               overall {{ person.overall }}
                           </div>
                           <div class="bottom-area">
@@ -180,10 +180,14 @@ import VanillaTilt from 'vanilla-tilt'
   padding: 20px 10px;
   margin:30px 60px;
   box-shadow: 1px 2px 36px 14px rgba(0,0,0,0.16);
-
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
 }
 .single-box:hover{
   box-shadow: 1px 2px 36px 14px rgba(58, 105, 206, 0.16);
+}
+.overall{
+  transform: translateZ(30px);
 }
 .up-area{
   display: flex;
@@ -209,7 +213,7 @@ import VanillaTilt from 'vanilla-tilt'
       width: 100%;
       margin: 10px auto;
       padding: 20px 10px;
-      animation: scroll 40s linear infinite;
+      animation: scroll 35s linear infinite;
     }
     /* Hide scrollbar for Chrome, Safari and Opera */
     .wrapper::-webkit-scrollbar {
