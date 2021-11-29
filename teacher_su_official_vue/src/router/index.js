@@ -100,6 +100,30 @@ const routes = [
       title:"Hall of fame"
     }
   },
+  {
+    path:'/ielts',
+    name:'Hallielts',
+    component: () => import('../views/Hallielts.vue'),
+    meta:{
+      title:"Ielts"
+    }
+  },
+  {
+    path:'/duolingo',
+    name:'Hallduolingo',
+    component: () => import('../views/Hallduolingo.vue'),
+    meta:{
+      title:"Duolingo"
+    }
+  },
+  {
+    path:'/younglearner',
+    name:'Hallyl',
+    component: () => import('../views/Hallyl.vue'),
+    meta:{
+      title:"Young learner"
+    }
+  },
 ]
 
 const router = createRouter({
