@@ -1,5 +1,5 @@
 <template>
-<div class="container-fluid">
+<main class="container-fluid">
       <div class="row hero-banner">
         <div class="col-12 col-lg-12 py-3 py-md-5 d-flex align-items-center  homebanner-containercs">
           <div class="col-lg-6 py-5 BannerTesti">
@@ -242,14 +242,12 @@
         <div class="col-12  wow animate__backInRight">
             <h3 style="font-family:'Roboto Slab', serif;" class="mb-4 fs-1 text-center">Announcements</h3>
 
-            <div class="d-flex">
+            <div class="d-flex justify-content-around align-items-center">
               <LatestEvents v-for="(event, index) in events" :key="index" :event='event'></LatestEvents>
             </div>
           </div>
       </div>
-
-      
-</div>
+</main>
 
 </template>
 

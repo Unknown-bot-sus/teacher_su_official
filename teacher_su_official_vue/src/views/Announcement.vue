@@ -9,7 +9,7 @@
         </div>
 
         <main class="row">
-            <div class="col-12 card-con">
+            <div class="col-6 card-con mx-auto">
                     <Event v-for="(event, index) in events" :key="index" :event="event"/>
             </div>
         </main>
@@ -38,7 +38,6 @@ import axios from "axios"
             axios.get("http://api.teachersucenter.com/api/temp/news")
                 .then(response =>{
                     this.events = response.data;
-                    console.log(this.events)
                 })
         },
     }
