@@ -233,19 +233,18 @@
                             </div>
                           </div>
                       </div>
-
-                      
                    </div>
             </div>
         </div>
       </div>
 
-      <div class="row align-items-center justify-content-center my-5">
+      <div class="row align-items-center justify-content-center">
         <div class="col-12  wow animate__backInRight">
             <h3 style="font-family:'Roboto Slab', serif;" class="mb-4 fs-1 text-center">Announcements</h3>
 
-            <LatestEvents></LatestEvents>
-            
+            <div class="d-flex">
+              <LatestEvents v-for="(event, index) in events" :key="index" :event='event'></LatestEvents>
+            </div>
           </div>
       </div>
 
@@ -259,9 +258,15 @@
 import Header from "@/components/Header"
 import LatestEvents from '@/components/LatestEvents'
 import WOW from "wow.js"
+import axios from 'axios'
 
 export default {
   name: 'Home',
+  data(){
+    return{
+      events: Array,
+    }
+  },
   components:{Header,LatestEvents},
   mounted () {
         var wow = new WOW(
@@ -279,6 +284,11 @@ export default {
     );
     wow.init();
 
+    axios.get('http://api.teachersucenter.com/api/temp/news?latest=True&count=3')
+        .then(response => {
+          this.events = response.data;
+          console.log(this.events)
+        })
   },
   
   methods: {

@@ -7,51 +7,49 @@
                 <h5 class="fw-bold m-0">Announcement</h5>
             </div>
         </div>
-        
-        <div class="row">
-            <div class="col-12 col-lg-8 pt-2 p-md-5">
-                <div class="card-con mt-2 py-3">
-                    <AnEvent></AnEvent>
-                </div>
+
+        <main class="row">
+            <div class="col-12 card-con">
+                    <Event v-for="(event, index) in events" :key="index" :event="event"/>
             </div>
-            <div class="col-12 col-lg-4 d-lg-flex align-items-center justify-content-center flex-column">
-                <div class="row mt-4">
-                    <div class="col-12 d-lg-flex align-items-center justify-content-center">
-                        <div class="card">
-                            <div class="card-header">
-                                Latest announcements
-                            </div>
-                            <div class="card-body">
-                                <LatestEvents></LatestEvents>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      
+        </main>
     </div>
 </template>
 
 <script>
 
-import AnEvent from "../components/AnEvent.vue"
-import LatestEvents from "../components/LatestEvents.vue"
+import Event from "@/components/Event.vue"
+import axios from "axios"
 
     export default {
         name:"Announcement",
+
+        data(){
+            return {
+                events: Array
+            }
+        },
         
         components: {
-            AnEvent,LatestEvents
-        }
+            Event
+        },
+
+        mounted(){
+            axios.get("http://api.teachersucenter.com/api/temp/news")
+                .then(response =>{
+                    this.events = response.data;
+                    console.log(this.events)
+                })
+        },
     }
 </script>
 
 <style lang="scss" scoped>
     .card-con{
-        height: 65vh;
+        height: 100vh;
         overflow: scroll;
     }
+    
     .card-con::-webkit-scrollbar {
     display: none;
     }
