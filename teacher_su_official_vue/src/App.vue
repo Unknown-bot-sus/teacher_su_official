@@ -2,21 +2,21 @@
   <div class="app">
     <Navbar/>
     <router-view></router-view>
-    <floaty></floaty>
+    <Fab/>
     <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue"
-import floaty from "./components/floaty.vue"
+import Fab from '@/components/Fab.vue'
 import { defineAsyncComponent } from '@vue/runtime-core';
   export default {
     name:"App",
     components :{Navbar,
     Footer: defineAsyncComponent(()=>
       import('./components/Footer.vue')),
-    floaty},
+    Fab},
   };
 </script>
 

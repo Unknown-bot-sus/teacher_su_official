@@ -22,13 +22,13 @@
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center align-items-center social-media-container text-dark">
-              <a href="https://www.facebook.com/Teacher-Su-270139473932097" title="facebook" target="_blank" class="icon-container">
+              <a href="https://www.facebook.com/Teacher-Su-270139473932097" title="Facebook" target="_blank" class="icon-container" data-bs-toggle="tooltip" data-bs-placement="top">
                 <i class="fab fa-facebook-f icon"></i>
               </a>
-              <a href="https://www.facebook.com/messages/t/270139473932097" title="messenger" target="_blank" class="icon-container">
+              <a href="https://www.facebook.com/messages/t/270139473932097" title="Messenger" target="_blank" class="icon-container" data-bs-toggle="tooltip" data-bs-placement="top"> 
                 <i class="fab fa-facebook-messenger icon"></i>
               </a>
-              <a href="mailto:hello@teachersucenter.com" title="gmail" target="_blank" class="icon-container">
+              <a href="mailto:hello@teachersucenter.com" title="Gmail" target="_blank" class="icon-container" data-bs-toggle="tooltip" data-bs-placement="top">
                 <i class="fal fa-envelope icon"></i>
               </a>
             </div>
@@ -45,6 +45,12 @@ import LogoContainer from '../components/LogoContainer.vue'
 export default {
     name: "Footer",
     components: {LogoContainer},
+    mounted() {
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+    }
 }
 </script>
 
@@ -58,6 +64,12 @@ li, span{
         color: inherit;
         text-decoration: none;
         transition: all 0.5s;
+
+        
+    }
+
+    .fa-chevron-right{
+            transition: all 0.5s;
     }
 
     a:hover{
@@ -99,7 +111,7 @@ li, span{
     left: 0;
     z-index: -1;
 
-    background-color: red;
+    background-color: var(--primary);
 
     transform: rotate(45deg) translateY(-50%) translate(-100%);
     transform-origin: left top;
@@ -112,7 +124,11 @@ li, span{
 }
 
 .icon-container:hover{
-    border-color: var(--primary);
+    border-color: var(--light);
+    
+    i{
+        color: var(--light);
+    }
 }
 
 

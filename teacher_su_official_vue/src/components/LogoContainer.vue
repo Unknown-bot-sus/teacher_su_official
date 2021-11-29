@@ -70,7 +70,7 @@ export default {
 
         span{
             font-family: sans-serif;
-            width: 12rem;
+            width: 13rem;
             color: #222;
             letter-spacing: 3px;
             position: relative;
@@ -87,8 +87,6 @@ export default {
             top: 0;
             left: 0;
             z-index: 0;
-
-            border-right: 4px solid #fff;
 
             transition: all 1.4s;
 
