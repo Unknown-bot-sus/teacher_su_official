@@ -77,8 +77,6 @@ table{
 
     min-width: 20rem;
 
-    // max-width: 30rem;
-
     @include media-breakpoint-down(sm){
         min-width: 17rem;
     }

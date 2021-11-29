@@ -77,43 +77,11 @@ const routes = [
     }
   },
   {
-    path:'/latestevent/:id',
-    name:'Leventdetail',
-    component: () => import('../views/Leventdetail.vue'),
-    meta:{
-      title:"Event details"
-    }
-  },
-  {
-    path:'/latestnews/:id',
-    name:'Lnewsdetail',
-    component: () => import('../views/Lnewsdetail.vue'),
-    meta:{
-      title:"News details"
-    }
-  },
-  {
     path:'/course/:id',
     name:'coursedetail',
     component: () => import('../views/coursedetail.vue'),
     meta:{
       title:"Course details"
-    }
-  },
-  {
-    path:'/event',
-    name:'eventdetail',
-    component: () => import('../views/eventdetail.vue'),
-    meta:{
-      title:"Event details"
-    }
-  },
-  {
-    path:'/news',
-    name:'newsdetail',
-    component: () => import('../views/newsdetail.vue'),
-    meta:{
-      title:"News details"
     }
   },
   {

@@ -9,9 +9,9 @@
                     </div>
                     <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">{{ renderTitle(list.title) }}</h5>
-                        <p class="card-text">{{ renderDescription(list.description) }}</p>
-                        <router-link :to="{ name: 'eventdetail', params:  {name:list.title} }">Read more</router-link>
+                        <h5 class="card-title">{{ renderText(list.title, 50, 'no title') }}</h5>
+                        <p class="card-text">{{ renderText(list.description, 100, 'no description') }}</p>
+                        <router-link to='#'>Read more</router-link>
                     </div>
                     </div>
                 </div>
@@ -31,29 +31,18 @@ import axios from "axios"
             } 
         },
         methods: {
-            renderDescription(listDesc) {
-                
-                if(listDesc.length > 100) return listDesc.slice(0,100)+ "...";
-                else if (listDesc.length === 0 ) return "no description";
-                else return listDesc
+            renderText(text, limit, fallback) {
+                return text.length > limit ? text.slice(0, limit) + "..." :
+                        text.length === 0 ? fallback : text;
             },
-            renderTitle(listTitle) {
-                
-                if(listTitle.length > 50) return listTitle.slice(0,50)+ "...";
-                else if (listTitle.length === 0 ) return "no title";
-                else return listTitle
-            }
         },
-         mounted(){
+        mounted(){
             axios.get("http://api.teachersucenter.com/api/temp/news")
                 .then(response =>{
-                    
-                    this.lists = response.data
-                    console.log(this.lists)
+                    this.lists = response.data;
+                    console.log('lists');
                 })
         },
-        
-       
     }
 </script>
 

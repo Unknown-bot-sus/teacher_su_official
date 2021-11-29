@@ -240,15 +240,13 @@
         </div>
       </div>
 
-      <div class="row my-5">
-        <div class="col-12 d-flex align-items-center justify-content-center wow animate__backInRight">
-          <div class="mt-3">
+      <div class="row align-items-center justify-content-center my-5">
+        <div class="col-12  wow animate__backInRight">
             <h3 style="font-family:'Roboto Slab', serif;" class="mb-4 fs-1 text-center">Announcements</h3>
-            
+
             <LatestEvents></LatestEvents>
             
           </div>
-        </div>
       </div>
 
       
@@ -258,8 +256,8 @@
 
 <script>
 // @ is an alias to /src
-import Header from "../components/Header"
-import LatestEvents from '../components/LatestEvents'
+import Header from "@/components/Header"
+import LatestEvents from '@/components/LatestEvents'
 import WOW from "wow.js"
 
 export default {

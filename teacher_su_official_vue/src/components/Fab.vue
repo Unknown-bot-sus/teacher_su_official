@@ -3,9 +3,9 @@
         <i class="fas fa-chevron-left"></i>
     </div>
 
-    <div class="bg-blur" v-if="active"></div>
+    <div class="bg-blur" v-show="active"></div>
 
-    <nav class="menu" v-if="active">
+    <nav class="menu" v-show="active">
         <div class="menu-closer" @click="invisible($event)">
             <i class="fas fa-plus"></i>
         </div>
@@ -42,14 +42,21 @@ export default {
                     icon: 'fas fa-phone',
                     app: 'Call'
                 },
-                {
-                    link: '#',
-                    icon: 'fab fa-linkedin-in',
-                    app: 'Linedin'
-                },
+                // {
+                //     link: '#',
+                //     icon: 'fab fa-linkedin-in',
+                //     app: 'Linedin'
+                // },
             ]
         }
     },
+    mounted(){
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+    },
+
     methods: {
         visible() {
             this.active = true;
@@ -68,28 +75,24 @@ export default {
                 if (this.del_time_out) {
                     clearTimeout(this.del_time_out);
                 }
-
-                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-                var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-                    return new bootstrap.Tooltip(tooltipTriggerEl)
-                });
             }
             target.classList.toggle('triggered');
         }
     },
 }
+
 </script>
 <style lang="scss" scoped>
 .menu-opener{
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     border: 1px solid #000;
     background-color: #fff;
     padding-left: 5px;
 
     text-align: start;
-    line-height: 2rem;
+    line-height: 3rem;
 
     position: fixed;
     top: 50%;
@@ -192,7 +195,6 @@ export default {
     left: 0;
     z-index: 100;
 }
-
 
 @keyframes start {
     0%{

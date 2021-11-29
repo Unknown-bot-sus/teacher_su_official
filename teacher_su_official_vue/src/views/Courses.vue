@@ -38,7 +38,7 @@
                 <div class="row col-12 justify-content-center align-items-center mt-5">
                     <button class="btn view-btn" 
                             v-show="!rendered_all" 
-                            @click="renderall">
+                            @click="rendered_all=true">
                             View All
                     </button>
                 </div>
@@ -230,10 +230,6 @@ export default {
             } catch {
                 return this.get_courses(array, --max_index);
             }
-        },
-
-        renderall(){
-            this.rendered_all = true;
         },
 
         isRenderedAll(){
