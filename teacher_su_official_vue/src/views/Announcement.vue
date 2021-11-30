@@ -26,7 +26,7 @@ import axios from "axios"
 
         data(){
             return {
-                events: Array
+                events: [],
             }
         },
         
@@ -34,11 +34,18 @@ import axios from "axios"
             Event
         },
 
+        methods: {
+            fetchData(link){
+                axios.get(link)
+                    .then(response=>{
+                        this.events.push(...response.data.results);
+                        if(response.data.next != null) this.fetchData(response.data.next);
+                    })
+            }
+        },
+
         mounted(){
-            axios.get("http://api.teachersucenter.com/api/temp/news")
-                .then(response =>{
-                    this.events = response.data;
-                })
+            this.fetchData("http://api.teachersucenter.com/api/temp/news")
         },
     }
 </script>

@@ -282,10 +282,9 @@ export default {
     );
     wow.init();
 
-    axios.get('http://api.teachersucenter.com/api/temp/news?latest=True&count=3')
+    axios.get('http://api.teachersucenter.com/api/temp/news?latest=3')
         .then(response => {
-          this.events = response.data;
-          console.log(this.events)
+          this.events = response.data.results;
         })
   },
   

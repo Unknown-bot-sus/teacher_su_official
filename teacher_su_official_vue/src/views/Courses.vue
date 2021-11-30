@@ -166,28 +166,10 @@ export default {
       }
     );
     wow.init();
-    },
-    created(){
-        axios.get("https://api.teachersucenter.com/api/temp/category")
 
-        .then(response =>{
-            for (let course of response.data){
-                if(this.catergorying_courses(course.name, ['Free'])){
-                    this.data['free'].push(course);
-                } else if(this.catergorying_courses(course.name,['Starters', 'Movers', 'Flyers', 'KET', 'FCE', 'PET', 'CAE', 'CPE'])){
-                    this.data['ylearner'].push(course);
-                } else if(this.catergorying_courses(course.name, ['ielts'])){
-                    this.data['ielts'].push(course)
-                } else {
-                    this.data['others'].push(course)
-                }
-            }
-        })
-
-        .then(()=>{
-            this.chgActCourse('free');
-            this.isRenderedAll();
-        });
+    this.fetchData("https://api.teachersucenter.com/api/temp/category")
+    this.chgActCourse('free');
+    this.isRenderedAll();
     },
     computed: {
         ...mapState({
@@ -209,7 +191,27 @@ export default {
     },
 
     methods:{
-        catergorying_courses(title, array){
+        fetchData(link){
+            axios.get(link)
+                .then(response=>{
+                    this.catergorying_courses(response.data.results);
+                    if(response.data.next != null) this.fetchData(response.data.next);
+                })
+        },
+        catergorying_courses(array){
+              for (let course of array){
+                if(this.isContained(course.name, ['Free'])){
+                    this.data['free'].push(course);
+                } else if(this.isContained(course.name,['Starters', 'Movers', 'Flyers', 'KET', 'FCE', 'PET', 'CAE', 'CPE'])){
+                    this.data['ylearner'].push(course);
+                } else if(this.isContained(course.name, ['ielts'])){
+                    this.data['ielts'].push(course)
+                } else {
+                    this.data['others'].push(course)
+                }
+            }
+        },
+        isContained(title, array){
             let contained = false;
             for(let el of array){
                 if(title.toLowerCase().includes(el.toLowerCase())){

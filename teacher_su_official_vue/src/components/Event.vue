@@ -27,8 +27,6 @@ export default {
         },
 
         getContent(){
-            console.log('h3434')
-            console.log(this.event.content.length)
             if(!this.rendered_all) return this.event.content.length < 300 ? this.event.content : this.event.content.slice(0, 300);
             return this.event.content;
         }
