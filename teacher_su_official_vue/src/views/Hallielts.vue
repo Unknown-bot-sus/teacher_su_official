@@ -13,41 +13,43 @@
             <h1 class="header text-center py-5"><span class="text-danger">Teacher Su</span>'s Hall of fame - IELTS</h1>
         </div>
 
-        <div class="row">
-        <div class="col-12">
+        <div class="row my-3">
         
+        <div class="col-12 my-2">
               <div class="wrapper">
-                  <div class="d-flex align-items-center justify-content-evenly flex-wrap">
+                  <div class="d-flex align-items-center justify-content-evenly flex-wrap slide-track">
                       <div class="single-box" v-for="person in data" :key="person.index" data-tilt>
                           <div class="up-area">
                             <div class="up-img">
-                                <img :src="person.img" style="width:100%;height:100%;border-radius:50%;border:5px solid #103B7B;" alt="">
+                                <img :src="'http://api.teachersucenter.com' + person.student_image" style="width:100%;height:100%;border-radius:50%;border:5px solid #103B7B;object-fit:cover;" alt="">
                             </div>
                             <div class="up-text">
-                              <p style="padding:0 5px;border-radius:20px;background:#103B7B;color:white;display:inline;">{{ person.name }}</p>
-                              <p style="border-bottom:3px solid #103B7B;padding:0 5px;">{{ person.title }}</p>
+                              <p style="padding:0 5px;border-radius:20px;background:#103B7B;color:white;display:inline;">{{ person.student_name }}</p>
+                              <p style="border-bottom:3px solid #103B7B;padding:0 5px;">{{ person.other_achievement }}</p>
                             </div>
                           </div>
-                          <div class="p-2 text-center my-2 fs-1 fw-bolder shadow overall" style="color:#103B7B;">
-                              overall {{ person.overall }}
+                          <div class="p-2 text-center my-2 fs-1 fw-bolder shadow overall">
+                              overall - {{ person.overall }}
                           </div>
                           <div class="bottom-area">
                             
                             <div>
                               <ul style="list-style-type:none;padding:0;">
-                                <li>speaking {{ person.speaking }}</li>
-                                <li>listening {{ person.listening }}</li>
-                                <li>writing {{ person.writing }}</li>
-                                <li>reading {{ person.reading }}</li>
+                                <li>Speaking - {{ person.speaking }}</li>
+                                <li>Listening - {{ person.listening }}</li>
+                                <li>Writing - {{ person.writing }}</li>
+                                <li>Reading - {{ person.reading }}</li>
                               </ul>
                             </div>
+                          </div>
+                          <div class="text-muted">
+                            Test date - {{ person.test_date }}
                           </div>
                       </div>
                   </div>
                   
-              </div>
+        </div>
 
-            
 
         </div>
       </div>
@@ -57,6 +59,8 @@
 
 <script>
 import VanillaTilt from 'vanilla-tilt'
+import axios from "axios"
+
 
     export default {
         name:"Hallielts",
@@ -66,113 +70,26 @@ import VanillaTilt from 'vanilla-tilt'
       }
     },
     mounted() {
-        VanillaTilt.init(document.querySelectorAll(".single-box"), {
-            max: 25,
-            speed: 400,
-            scale: 1,
-        });
+       
+
+         axios.get("https://api.teachersucenter.com/api/temp/ielts_students")
+                .then(response =>{
+                    this.data= response.data.results;
+                }).then(()=>{
+                   VanillaTilt.init(document.querySelectorAll(".single-box"), {
+                    max: 25,
+                    speed: 400,
+                    scale: 1,
+                });
+                })
     },
-    created () {
-      this.data = [
-            { 
-                name:"a person",
-                title: 'ielts br nyr',
-                speaking:1,
-                listening:2,
-                writing:3,
-                reading:4,
-                img:"../assets/img/bmo.jpeg",
-                overall:7
-            },
-            { 
-                name:"a person",
-                title: 'ielts br nyr',
-                speaking:1,
-                listening:2,
-                writing:3,
-                reading:4,
-                img:"../assets/img/bmo.jpeg",
-                overall:7
-            },
-            { 
-                name:"a person",
-                title: 'ielts br nyr',
-                speaking:1,
-                listening:2,
-                writing:3,
-                reading:4,
-                img:"../assets/img/bmo.jpeg",
-                overall:7
-            },
-            { 
-                name:"a person",
-                title: 'ielts br nyr',
-                speaking:1,
-                listening:2,
-                writing:3,
-                reading:4,
-                img:"../assets/img/bmo.jpeg",
-                overall:7
-            },
-            { 
-                name:"a person",
-                title: 'ielts br nyr',
-                speaking:1,
-                listening:2,
-                writing:3,
-                reading:4,
-                img:"../assets/img/bmo.jpeg",
-                overall:7
-            },
-            { 
-                name:"a person",
-                title: 'ielts br nyr',
-                speaking:1,
-                listening:2,
-                writing:3,
-                reading:4,
-                img:"../assets/img/bmo.jpeg",
-                overall:7
-            },
-            { 
-                name:"a person",
-                title: 'ielts br nyr',
-                speaking:1,
-                listening:2,
-                writing:3,
-                reading:4,
-                img:"../assets/img/bmo.jpeg",
-                overall:7
-            },
-            { 
-                name:"a person",
-                title: 'ielts br nyr',
-                speaking:1,
-                listening:2,
-                writing:3,
-                reading:4,
-                img:"../assets/img/bmo.jpeg",
-                overall:7
-            },
-            { 
-                name:"a person",
-                title: 'ielts br nyr',
-                speaking:1,
-                listening:2,
-                writing:3,
-                reading:4,
-                img:"../assets/img/bmo.jpeg",
-                overall:3
-            },
-           
-        ];
-    },
+    
     }
 </script>
 
 <style lang="scss" scoped>
     .single-box{
-  min-width: 320px;
+  max-width: 320px;
   border-radius: 15px;
   background: white;
   padding: 20px 10px;
