@@ -68,27 +68,30 @@ import axios from 'axios'
         data: []
       }
     },
+    methods: {
+       getDate(x){
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            let date = new Date(x)
+            return `${date.getUTCDate()} ${months[date.getMonth()+1]} ${date.getUTCFullYear()}`
+        },
+        fetchData(link){
+                axios.get(link)
+                    .then(response=>{
+                        this.data.push(...response.data.results);
+                        if(response.data.next != null) this.fetchData(response.data.next);
+                    }).then(()=>{
+                      VanillaTilt.init(document.querySelectorAll(".single-box"), {
+                                max: 25,
+                                speed: 400,
+                                scale: 1,
+                    })
+                    })
+            }
+    },
     mounted() {
-      axios.get("https://api.teachersucenter.com/api/temp/det_students")
-                .then(response =>{
-                    this.data= response.data.results;
-                }).then(()=>{
-                  VanillaTilt.init(document.querySelectorAll(".single-box"), {
-                    max: 25,
-                    speed: 400,
-                    scale: 1,
-                });
-                })
-
-
-        
+        this.fetchData("https://api.teachersucenter.com/api/temp/det_students")
     },
-    created () {
-        axios.get("https://api.teachersucenter.com/api/temp/det_students")
-                .then(response =>{
-                    this.data= response.data.results;
-                })
-    },
+  
     }
 </script>
 

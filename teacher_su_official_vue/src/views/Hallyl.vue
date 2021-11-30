@@ -19,25 +19,14 @@
               <div class="wrapper">
                   <div class="d-flex align-items-center justify-content-evenly flex-wrap slide-track">
                       <div class="single-box" v-for="person in data" :key="person.index" data-tilt>
-                          <div class="up-area">
-                            <div class="up-img">
-                                <img :src="'http://api.teachersucenter.com' + person.student_image" style="width:100%;height:100%;border-radius:50%;border:5px solid #BD2222;object-fit:cover;" alt="">
+                            <div class="overall">
+                                <img :src="'http://api.teachersucenter.com' + person.student_image" class="img-thumbnail" style="width:100%;height:100%;" alt="">
                             </div>
-                            <div class="up-text">
-                              <p style="padding:0 5px;border-radius:20px;background:#BD2222;color:white;display:inline;">{{ person.student_name }}</p>
+                            <div class="d-flex align-items-center justify-content-evenly flex-column">
+                              <p class="m-0 fs-5 fw-bolder ">{{ person.student_name }}</p>
+                              <p class="m-0">{{ person.classname }}</p>
+                              <p class="m-0">{{ getDate(person.date_posted) }}</p>
                             </div>
-                          </div>
-                          <div class="bottom-area my-3">
-                            
-                            <div>
-                              <ul style="list-style-type:none;padding:0;">
-                                <li>Class name - {{ person.classname }}</li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="text-muted">
-                            Date posted - {{ person.date_posted }}
-                          </div>
                       </div>
                   </div>
                   
@@ -63,19 +52,28 @@ import axios from 'axios'
         data: []
       }
     },
+    methods: {
+       getDate(x){
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            let date = new Date(x)
+            return `${date.getUTCDate()} ${months[date.getMonth()+1]} ${date.getUTCFullYear()}`
+        },
+        fetchData(link){
+                axios.get(link)
+                    .then(response=>{
+                        this.data.push(...response.data.results);
+                        if(response.data.next != null) this.fetchData(response.data.next);
+                    }).then(()=>{
+                      VanillaTilt.init(document.querySelectorAll(".single-box"), {
+                                max: 25,
+                                speed: 400,
+                                scale: 1,
+                    })
+                    })
+            }
+    },
     mounted() {
-        
-
-        axios.get("https://api.teachersucenter.com/api/temp/best_students")
-                .then(response =>{
-                    this.data= response.data.results;
-                }).then(()=>{
-                  VanillaTilt.init(document.querySelectorAll(".single-box"), {
-                max: 25,
-                speed: 400,
-                scale: 1,
-            });
-                })
+        this.fetchData("https://api.teachersucenter.com/api/temp/best_students")
     },
   
     }

@@ -68,53 +68,6 @@
             
         </div>
 
-      <div class="row my-5">
-            <h2 class="header1 text-center mt-3 wow animate__fadeInUp"><span class="text-danger">Teacher Su</span> Centre going Through Covid</h2>
-
-        <div class="col-12 d-flex align-items-center justify-content-center p-3 p-md-5 wow animate__fadeInUp">
-
-            <div class="para-about">
-              <p> ‘Loem Ipsum is simply dummy text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos tenetur.’</p>
-              <p> ‘Loem Ipsum is simply dummy text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perspiciatis earum voluptatibus explicabo. Distinctio vel minima ipsum expedita mollitia vero autem totam! Aliquam obcaecati doloremque maiores nostrum, consectetur dignissimos tenetur.’</p>
-            </div>
-        </div>
-      </div>
-
-      <div class="row">
-          <div class="col-12 p-3 p-lg-5">
-              <h1 class="text-center header1 mb-3 wow animate__fadeInUp">Awards</h1>
-              <div class="para-t wow animate__fadeInUp">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-              </div>
-          </div>
-      </div>
-
-      <div class="row">
-          <div class="col-12 p-3 p-lg-5">
-              <h1 class="text-center header1 mb-3 wow animate__fadeInUp">Standard</h1>
-              <div class="para-t wow animate__fadeInUp">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-              </div>
-          </div>
-      </div>
-
-      <div class="row">
-          <div class="col-12 p-3 p-lg-5">
-              <h1 class="text-center header1 mb-3 wow animate__fadeInUp">Our Vision</h1>
-              <div class="para-t wow animate__fadeInUp">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-              </div>
-          </div>
-      </div>
-
-      <div class="row">
-        <div class="col-12 p-3 p-lg-5">
-          <h1 class="text-center header1 mb-3 wow animate__fadeInUp">Terms and Policy</h1>
-          <div class="para-t wow animate__fadeInUp">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-          </div>
-        </div>
-      </div>
   </div>
 </template>
 
