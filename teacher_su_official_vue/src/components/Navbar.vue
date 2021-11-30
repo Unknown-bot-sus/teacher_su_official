@@ -78,6 +78,8 @@
                       <li><router-link :to="{name: 'Community'}" class="nav-link">Health and well-beings</router-link></li>
                   </ul>
                 </li>
+
+                <li><router-link :to="{name: 'Hall'}" class="nav-link">Hall Of Fame</router-link></li>
               </ul>
             </li>
 
