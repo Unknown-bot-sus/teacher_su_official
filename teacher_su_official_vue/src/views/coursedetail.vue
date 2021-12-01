@@ -55,7 +55,7 @@ import axios from "axios"
             }
         },
         mounted(){
-            axios.get(`http://api.teachersucenter.com/api/temp/category/${this.$route.params.id}`)
+            axios.get(`https://api.teachersucenter.com/api/temp/category/${this.$route.params.id}`)
                 .then(response =>{
                     this.course = response.data;
                     console.log(new Date(this.course.date_posted).getDate())
