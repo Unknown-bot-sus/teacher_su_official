@@ -45,7 +45,7 @@ import axios from "axios"
         },
 
         mounted(){
-            this.fetchData("http://api.teachersucenter.com/api/temp/news")
+            this.fetchData("https://api.teachersucenter.com/api/temp/news")
         },
     }
 </script>

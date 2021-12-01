@@ -287,7 +287,7 @@ export default {
     );
     wow.init();
 
-    axios.get('http://api.teachersucenter.com/api/temp/news?latest=3')
+    axios.get('https://api.teachersucenter.com/api/temp/news?latest=3')
         .then(response => {
           this.events = response.data.results;
         })
