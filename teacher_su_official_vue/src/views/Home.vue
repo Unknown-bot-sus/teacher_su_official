@@ -242,9 +242,14 @@
         <div class="col-12  wow animate__backInRight">
             <h3 style="font-family:'Roboto Slab', serif;" class="mb-4 fs-1 text-center">Announcements</h3>
 
-            <div class="d-flex justify-content-around align-items-center">
+            <div class="d-flex justify-content-evenly align-items-center flex-wrap">
               <LatestEvents v-for="(event, index) in events" :key="index" :event='event'></LatestEvents>
             </div>
+
+          <div class="d-flex align-items-center justify-content-center mb-3">
+                      <button class="btn btn-primary"><router-link :to="{name:'Announcement'}" class="text-light text-decoration-none">Click to see all</router-link></button>
+            </div>
+
           </div>
       </div>
 </main>

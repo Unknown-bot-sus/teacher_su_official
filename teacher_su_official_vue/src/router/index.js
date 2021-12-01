@@ -124,6 +124,14 @@ const routes = [
       title:"Young learner"
     }
   },
+  {
+    path:'/eventDetail/:id',
+    name:'eventDetail',
+    component: () => import('../views/eventDetail.vue'),
+    meta:{
+      title:"event detail"
+    }
+  },
 ]
 
 const router = createRouter({
