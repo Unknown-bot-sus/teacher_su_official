@@ -22,7 +22,7 @@ import axios from 'axios';
             }
         },
         mounted(){
-            axios.get(`http://api.teachersucenter.com/api/temp/news/${this.$route.params.id}`)
+            axios.get(`https://api.teachersucenter.com/api/temp/news/${this.$route.params.id}`)
                 .then(response =>{
                     this.event = response.data;
                 })
