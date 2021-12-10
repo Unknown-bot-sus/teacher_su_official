@@ -9,8 +9,8 @@
         </div>
 
         <main class="row">
-            <div class="col-12 col-lg-6 card-con mx-auto">
-                    <Event v-for="(event, index) in events" :key="index" :event="event"/>
+            <div class="col-12 d-flex align-items-center justify-content-evenly flex-wrap">
+                    <Event v-for="(event, index) in events" :key="index" :event="event" :link="{name:'eventDetail',params:{id:event.id}}" />
             </div>
         </main>
     </div>

@@ -1,41 +1,40 @@
 <template>
-    <div class="card mb-5" :id="event.id">
-        <h2 class="card-header">{{ event.title }} <br/> <small class="text-muted">Date Posted: {{ getDate }}</small></h2>
-        <div class="card-body clearfix">
-            <img :src="`http://api.teachersucenter.com${event.image}`" :alt="event.content+'pic'" class="col-6 col-md- float-md-end">
-            <h3 class="card-title h5">{{ event.description }}</h3>
-            <p class="card-text">{{ getContent }} <span v-if="!rendered_all" @click="rendered_all=true" role="read_more" type="button">...Read More</span></p>
-        </div>
-    </div>
+            <div class="card my-3 mx-5"  :id="event.id" style="max-width:500px">
+                <div class="row g-0">
+                    <div class="col-md-4 d-flex align-items-center justify-content-center p-1">
+                    <img :src="`https://api.teachersucenter.com${event.image}`" class="img-fluid rounded-start cimg" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ event.title }}</h5>
+                        <p class="card-text">{{ renderText(event.content,200,"no title") }}</p>
+                        <router-link :to="link">Read more</router-link>
+                    </div>
+                    </div>
+                </div>
+            </div>
 </template>
 <script>
 export default {
     name: 'Event',
     props: {
         'event': Object,
+        'link': String
     },
     data(){
         return {
             rendered_all: false,
         }
     },
-    computed: {
-        getDate(){
-            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-            let date = new Date(this.event.date_posted)
-            return `${date.getUTCDate()} ${months[date.getMonth()+1]} ${date.getUTCFullYear()}`
-        },
-
-        getContent(){
-            if(!this.rendered_all) return this.event.content.length < 300 ? this.event.content : this.event.content.slice(0, 300);
-            return this.event.content;
-        }
-    },
     methods: {
-        
+        renderText(text, limit , fallback){
+        return text.length > limit ? text.slice(0, limit) + "..." : text.length != 0 ? text : fallback;
+    }
     }
 }
 </script>
 <style lang="scss" scoped>
-
+    .cimg{
+       width: 300px;
+   }
 </style>
