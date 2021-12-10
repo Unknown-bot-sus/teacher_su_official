@@ -119,7 +119,7 @@ export default {
         let data = [];
         let date = new Date();
         date = `${date.getUTCFullYear()}-${date.getUTCMonth() + 1 < 10 ? '0' + (date.getUTCMonth() + 1) : date.getUTCMonth() + 1}-${date.getUTCDate() < 10 ? '0' + date.getUTCDate() : date.getUTCDate()}`;
-        axios.get('https://api.teachersucenter.com/api/verify/works')
+        axios.get('https://api.teachersucenter.com/api/simpapi/works')
             .then(response=>{
                 this.data = response.data.filter(course=>{
                     return +course.date_from.replace(/-/g, '') > (+date.replace(/-/g, '') - 10)

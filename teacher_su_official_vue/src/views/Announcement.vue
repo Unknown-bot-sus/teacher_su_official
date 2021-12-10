@@ -9,7 +9,7 @@
         </div>
 
         <main class="row">
-            <div class="col-6 card-con mx-auto">
+            <div class="col-12 col-lg-6 card-con mx-auto">
                     <Event v-for="(event, index) in events" :key="index" :event="event"/>
             </div>
         </main>
