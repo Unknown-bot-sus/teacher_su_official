@@ -31,7 +31,7 @@
             <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
 
             <li class="navbar-item">
-                <a href="#" class="desktop-item nav-link">Courses<i class="fas fa-chevron-down mx-3"></i></a>
+                <router-link :to="{name:'Courses'}" class="desktop-item nav-link">Courses<i class="fas fa-chevron-down mx-3"></i></router-link>
                 <input type="checkbox" id="sm-course" class="tgbtn" hidden>
                 <label for="sm-course" class="mobile-item text-light">Courses<i class="fas fa-chevron-down mx-3"></i></label>
                 <ul class="mega-box">
@@ -45,12 +45,12 @@
                     </ul>
                   </li>
                   <li><router-link :to="{name: 'Register'}" class="nav-link">How to apply</router-link></li>
-                  <li><router-link :to="{name: 'Study'}" class="nav-link">How to apply scholarship</router-link></li>
+                  <li><router-link :to="{name: 'Study'}" class="nav-link">Study with us</router-link></li>
                 </ul>
             </li>
 
             <li class="navbar-item">
-              <a href="#" class="desktop-item nav-link" id="study">Study with us<i class="fas fa-chevron-down mx-3"></i></a>
+              <router-link :to="{name:'Study'}" class="desktop-item nav-link" id="study">Study with us<i class="fas fa-chevron-down mx-3"></i></router-link>
               <input type="checkbox" id="sm-study" class="tgbtn" hidden>
               <label for="sm-study" class="mobile-item text-light">Study with us<i class="fas fa-chevron-down mx-3"></i></label>
               <ul class="mega-box">
@@ -58,7 +58,6 @@
                   <ul class="mini-box">
                     <li><router-link :to="{name: 'Register'}" class="nav-link">How to apply</router-link></li>
                     <li><router-link :to="{name: 'Register'}" class="nav-link">New term start date</router-link></li>
-                    <li><router-link :to="{name: 'Study'}" class="nav-link">Scholarship</router-link></li>
                     <li><router-link :to="{name: 'Courses'}" class="nav-link">View all courses</router-link></li>
                   </ul>
                 </li>
