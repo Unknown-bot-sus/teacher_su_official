@@ -9,7 +9,7 @@
                     <li><router-link to="/">Home </router-link><i class="fas fa-chevron-right"></i></li>
                     <li><router-link to="/courses">Courses </router-link><i class="fas fa-chevron-right"></i></li>
                     <li><router-link to="/studyWithUs">Study with us </router-link><i class="fas fa-chevron-right"></i></li>
-                    <li><router-link to="/career">Career Opprotunities </router-link><i class="fas fa-chevron-right"></i></li>
+                    <li><router-link to="/career">Career Opportunities </router-link><i class="fas fa-chevron-right"></i></li>
                     <li><router-link to="#">Community </router-link><i class="fas fa-chevron-right"></i></li>
                     <li><router-link to="/about">About </router-link><i class="fas fa-chevron-right"></i></li>
                 </ul>

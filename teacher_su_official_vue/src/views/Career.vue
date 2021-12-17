@@ -4,7 +4,7 @@
             <div class="col-12 d-flex align-items-center px-3 px-md-5 py-2" style="background-color:#caccd1;">
                 <router-link :to="{name:'Home'}"> <i class="me-4 fs-4 fas fa-home text-dark"></i> </router-link>
                 <i class="me-4 fs-4 fas fa-chevron-right"></i>
-                <h5 class="fw-bold m-0">Career opportunity</h5>
+                <h5 class="fw-bold m-0">Career opportunities</h5>
             </div>
         </div>
 
@@ -55,15 +55,15 @@ export default {
         this.data = [
             {
                 title: 'Main Teacher',
-                description: 'The main teacher is the decision-maker for the whole class and leads assistant lecturers. An MT should be able to teach young learners and reaches them with engaging lesson plans.',
+                description: 'The main teacher is the decision-maker of the whole class and leads assistant lecturers. An MT should be able to teach young learners and reach them with engaging lesson plans.',
                 requirements: 'Bachelor’s degree in teaching or relevant field, In-depth knowledge of teaching methodologies and practices, Good communication and organizational skills, Cool-tempered and positive attitude, Strong leadership skill, Familiar with online teaching tools (preferable)',
-                responsibilities: 'Prepare effective lesson plans, tests and assignments, Assign date and time for the tests, Grade homework, assignments and tests, Choose award-worthy students, Decide and prove if each student is qualified for the next level, Manage assistants lecturers and give appropriate instructions, Check the daily/monthly reports from the assistant lecturers, Check class information on the internal staff management platform',
+                responsibilities: 'Prepare effective lesson plans, Assign date and time for the tests, Grade homework, assignments and tests, Choose award-worthy students, Decide and prove if each student is qualified for the next level, Manage assistant lecturers and give appropriate instructions, Check the daily/monthly reports from the assistant lecturers, Check class information on the internal staff management platform',
             },
             {
                 title: 'Assistant Lecturer',
                 description: 'The assistant lecturer supports the main teacher in presenting lessons and helps students learn effectively. The duties of an assistant lecturer can be varied on the age of students.',
                 requirements: 'Be a former student at the Teacher Su Language Centre, Sufficient qualification in English, Good communication and organizational skills, Cool-tempered and positive attitude, Familiar with online teaching tools (preferable), A college degree is not mandatory',
-                responsibilities: 'Help the main teacher plan and upload tests, Track students attendance and class schedules, Work with smaller groups to enhance the learning process and give attention to the progress of individuals, Upload daily lessons and necessary announcements on google classroom, Organize test marks and prepare daily/monthly reports for consultation, Call students if they are not taking the test'
+                responsibilities: "Help the main teacher plan and upload tests, Track student's attendance and class schedules, Work with smaller groups to enhance the learning process and give attention to the progress of individuals, Upload daily lessons and necessary announcements on google classroom, Organize test marks and prepare daily/monthly reports for consultation, Call students if they are not taking the test",
             },
             {
                 title: 'Graphic Designer',

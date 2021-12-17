@@ -19,7 +19,7 @@
             </div>
           </li>
           <li class="navbar-item"><router-link :to="{name:'Announcement'}" class="nav-link text-light mx-2 menu-items">News</router-link></li>
-          <li class="navbar-item"><a href="tel:+959422490839" target="_blank" class="nav-link text-light  mx-2 menu-items">Contacts</a></li>
+          <li class="navbar-item"><a href="tel:+959422490839" target="_blank" class="nav-link text-light  mx-2 menu-items">Contact</a></li>
         </ul>
       </div>
 

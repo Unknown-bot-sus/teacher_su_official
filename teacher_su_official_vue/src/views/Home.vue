@@ -102,7 +102,7 @@
                 <div class="col-12 col-xl-6 p-3 ">
                 <router-link :to="{name:'Community'}">
                   <div class=" d-flex align-items-center justify-content-between border border-dark text-danger item-hover2 wow animate__backInRight">
-                    <p class="m-0 px-1 fs-6 fw-bold ">Extra curriculum activites</p>
+                    <p class="m-0 px-1 fs-6 fw-bold ">Extra-curricular activites</p>
                     <span class="w-50 p-0" style="border-left:25px solid transparent;border-bottom: 50px solid #103B7B;"></span>
                 </div>
                 </router-link>
@@ -134,7 +134,7 @@
                               </div>
                               <div class="mc-text d-flex align-items-center justify-content-evenly flex-column text-center">
                                 <h3>Wine Su Waddy</h3>
-                                <p>"My english got a lot better. I was very motivated by the opportunities given here at the center, got a lot of nice friends and have always been feeling blissful by the kindness and warmness of Teacher Su."</p>
+                                <p>"My English got a lot better. I was very motivated by the opportunities given here at the center, got a lot of nice friends and have always been feeling blissful by the kindness and warmness of Teacher Su."</p>
                               </div>
                               
                                
@@ -150,7 +150,7 @@
                               </div>
                               <div class="mc-text d-flex align-items-center justify-content-evenly flex-column text-center">
                                 <h3>Su Myat Min Khin</h3>
-                                <p>"Teacher Su plus some teachers assisted me well. My very first bands in IELTS mock tests were just 5.5 and 6 in a nut shell but at the end of my IELTS journey, overall 7 with band 8 in Listening were what I have tried hard for."</p>
+                                <p>"Teacher Su plus some teachers assisted me well. My very first bands in IELTS mock tests were just 5.5 and 6 in a nutshell but at the end of my IELTS journey, overall 7 with band 8 in Listening were what I have tried hard for."</p>
                               </div>
                               
                                
@@ -189,7 +189,7 @@
                           <div class="col-12 d-flex align-items-center justify-content-center rev-con">
                             <div class="rev-box d-flex align-items-center justify-content-evenly flex-column p-5">
                               <div class="rev-text d-flex align-items-center justify-content-evenly flex-column">
-                                <p class="text-dark fs-2 text-center">"My english got a lot better. I was very motivated by the opportunities given here at the center, got a lot of nice friends and have always been feeling blissful by the kindness and warmness of Teacher Su."</p>
+                                <p class="text-dark fs-2 text-center">"My English got a lot better. I was very motivated by the opportunities given here at the center, got a lot of nice friends and have always been feeling blissful by the kindness and warmness of Teacher Su."</p>
                                 <p class="fw-bold fs-4">Wine Su Waddy</p>
                                 <p class="text-muted">IELTS student</p>
                               </div>
@@ -205,7 +205,7 @@
                           <div class="col-12 d-flex align-items-center justify-content-center rev-con">
                             <div class="rev-box d-flex align-items-center justify-content-evenly flex-column p-5">
                               <div class="rev-text d-flex align-items-center justify-content-evenly flex-column">
-                                <p class="text-dark fs-2 text-center">"Teacher Su plus some teachers assisted me well. My very first bands in IELTS mock tests were just 5.5 and 6 in a nut shell but at the end of my IELTS journey, overall 7 with band 8 in Listening were what I have tried hard for."</p>
+                                <p class="text-dark fs-2 text-center">"Teacher Su plus some teachers assisted me well. My very first bands in IELTS mock tests were just 5.5 and 6 in a nutshell but at the end of my IELTS journey, overall 7 with band 8 in Listening were what I have tried hard for."</p>
                                 <p class="fw-bold fs-4">Su Myat Min Khin</p>
                                 <p class="text-muted">IELTS student</p>
                               </div>

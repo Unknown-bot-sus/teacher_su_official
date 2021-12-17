@@ -84,7 +84,7 @@
         </div>
 
         <div class="row my-5 d-flex align-items-center justify-content-center">
-            <Header title="Extra Curriculum activites" class="text-center courses-text mb-5 wow animate__fadeInUp"></Header>
+            <Header title="Extra-curricular activites" class="text-center courses-text mb-5 wow animate__fadeInUp"></Header>
             <div class="col-12 col-sm-7 px-4 px-md-5">
                 <div>
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">

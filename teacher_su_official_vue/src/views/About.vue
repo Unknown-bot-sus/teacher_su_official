@@ -24,10 +24,10 @@
         <div class="col-12 d-flex align-items-center justify-content-center p-3 p-md-5">
 
             <div class="para-about wow animate__fadeInUp">
-              <p style="text-indent:3rem;"> Teacher Su Center started out as an IELTS and English training center in Naypyitaw, Myanmar in the year 2018.Teacher Su moved online in April 2020 because of the corona virus pandemic. Since then, the center rapidly grew.
-                Under the leadership of its young and talented founder Su Htet Zaw, the center quikly developed a massive online profile.
+              <p style="text-indent:3rem;"> Teacher Su Centre started out as an IELTS and English training center in Naypyitaw, Myanmar in the year 2018.Teacher Su moved online in April 2020 because of the coronavirus pandemic. Since then, the center rapidly grew.
+                Under the leadership of its young and talented founder Su Htet Zaw, the center quickly developed a massive online profile.
                 </p>
-              <p style="text-indent:3rem;"> As of October 2021, the center has over 100 classes offering as many as 15 different courese including personal development courses and 
+              <p style="text-indent:3rem;"> As of October 2021, the centre has over 100 classes offering as many as 15 different courses including personal development courses and 
                 additional services to its students and staff members. Over 4500 students are currently attending the center from all over the nation.</p>
             </div>
         </div>
@@ -58,7 +58,7 @@
                             a CISA National Conference Program Coordinator, a postgraduate student representative at Library consultative committee, a Connect Mentor, Social Media Communication Assistant and International Host at La Trobe. 
                             Moreover, she worked as a School Partnership Program facilitator, casual registration staff and connect leader at La Trobe University (Melbourne). 
                             She is also a member of the Golden Key International Honour Society, which membership is invitation only and applies to the top 15% of the respective university. 
-                            Due to her excellent leadership and academic skills, she was proudly awarded ‘Victoria International Student of the Year - Higher Education (2017)’. 
+                            Due to her excellent leadership and academic skills, she was proudly awarded the ‘Victoria International Student of the Year - Higher Education (2017)’. 
                             She is currently working as the CEO of the centre to bring quality education and provide international standard facilities to young students.
                         </p>
 

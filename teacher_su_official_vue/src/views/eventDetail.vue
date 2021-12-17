@@ -6,7 +6,7 @@
             </div>
             <div class="col-12">
                     <h1 class="my-3">{{ event.title }}</h1>
-                    <p>{{ event.content}} </p>
+                    <p style="text-indent:5rem;line-height:40px;">{{ event.content}} </p>
             </div>
         </div>
     </div>
