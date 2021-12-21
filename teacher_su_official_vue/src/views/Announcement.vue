@@ -38,8 +38,11 @@ import axios from "axios"
             fetchData(link){
                 axios.get(link)
                     .then(response=>{
+                        console.log(response)
                         this.events.push(...response.data.results);
                         if(response.data.next != null) this.fetchData(response.data.next);
+                    }).catch((err)=>{
+                        console.log(err)
                     })
             }
         },
